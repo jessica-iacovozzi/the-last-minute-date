@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :messages_as_sender, class_name: "Message", foreign_key: :sender_id
-  has_many :messages_as_receiver, class_name: "Message", foreign_key: :receiver_id
-  has_many :tickets
+  has_many :sent_messages, class_name: "Message", foreign_key: :sender_id, dependent: :destroy
+  has_many :received_messages, class_name: "Message", foreign_key: :receiver_id, dependent: :destroy
+  has_many :conversations, through: :sent_messsages, dependent: :destroy
+  has_many :tickets, dependent: :destroy
 
   validates :first_name, :username, :tags, :picture_url, :age, :description, presence: true
   validates :username, uniqueness: true
