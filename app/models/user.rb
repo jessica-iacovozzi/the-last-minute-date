@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :messages_as_receiver, class_name: "Message", foreign_key: :receiver_id
   has_many :tickets
 
-  validates :first_name, :username, :preferences, :picture_url, :age, :description, presence: true
+  validates :first_name, :username, :tags, :picture_url, :age, :description, presence: true
   validates :username, uniqueness: true
   validates :age, numericality: { only_integer: true }
 end
