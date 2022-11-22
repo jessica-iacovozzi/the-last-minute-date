@@ -83,7 +83,6 @@ salsa = {
   price: '5',
   artist: 'Myriam and Louis',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
-
 }
 
 salsa = {
@@ -94,7 +93,6 @@ salsa = {
   price: '5',
   artist: 'Myriam and Louis',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
-
 }
 
 salsa = {
@@ -107,14 +105,45 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-Message.destroy_all
-puts "destroyed all messages"
+salsa = {
+  title: 'Salsa Latin Groove Party At Club 6/49',
+  date: 'Fri, Nov 25, 9:00 p.m',
+  category: 'Salsa',
+  address: '1112 Saint-Catherine St W, Montreal, Quebec',
+  price: '5',
+  artist: 'Myriam and Louis',
+  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+}
 
-Conversation.destroy_all
-puts "destroyed all conversations"
+salsa = {
+  title: '1909 Av. des Canadiens-de-Montréal, Montreal, Quebec',
+  date: 'Date.new(2022, 11, 19)',
+  category: 'Salsa',
+  address: '1112 Saint-Catherine St W, Montreal, Quebec',
+  price: '5',
+  artist: 'Myriam and Louis',
+  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+}
 
-User.destroy_all
-puts "destroyed all users"
+salsa = {
+  title: 'Salsa Latin Groove Party At Club 6/49',
+  date: 'Fri, Nov 25, 9:00 p.m',
+  category: 'Salsa',
+  address: '1112 Saint-Catherine St W, Montreal, Quebec',
+  price: '5',
+  artist: 'Myriam and Louis',
+  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+}
+
+# Messages Seed
+# Message.destroy_all
+# puts "destroyed all messages"
+
+# Conversation.destroy_all
+# puts "destroyed all conversations"
+
+# User.destroy_all
+# puts "destroyed all users"
 
 # User.create!(email: "j@j.com", password: "123456")
 # User.create!(email: "e@e.com", password: "123456")
