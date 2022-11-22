@@ -10,5 +10,5 @@ class User < ApplicationRecord
 
   validates :first_name, :username, :preferences, :picture_url, :age, :description, presence: true
   validates :username, uniqueness: true
-  validates :age, numericality: true, on: :account_setup
+  validates :age, numericality: { only_integer: true }
 end
