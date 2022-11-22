@@ -135,7 +135,7 @@ Symphorien = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-yoga = {
+concert = {
   title: "Les Shirley - More is More (Lancement d'album)",
   date: time2,
   category: 'Concerts',
@@ -147,7 +147,13 @@ yoga = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-Messages Seed
+[ concert Symphorien skeggs_concert Comedy hockey salsa ].each do |attribute|
+  event = events.create!(attribute)
+  puts "created #{event.title}"
+end
+puts "done!"
+
+# Messages Seed
 Message.destroy_all
 puts "destroyed all messages"
 
