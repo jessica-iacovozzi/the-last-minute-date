@@ -69,15 +69,21 @@ puts 'done!'
 
 # Adding event seed
 puts 'Cleaning events'
-event.destoy_all
+Event.destroy_all
 
-time = Time.new
+puts "Generating the dates..."
+time1 = Time.now
+time2 = time1 + (4 * 60 * 60) # plus 4 hours
+time3 = time1 + (2 * 60 * 60) # plus 2 hours
 
-puts 'Creating Event..'
+time1.strftime("%a, %b %e, %-I%P")
+time2.strftime("%a, %b %e, %-I%P")
+time3.strftime("%a, %b %e, %-I%P")
 
+puts 'Creating Event...'
 salsa = {
   title: 'Salsa Latin Groove Party At Club 6/49',
-  date: 'Fri, Nov 25, 9:00 p.m',
+  date: time1,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
@@ -85,9 +91,9 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-salsa = {
+dancing = {
   title: '1909 Av. des Canadiens-de-Montréal, Montreal, Quebec',
-  date: 'Date.new(2022, 11, 19)',
+  date: time2,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
@@ -95,9 +101,9 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-salsa = {
+concert = {
   title: 'Salsa Latin Groove Party At Club 6/49',
-  date: 'Fri, Nov 25, 9:00 p.m',
+  date: time3,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
@@ -105,9 +111,9 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-salsa = {
+hockey = {
   title: 'Salsa Latin Groove Party At Club 6/49',
-  date: 'Fri, Nov 25, 9:00 p.m',
+  date: time3,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
@@ -115,9 +121,9 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-salsa = {
+ball = {
   title: '1909 Av. des Canadiens-de-Montréal, Montreal, Quebec',
-  date: 'Date.new(2022, 11, 19)',
+  date: time1,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
@@ -125,9 +131,9 @@ salsa = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-salsa = {
+yoga = {
   title: 'Salsa Latin Groove Party At Club 6/49',
-  date: 'Fri, Nov 25, 9:00 p.m',
+  date: time2,
   category: 'Salsa',
   address: '1112 Saint-Catherine St W, Montreal, Quebec',
   price: '5',
