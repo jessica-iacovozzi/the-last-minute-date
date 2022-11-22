@@ -1,3 +1,23 @@
+Message.destroy_all
+puts "destroyed all messages"
+
+Conversation.destroy_all
+puts "destroyed all conversations"
+
+User.destroy_all
+puts "destroyed all users"
+
+# User.create!(email: "j@j.com", password: "123456")
+# User.create!(email: "e@e.com", password: "123456")
+
+# Conversation.create!
+
+# Message.create!(content: "Hey", sender: User.first, receiver: User.last, conversation: Conversation.first)
+# Message.create!(content: "What's up?", sender: User.first, receiver: User.last, conversation: Conversation.first)
+
+# Message.create!(content: "Yo", sender: User.last, receiver: User.first, conversation: Conversation.first)
+# Message.create!(content: "Not much, you?", sender: User.last, receiver: User.first, conversation: Conversation.first)
+
 # users = User.create([{ first_name: "Jessica",
 #                        username: "theoneandonlyjess",
 #                        age: 26,
@@ -6,6 +26,3 @@
 #                        tags: ["R&B"],
 #                        email: "iacovozzi.jessica@gmail.com",
 #                        password: "123456" }])
-
-User.create!(email: "j@j.com", password: "123456")
-User.create!(email: "e@e.com", password: "123456")
