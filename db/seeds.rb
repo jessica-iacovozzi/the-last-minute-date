@@ -8,31 +8,36 @@
 
 # TODO: User Seed
 puts 'Cleaning Database'
-puts 'Messages...'
 Message.destroy_all
-puts 'Users...'
+puts 'Cleaned Messages...'
 User.destroy_all
-puts 'Events...'
+puts 'Cleaned Users...'
 Event.destroy_all
-puts 'Conversations...'
+puts 'Cleaned Events...'
 Conversation.destroy_all
-puts 'Database All Clean!'
+puts 'Cleaned Conversations...'
+puts 'Done!'
 
-puts 'loading tags...'
-
+puts 'Generating Tags..'
 sports = %w[
   Baseball Basketball Boxing Cycling eSports Football Gymnastics Hockey Martial Arts Soccer Tennis Volleyball
 ].sample(3)
+puts 'Created Sports'
+
 concert = %w[
   Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal Pop R&B Reggae Religious Rock
 ].sample(4)
+puts 'Created Concerts'
+
 arts_and_theatre = %w[
   Comedy Cultural Dance Fashion Magic & Illusion Music Opera Puppetry Theatre
 ].sample(3)
-puts 'done!'
+puts 'Created Arts & Theatre'
 
+# Returns -> A multidimensional array -> flatten into one array
 tags = [sports, concert, arts_and_theatre]
 all_tags = tags.flatten
+puts 'Done!'
 
 puts 'Generating Users...'
 hugo = {
@@ -129,7 +134,7 @@ keanu = {
   tags: all_tags,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/37_npvpm9.jpg',
-  age: '24',
+  age: '35',
   email: 'kk@g.com',
   password: '123456',
   description: 'Learning new things'
@@ -140,7 +145,7 @@ kira = {
   tags: all_tags,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/22_aqlonp.jpg',
-  age: '24',
+  age: '46',
   email: 'bk@g.com',
   password: '123456',
   description: 'Learning new things'
@@ -151,7 +156,7 @@ frances = {
   tags: all_tags,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/69_npnerl.jpg',
-  age: '22',
+  age: '31',
   email: 'fc@g.com',
   password: '123456',
   description: 'Learning new things'
@@ -184,7 +189,7 @@ minnie = {
   tags: all_tags,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/19_a1inms.jpg',
-  age: '32',
+  age: '33',
   email: 'om@g.com',
   password: '123456',
   description: 'Learning new things'
@@ -207,7 +212,7 @@ eleanor = {
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/21_plnux6.jpg',
   age: '27',
-  email: 'seb@g.com',
+  email: 'ec@g.com',
   password: '123456',
   description: 'Learning new things'
 }
@@ -240,7 +245,7 @@ noora = {
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/8_tjclm1.jpg',
   age: '22',
-  email: 'jj@g.com',
+  email: 'juu@g.com',
   password: '123456',
   description: 'Learning new things'
 }
@@ -260,7 +265,7 @@ marcelhio = {
   eva, hugo, giovanni, jessica,
   alex, megan, alicia, delores,
   keanu, kira, frances, charis,
-  henrietta, minnie, Sebastien, eleanor,
+  henrietta, minnie, sebastien, eleanor,
   sasha, jennifer, noora, marcelhio
 ].each do |attribute|
   user = User.create!(attribute)
@@ -269,20 +274,20 @@ end
 puts 'done!'
 
 # TODO: Adding event seed
-puts 'Generating Events'
+puts 'Generating Events...'
 
-puts "Generating The Dates..."
-time1 = Time.now + 1.day # 1 hour
-time2 = time1 + (5 * 60 * 60) # plus 5 hours
-time3 = time1 + (3 * 60 * 60) # plus 33hours
+puts "Created Dates"
+time1 = Time.now - 1.day # 1 day
+time2 = time1 - 2.day # plus 2 day
+time3 = time1 - 3.day # plus 3 day
 
 # Formatting the dates -> Tue, Nov 22, 6pm
 time1.strftime("%a, %b %e, %-I%P")
 time2.strftime("%a, %b %e, %-I%P")
 time3.strftime("%a, %b %e, %-I%P")
 
-puts 'Creating Event...'
-salsa = {
+puts 'Created Events'
+salsa_latin = {
   title: 'Salsa Latin Groove Party At Club 6/49',
   date: time1,
   category: 'Arts & Theatre',
@@ -302,7 +307,7 @@ hockey = {
   artist: 'Nashville vs Montreal Canadiens',
   picture_url: 'https://b.fssta.com/uploads/application/nhl/venues/Bell-Centre.vresize.2240.1260.medium.1.jpg'
 }
-comedy = {
+patrick_norman = {
   title: 'Patrick Norman',
   date: time3,
   category: 'Arts & Theatre',
@@ -323,7 +328,6 @@ skeggs_concert = {
   artist: 'SKEGSS, Sir Chloe and Adam Newling',
   picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
 }
-
 symphorien = {
   title: 'Symphorien',
   date: time1,
@@ -334,7 +338,7 @@ symphorien = {
   artist: 'Symphorien',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
-concert = {
+les_shirley = {
   title: "Les Shirley - More is More (Lancement d'album)",
   date: time2,
   category: 'Concerts',
@@ -345,19 +349,59 @@ concert = {
   artist: 'Les Shirley',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
+# ----
+guillaume_pineault = {
+  title: 'Guillaume Pineault',
+  date: time3,
+  category: 'Comedy',
+  address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
+  description: "Guillaume Pineault was first an occupational therapist then an osteopath but he's finally in humor",
+  price: '35',
+  artist: 'Guillaume Pineault',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669232271/last-minute-date/Event%20images/9ca32c6f-c8de-432c-ab06-c79befc8f85b_1323201_TABLET_LANDSCAPE_LARGE_16_9_icrc17.webp'
+}
+skeggs_con = {
+  title: 'SKEGSS',
+  date: time2,
+  category: 'Concerts',
+  address: 'Théâtre Corona Montreal, Canada',
+  description: '',
+  price: '64',
+  artist: 'SKEGSS, Sir Chloe and Adam Newling',
+  picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
+}
 
-[concert, symphorien, skeggs_concert, comedy, hockey, salsa].each do |attribute|
+sym = {
+  title: 'Symphorien',
+  date: time1,
+  category: 'Arts & Theatre',
+  address: "L'Etoile Brossard, Canada",
+  description: 'The main character, Symphorien, is a naive but sympathetic fellow, who is the janitor for this guest house run by Mrs. Sylvain, a single yet bumbling lady.',
+  price: '55',
+  artist: 'Symphorien',
+  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+}
+con = {
+  title: "Les Shirley - More is More (Lancement d'album)",
+  date: time1,
+  category: 'Concerts',
+  address: 'Fairmount Theatre
+  Montreal, Canada',
+  description: 'Sweat at the show not before',
+  price: '40',
+  artist: 'Les Shirley',
+  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+}
+
+
+[
+  salsa_latin, hockey, patrick_norman, skeggs_concert, symphorien,
+  les_shirley, guillaume_pineault, skeggs_con, sym, con
+].each do |attribute|
   event = Event.create!(attribute)
-  puts "created #{event.title}"
+  puts "Created #{event.category}"
 end
 puts "Done!"
-
-# Messages Seed
-Message.destroy_all
-puts "destroyed all messages"
-
-Conversation.destroy_all
-puts "destroyed all conversations"
 
 # User.destroy_all
 # puts "destroyed all users"
@@ -365,10 +409,10 @@ puts "destroyed all conversations"
 # User.create!(email: "j@j.com", password: "123456")
 # User.create!(email: "e@e.com", password: "123456")
 
-puts 'Creating Empty Conversation'
+puts 'Created Empty Conversation'
 Conversation.create!
 
-puts 'Creating  Messages'
+puts 'Created  Messages'
 Message.create!(
   content: "Hey",
   sender: User.first,
@@ -381,7 +425,6 @@ Message.create!(
   receiver: User.last,
   conversation: Conversation.first
 )
-
 Message.create!(
   content: "Yo",
   sender: User.last,
