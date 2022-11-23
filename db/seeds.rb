@@ -16,6 +16,8 @@ Event.destroy_all
 puts 'Cleaned Events...'
 Conversation.destroy_all
 puts 'Cleaned Conversations...'
+Tickets.destroy_all
+puts 'Cleaned Tickets...'
 puts 'Done!'
 
 puts 'Generating Tags..'
@@ -372,7 +374,7 @@ dominic_paquet = {
   date: time1,
   category: 'arts_and_theatre',
   address: "1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2",
-  description: 'Dominic Paquet is one of the most hilarious showman! Comedian, actor and host',
+  description: 'Dominic Paquet is one of the most hilarious showman! Comedian, actor and host.',
   price: '49',
   artist: 'Dominic Paquet',
   picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238545/last-minute-date/Event%20images/Mise-en-vente-Dominic-Paquet-Gracieusete%CC%81_bgr1ka.jpg'
@@ -382,7 +384,7 @@ con = {
   date: time2,
   category: 'sport',
   address: '3200 Rue Viau, Montreal, QC H1B3J3',
-  description: 'Competitive Dicing',
+  description: 'Competitive Dicing.',
   price: '452',
   artist: 'Diving Championships',
   picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238994/last-minute-date/Event%20images/Hernandez-Schnell-courtesy-USA-Diving_rcb5vp.png'
@@ -441,3 +443,13 @@ users = User.create([{ first_name: "Jessica",
                        email: "iacovozzi.jessica@gmail.com",
                        password: "123456" }])
 puts 'All Done!'
+
+
+puts 'Creating Empty ticket'
+Ticket.new
+
+Puts 'selecting the users'
+eva = User.find_by(first_name: 'Eva')
+hugo = User.find_by(first_name: 'Hugo')
+jess = User.find_by(first_name: 'Jessica')
+gio = User.find_by(first_name: 'Giovanni')
