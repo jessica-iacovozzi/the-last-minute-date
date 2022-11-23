@@ -19,13 +19,13 @@ puts 'Cleaned Conversations...'
 puts 'Done!'
 
 puts 'Generating Tags..'
-sports = %w[
+sport = %w[
   Baseball Basketball Boxing Cycling eSports Football Gymnastics Hockey Martial Arts Soccer Tennis Volleyball
 ].sample(3)
 puts 'Created Sports'
 
 concert = %w[
-  Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal Pop R&B Reggae Religious Rock
+  Pop Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal R&B Reggae Religious Rock
 ].sample(4)
 puts 'Created Concerts'
 
@@ -35,7 +35,7 @@ arts_and_theatre = %w[
 puts 'Created Arts & Theatre'
 
 # Returns -> A multidimensional array -> flatten into one array
-tags = [sports, concert, arts_and_theatre]
+tags = [sport, concert, arts_and_theatre]
 all_tags = tags.flatten
 puts 'Done!'
 
@@ -290,106 +290,102 @@ puts 'Created Events'
 guillaume_pineault = {
   title: 'Guillaume Pineault',
   date: time3,
-  category: 'Comedy',
+  category: 'arts_and_theatre',
   address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
-  description: "Guillaume Pineault was first an occupational therapist then an osteopath but he's finally in humor",
+  description: "Occupational therapist then an osteopath but he's finally in humor.",
   price: '35',
   artist: 'Guillaume Pineault',
   picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669232271/last-minute-date/Event%20images/9ca32c6f-c8de-432c-ab06-c79befc8f85b_1323201_TABLET_LANDSCAPE_LARGE_16_9_icrc17.webp'
 }
-# ---
 pomme = {
   title: 'Pomme',
   date: time1,
-  category: 'Pop',
+  category: 'concert',
   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-  description: 'buggie woogy and let loose',
+  description: 'French singer-songwriter.',
   price: '110',
-  artist: 'Myriam and Louis',
+  artist: 'Claire Pommet',
   picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669234934/last-minute-date/Event%20images/e8d7bf68-ca94-4ce5-a9c0-006e6b6f81dd_1774051_TABLET_LANDSCAPE_LARGE_16_9_znvr5n.webp'
 }
-hockey = {
-  title: 'Montreal Canadiens vs. Nashville Predators',
+jessie_reyez = {
+  title: 'Jessie Reyez',
   date: time2,
-  category: 'Sports',
-  address: 'Centre Bell, 1909 Av. des Canadiens-de-Montréal, Montréal, QC',
-  description: 'Watch your favorite game',
+  category: 'concert',
+  address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+  description: 'Canadian singer-songwriter.',
   price: '287',
-  artist: 'Nashville vs Montreal Canadiens',
-  picture_url: 'https://b.fssta.com/uploads/application/nhl/venues/Bell-Centre.vresize.2240.1260.medium.1.jpg'
+  artist: 'Jessica Reyez',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669236589/last-minute-date/Event%20images/0x0_byplvc.jpg'
 }
-patrick_norman = {
-  title: 'Patrick Norman',
+montreal_canadiens = {
+  title: 'Montreal Canadiens',
   date: time3,
-  category: 'Arts & Theatre',
-  address: 'L`Étoile Banque Nationale
-  6000 Boul. de Rome, Brossard, Quebec',
-  description: "Patrick Norman will be performing near you at L'Étoile on Thursday 22 December 2022 as part of their tour.",
-  price: '45',
-  artist: 'Patrick Norman',
-  picture_url: 'https://www.nvrc.ca/sites/default/files/styles/section_landing_banner/public/default_images/theatre-placeholder-banner.jpg?itok=b1b9eQja'
+  category: 'sport',
+  address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
+  description: "Lineup: Montreal Canadiens vs San Jose Sharks.",
+  price: '145',
+  artist: 'Hockey Game',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669237028/last-minute-date/Event%20images/HabsCouldWinIt_Getty_Ringer.0_w4dydb.jpg'
 }
-skeggs_concert = {
-  title: 'SKEGSS',
+jo_cormier = {
+  title: 'Jo Cormier',
   date: time3,
-  category: 'Concerts',
-  address: 'Théâtre Corona Montreal, Canada',
-  description: '',
-  price: '64',
-  artist: 'SKEGSS, Sir Chloe and Adam Newling',
-  picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
+  category: 'arts_and_theatre',
+  address: '9200 Boulevard Leduc, Brossard, QC J4Y0L1',
+  description: 'o Cormier shares a wish with his parents even before starting school: to be humorous!',
+  price: '29',
+  artist: 'Jo Cormier',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669237216/last-minute-date/Event%20images/jo-cormier_xnhcye.jpg'
 }
-symphorien = {
-  title: 'Symphorien',
+rocket_hockey = {
+  title: 'Rocket vs Abbotsford',
   date: time1,
-  category: 'Arts & Theatre',
-  address: "L'Etoile Brossard, Canada",
-  description: 'The main character, Symphorien, is a naive but sympathetic fellow, who is the janitor for this guest house run by Mrs. Sylvain, a single yet bumbling lady.',
+  category: 'sport',
+  address: "1950 Rue Claude-Gagne, Laval, QC H7N 0E4",
+  description: 'Lineup: Rocket de Laval vs Abbotsford Canucks.',
   price: '55',
-  artist: 'Symphorien',
-  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+  artist: 'Hockey Team',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669237659/last-minute-date/Event%20images/995013667dd9079a4872274476d8d160_p_vi_110335_1612963928_oxw2iu.png'
 }
-les_shirley = {
-  title: "Les Shirley - More is More (Lancement d'album)",
+lil_tjay = {
+  title: "Lil Tjay",
   date: time2,
-  category: 'Concerts',
-  address: 'Fairmount Theatre
-  Montreal, Canada',
-  description: 'Sweat at the show not before',
-  price: '40',
-  artist: 'Les Shirley',
-  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+  category: 'concert',
+  address: '1950 Rue Claude-Gagne, Laval, QC H7N 0E4',
+  description: 'American rapper and singer.',
+  price: '57',
+  artist: 'Tione Jayden Merritt',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669237796/last-minute-date/Event%20images/83356a8d-1f34-4063-920f-90ec11a40412_1822481_TABLET_LANDSCAPE_LARGE_16_9_nscwrh.jpg'
 }
-skeggs_con = {
-  title: 'SKEGSS',
+riz_la_vie = {
+  title: 'Riz La Vie',
   date: time2,
-  category: 'Concerts',
-  address: 'Théâtre Corona Montreal, Canada',
-  description: '',
-  price: '64',
-  artist: 'SKEGSS, Sir Chloe and Adam Newling',
-  picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
+  category: 'concert',
+  address: '1403 Rue Sainte Elisabeth, Montreal, QC H2X 3C5',
+  description: 'New-York based singer/songwriter.',
+  price: '16',
+  artist: 'Riz La Vie',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238153/last-minute-date/Event%20images/indie_RIZ-LA-VIE_770_433_70_s_agdsdg.jpg'
 }
-sym = {
-  title: 'Symphorien',
+dominic_paquet = {
+  title: 'Dominic Paquet',
   date: time1,
-  category: 'Arts & Theatre',
-  address: "L'Etoile Brossard, Canada",
-  description: 'The main character, Symphorien, is a naive but sympathetic fellow, who is the janitor for this guest house run by Mrs. Sylvain, a single yet bumbling lady.',
-  price: '55',
-  artist: 'Symphorien',
-  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+  category: 'arts_and_theatre',
+  address: "1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2",
+  description: 'Dominic Paquet is one of the most hilarious showman! Comedian, actor and host',
+  price: '49',
+  artist: 'Dominic Paquet',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238545/last-minute-date/Event%20images/Mise-en-vente-Dominic-Paquet-Gracieusete%CC%81_bgr1ka.jpg'
 }
 con = {
-  title: "Les Shirley - More is More (Lancement d'album)",
+  title: "Fina World Junior Diving Championships",
   date: time2,
-  category: 'Concerts',
-  address: 'Fairmount Theatre
-  Montreal, Canada',
-  description: 'Sweat at the show not before',
-  price: '40',
-  artist: 'Les Shirley',
-  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+  category: 'sport',
+  address: '3200 Rue Viau, Montreal, QC H1B3J3',
+  description: 'Competitive Dicing',
+  price: '452',
+  artist: 'Diving Championships',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238994/last-minute-date/Event%20images/Hernandez-Schnell-courtesy-USA-Diving_rcb5vp.png'
 }
 
 [
