@@ -434,6 +434,7 @@ Message.create!(
   conversation: Conversation.first
 )
 
+<<<<<<< HEAD
 users = User.create([{ first_name: "Jessica",
                        username: "theoneandonlyjess",
                        age: 26,
@@ -453,3 +454,19 @@ eva = User.find_by(first_name: 'Eva')
 hugo = User.find_by(first_name: 'Hugo')
 jess = User.find_by(first_name: 'Jessica')
 gio = User.find_by(first_name: 'Giovanni')
+=======
+Ticket.create!(
+  event_id: 9,
+  user_id: 9
+)
+
+# users = User.create([{ first_name: "Jessica",
+#                        username: "theoneandonlyjess",
+#                        age: 26,
+#                        description: "I love R&B. My favourite artists are Jessie Reyez and Kehlani",
+#                        picture_url: "https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+#                        tags: ["R&B"],
+#                        email: "iacovozzi.jessica@gmail.com",
+#                        password: "123456" }])
+# puts 'All Done!'
+>>>>>>> master
