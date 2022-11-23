@@ -19,11 +19,23 @@ puts 'Conversations...'
 Conversation.destroy_all
 puts 'Database All Clean!'
 
+puts 'loading tags...'
+sports = %w[
+  Baseball Basketball Boxing Cycling eSports Football Gymnastics Hockey Martial Arts Soccer Tennis Volleyball
+]
+concert = %w[
+  Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal Pop R&B Reggae Religious Rock
+]
+arts_and_theatre = %w[
+  Comedy Cultural Dance Fashion Magic & Illusion Music Opera Puppetry Theatre
+]
+puts 'done!'
+
 puts 'Generating Users...'
 hugo = {
   first_name: 'Hugo',
   username: 'Hugo Spirit',
-  tags: ['salsa', 'theatre', 'concert'],
+  tags: [],
   picture_url:
   'https://avatars.githubusercontent.com/u/112583556?v=4',
   age: '22',
@@ -35,7 +47,7 @@ hugo = {
 eva = {
   first_name: 'Eva',
   username: 'lola',
-  tags: ['Opera', 'Open-mic', 'wizkid'],
+  tags: [],
   picture_url:
   'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
   age: '23',
@@ -47,7 +59,7 @@ eva = {
 jessica = {
   first_name: 'Jessica',
   username: 'jess',
-  tags: ['Concerts', 'mexican', 'Drake'],
+  tags: [],
   picture_url:
   'https://avatars.githubusercontent.com/u/104274353?v=4',
   age: '26',
@@ -59,7 +71,7 @@ jessica = {
 giovanni = {
   first_name: 'Giovanni',
   username: 'gio',
-  tags: ['Salsa', 'Hockey', 'Comedy'],
+  tags: [],
   picture_url:
   'https://avatars.githubusercontent.com/u/88079608?v=4',
   age: '25',
@@ -68,7 +80,59 @@ giovanni = {
   description: 'Learning new things'
 }
 
-[eva, hugo, giovanni, jessica].each do |attribute|
+
+alex = {
+  first_name: 'Alex',
+  username: 'alexadvocate',
+  tags: [],
+  picture_url:
+  'Jose Brewsaugh',
+  age: '22',
+  email: 'h@d.com',
+  password: '123456',
+  description: 'Studying at Le Wagon'
+}
+
+eva = {
+  first_name: 'Eva',
+  username: 'lola',
+  tags: [],
+  picture_url:
+  'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
+  age: '23',
+  email: 'e@e.com',
+  password: '123456',
+  description: 'Studying web dev'
+}
+
+jessica = {
+  first_name: 'Jessica',
+  username: 'jess',
+  tags: [],
+  picture_url:
+  'https://avatars.githubusercontent.com/u/104274353?v=4',
+  age: '26',
+  email: 'j@j.com',
+  password: '123456',
+  description: 'Studying web development'
+}
+
+giovanni = {
+  first_name: 'Giovanni',
+  username: 'gio',
+  tags: [],
+  picture_url:
+  'https://avatars.githubusercontent.com/u/88079608?v=4',
+  age: '25',
+  email: 'g@g.com',
+  password: '123456',
+  description: 'Learning new things'
+}
+
+
+
+
+[eva, hugo, giovanni, jessica, alex, ].each do |attribute|
   user = User.create!(attribute)
   puts "Created #{user.first_name}"
 end
@@ -86,8 +150,6 @@ time3 = time1 + (3 * 60 * 60) # plus 33hours
 time1.strftime("%a, %b %e, %-I%P")
 time2.strftime("%a, %b %e, %-I%P")
 time3.strftime("%a, %b %e, %-I%P")
-
-
 
 puts 'Creating Event...'
 salsa = {
