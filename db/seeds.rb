@@ -438,10 +438,10 @@ Message.create!(
   conversation: Conversation.first
 )
 
-Ticket.create!(
-  event_id: 9,
-  user_id: 9
-)
+# Ticket.create!(
+#   event_id: 9,
+#   user_id: 9
+# )
 
 # users = User.create([{ first_name: "Jessica",
 #                        username: "theoneandonlyjess",
