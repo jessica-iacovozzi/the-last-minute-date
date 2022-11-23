@@ -9,12 +9,15 @@
 
 # TODO: User Seed
 puts 'Cleaning Database'
+puts 'Messages...'
 Message.destroy_all
-puts 'Messages Clean'
+puts 'Users...'
 User.destroy_all
-puts 'Cleaning Events Table'
+puts 'Events...'
 Event.destroy_all
-puts 'Cleaning Events Table'
+puts 'Conversations...'
+Conversation.destroy_all
+puts 'Database All Clean!'
 
 puts 'Generating Users...'
 hugo = {
@@ -72,7 +75,7 @@ end
 puts 'done!'
 
 # TODO: Adding event seed
-puts 'Generating Events Table'
+puts 'Generating Events'
 
 puts "Generating The Dates..."
 time1 = Time.now + 1.day # 1 hour
