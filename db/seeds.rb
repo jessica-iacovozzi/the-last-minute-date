@@ -30,7 +30,7 @@ concert = %w[
 puts 'Created Concerts'
 
 arts_and_theatre = %w[
-  Comedy Cultural Dance Fashion Magic & Illusion Music Opera Puppetry Theatre
+  Comedy Cultural Dance Fashion Magic_&_illusion Music Opera Puppetry Theatre
 ].sample(3)
 puts 'Created Arts & Theatre'
 
@@ -49,7 +49,7 @@ hugo = {
   age: '22',
   email: 'h@d.com',
   password: '123456',
-  description: 'Studying at Le Wagon'
+  description: 'Internet enthusiast. Hipster-friendly reader. Outdoor lover.'
 }
 eva = {
   first_name: 'Eva',
@@ -60,7 +60,7 @@ eva = {
   age: '23',
   email: 'e@e.com',
   password: '123456',
-  description: 'Studying web dev'
+  description: 'Zombie specialist, Communicator, Internet fanatic.'
 }
 jessica = {
   first_name: 'Jessica',
@@ -71,7 +71,7 @@ jessica = {
   age: '26',
   email: 'j@j.com',
   password: '123456',
-  description: 'Studying web development'
+  description: 'Pop culture geek, Incurable bacon fan.'
 }
 giovanni = {
   first_name: 'Giovanni',
@@ -82,7 +82,7 @@ giovanni = {
   age: '25',
   email: 'g@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Evil coffee lover, Music fanatic.'
 }
 alex = {
   first_name: 'Alex',
@@ -93,7 +93,7 @@ alex = {
   age: '37',
   email: 'ad@d.com',
   password: '123456',
-  description: 'Studying at Le Wagon'
+  description: 'Extreme twitter lover, Analyst, Pop culture geek.'
 }
 megan = {
   first_name: 'Megan',
@@ -104,7 +104,7 @@ megan = {
   age: '27',
   email: 'me@e.com',
   password: '123456',
-  description: 'Studying web dev'
+  description: 'Tv specialist, Proud thinker.'
 }
 alicia = {
   first_name: 'Alicia',
@@ -115,7 +115,7 @@ alicia = {
   age: '29',
   email: 'pa@j.com',
   password: '123456',
-  description: 'Studying web development'
+  description: 'Writer, Hardcore twitter trailblazer.'
 }
 delores = {
   first_name: 'Delores',
@@ -126,7 +126,7 @@ delores = {
   age: '25',
   email: 'de@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Pop culture guru, Passionate coffee nerd.'
 }
 keanu = {
   first_name: 'Keanu',
@@ -137,7 +137,7 @@ keanu = {
   age: '35',
   email: 'kk@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Typical social mediaholic, Music fan.'
 }
 kira = {
   first_name: 'kira',
@@ -148,7 +148,7 @@ kira = {
   age: '46',
   email: 'bk@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Social media lover, Music fan, Introvert.'
 }
 frances = {
   first_name: 'Frances',
@@ -159,7 +159,7 @@ frances = {
   age: '31',
   email: 'fc@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Avid travel specialist, Friendly bacon lover.'
 }
 charis = {
   first_name: 'Charis',
@@ -170,7 +170,7 @@ charis = {
   age: '28',
   email: 'lc@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Coffee advocate, Wannabe gamer.'
 }
 henrietta = {
   first_name: 'Henrietta',
@@ -181,7 +181,7 @@ henrietta = {
   age: '32',
   email: 'ht@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Hipster-friendly travel ninja.'
 }
 minnie = {
   first_name: 'Minnie',
@@ -192,7 +192,7 @@ minnie = {
   age: '33',
   email: 'om@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Professional music specialist, Game lover.'
 }
 sebastien = {
   first_name: 'Sebastien',
@@ -203,7 +203,7 @@ sebastien = {
   age: '21',
   email: 'seb@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Total social media scholar.'
 }
 eleanor = {
   first_name: 'Eleanor',
@@ -214,7 +214,7 @@ eleanor = {
   age: '27',
   email: 'ec@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Hardcore pop culture advocate.'
 }
 sasha = {
   first_name: 'Sasha',
@@ -225,7 +225,7 @@ sasha = {
   age: '27',
   email: 'sy@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Lifelong music nerd, Avid food buff.'
 }
 jennifer = {
   first_name: 'Jennifer',
@@ -236,7 +236,7 @@ jennifer = {
   age: '26',
   email: 'jj@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Travelaholic, Incurable web fanatic.'
 }
 noora = {
   first_name: 'Noor',
@@ -247,7 +247,7 @@ noora = {
   age: '22',
   email: 'juu@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Unapologetic music scholar, Problem solver.'
 }
 marcelhio = {
   first_name: 'Marcelhio',
@@ -258,7 +258,7 @@ marcelhio = {
   age: '24',
   email: 'mc@g.com',
   password: '123456',
-  description: 'Learning new things'
+  description: 'Music aficionado, Subtly charming food nerd.'
 }
 
 [
@@ -287,15 +287,26 @@ time2.strftime("%a, %b %e, %-I%P")
 time3.strftime("%a, %b %e, %-I%P")
 
 puts 'Created Events'
-salsa_latin = {
-  title: 'Salsa Latin Groove Party At Club 6/49',
+guillaume_pineault = {
+  title: 'Guillaume Pineault',
+  date: time3,
+  category: 'Comedy',
+  address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
+  description: "Guillaume Pineault was first an occupational therapist then an osteopath but he's finally in humor",
+  price: '35',
+  artist: 'Guillaume Pineault',
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669232271/last-minute-date/Event%20images/9ca32c6f-c8de-432c-ab06-c79befc8f85b_1323201_TABLET_LANDSCAPE_LARGE_16_9_icrc17.webp'
+}
+# ---
+pomme = {
+  title: 'Pomme',
   date: time1,
-  category: 'Arts & Theatre',
-  address: '1112 Saint-Catherine St W, Montreal, Quebec',
+  category: 'Pop',
+  address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
   description: 'buggie woogy and let loose',
-  price: '5',
+  price: '110',
   artist: 'Myriam and Louis',
-  picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
+  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669234934/last-minute-date/Event%20images/e8d7bf68-ca94-4ce5-a9c0-006e6b6f81dd_1774051_TABLET_LANDSCAPE_LARGE_16_9_znvr5n.webp'
 }
 hockey = {
   title: 'Montreal Canadiens vs. Nashville Predators',
@@ -349,17 +360,6 @@ les_shirley = {
   artist: 'Les Shirley',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
-# ----
-guillaume_pineault = {
-  title: 'Guillaume Pineault',
-  date: time3,
-  category: 'Comedy',
-  address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
-  description: "Guillaume Pineault was first an occupational therapist then an osteopath but he's finally in humor",
-  price: '35',
-  artist: 'Guillaume Pineault',
-  picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669232271/last-minute-date/Event%20images/9ca32c6f-c8de-432c-ab06-c79befc8f85b_1323201_TABLET_LANDSCAPE_LARGE_16_9_icrc17.webp'
-}
 skeggs_con = {
   title: 'SKEGSS',
   date: time2,
@@ -370,7 +370,6 @@ skeggs_con = {
   artist: 'SKEGSS, Sir Chloe and Adam Newling',
   picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
 }
-
 sym = {
   title: 'Symphorien',
   date: time1,
@@ -383,7 +382,7 @@ sym = {
 }
 con = {
   title: "Les Shirley - More is More (Lancement d'album)",
-  date: time1,
+  date: time2,
   category: 'Concerts',
   address: 'Fairmount Theatre
   Montreal, Canada',
@@ -392,7 +391,6 @@ con = {
   artist: 'Les Shirley',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
-
 
 [
   salsa_latin, hockey, patrick_norman, skeggs_concert, symphorien,
