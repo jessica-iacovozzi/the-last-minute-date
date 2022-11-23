@@ -1,0 +1,6 @@
+<h2>Upcoming shows</h2>
+
+<h2>Past shows</h2>
+<% @tickets.each do |ticket| %>
+  <p><%= ticket.event_id %></p>
+<% end %>
