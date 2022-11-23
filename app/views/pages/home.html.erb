@@ -1,19 +1,2 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-
-<%
-sports = %w[
-  Baseball Basketball Boxing Cycling eSports Football Gymnastics Hockey Martial Arts Soccer Tennis Volleyball
-].sample(3)
-concert = %w[
-  Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal Pop R&B Reggae Religious Rock
-].sample(4)
-arts_and_theatre = %w[
-  Comedy Cultural Dance Fashion Magic_&_Illusion Music Opera Puppetry Theatre
-].sample(3)
-puts 'done!'
-%>
-
-<% tags = [ sports, concert, arts_and_theatre] %>
-<% all_tags = tags.flatten %>
-<%= all_tags %>
