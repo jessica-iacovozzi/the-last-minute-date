@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-# require "open.uri"
 
 # TODO: User Seed
 puts 'Cleaning Database'
@@ -86,7 +85,7 @@ alex = {
   username: 'alexadvocate',
   tags: [],
   picture_url:
-  'Jose Brewsaugh',
+  cl_image_tag("IMAGE_WITH_FACE_ID"),
   age: '22',
   email: 'h@d.com',
   password: '123456',
@@ -128,9 +127,6 @@ giovanni = {
   password: '123456',
   description: 'Learning new things'
 }
-
-
-
 
 [eva, hugo, giovanni, jessica, alex, ].each do |attribute|
   user = User.create!(attribute)
