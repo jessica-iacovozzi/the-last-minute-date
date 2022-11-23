@@ -1,12 +1,27 @@
-.navbar-lewagon {
+.navbar-lmd {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-lmd .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lmd .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+}
+
+.navbar-collapse {
+  background-color: #F0CCD7;
+}
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.837);
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
 }
