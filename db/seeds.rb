@@ -7,12 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # require "open.uri"
 
-# user seed
+# TODO: User Seed
 puts 'Cleaning Database'
 Message.destroy_all
 User.destroy_all
 
-puts 'Creating Users'
+puts 'Generating Users...'
 hugo = {
   first_name: 'Hugo',
   username: 'Hugo Spirit',
@@ -20,7 +20,7 @@ hugo = {
   picture_url:
   'https://avatars.githubusercontent.com/u/112583556?v=4',
   age: '22',
-  email: 'hd@gmail.com',
+  email: 'h@d.com',
   password: '123456',
   description: 'Studying at Le Wagon'
 }
@@ -32,7 +32,7 @@ eva = {
   picture_url:
   'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
   age: '23',
-  email: 'eva@gmail.com',
+  email: 'e@e.com',
   password: '123456',
   description: 'Studying web dev'
 }
@@ -43,8 +43,8 @@ jessica = {
   tags: ['Concerts', 'mexican', 'Drake'],
   picture_url:
   'https://avatars.githubusercontent.com/u/104274353?v=4',
-  age: '24',
-  email: 'jl@gmail.com',
+  age: '26',
+  email: 'j@j.com',
   password: '123456',
   description: 'Studying web development'
 }
@@ -56,22 +56,22 @@ giovanni = {
   picture_url:
   'https://avatars.githubusercontent.com/u/88079608?v=4',
   age: '25',
-  email: 'gio@gmail.com',
+  email: 'g@g.com',
   password: '123456',
   description: 'Learning new things'
 }
 
 [eva, hugo, giovanni, jessica].each do |attribute|
   user = User.create!(attribute)
-  puts "created #{user.first_name}"
+  puts "Created #{user.first_name}"
 end
 puts 'done!'
 
-# Adding event seed
-puts 'Cleaning events'
+# TODO: Adding event seed
+puts 'Cleaning Events'
 Event.destroy_all
 
-puts "Generating the dates..."
+puts "Generating The Dates..."
 time1 = Time.now
 time2 = time1 + (4 * 60 * 60) # plus 4 hours
 time3 = time1 + (2 * 60 * 60) # plus 2 hours
@@ -102,13 +102,13 @@ hockey = {
   artist: 'Nashville vs Montreal Canadiens',
   picture_url: 'https://b.fssta.com/uploads/application/nhl/venues/Bell-Centre.vresize.2240.1260.medium.1.jpg'
 }
-Comedy = {
+comedy = {
   title: 'Patrick Norman',
   date: time3,
   category: 'Arts & Theatre',
   address: 'L`Étoile Banque Nationale
   6000 Boul. de Rome, Brossard, Quebec',
-  description: "Patrick Norman will be performing near you at L'Étoile on Thursday 22 December 2022 as part of their tour, and are scheduled to play 1 concert across 1 country in 2022-2023.",
+  description: "Patrick Norman will be performing near you at L'Étoile on Thursday 22 December 2022 as part of their tour.",
   price: '45',
   artist: 'Patrick Norman',
   picture_url: 'https://www.nvrc.ca/sites/default/files/styles/section_landing_banner/public/default_images/theatre-placeholder-banner.jpg?itok=b1b9eQja'
@@ -124,17 +124,16 @@ skeggs_concert = {
   picture_url: 'https://images.thebrag.com/tmn/uploads/Skegss-Press-Shot-2019.png'
 }
 
-Symphorien = {
+symphorien = {
   title: 'Symphorien',
   date: time1,
   category: 'Arts & Theatre',
   address: "L'Etoile Brossard, Canada",
-  description: 'The main character, Symphorien, is a naive but sympathetic fellow, who is the janitor for this guest house run by Mrs. Sylvain, a single yet bumbling lady who runs the house in a strict, efficient way.',
+  description: 'The main character, Symphorien, is a naive but sympathetic fellow, who is the janitor for this guest house run by Mrs. Sylvain, a single yet bumbling lady.',
   price: '55',
   artist: 'Symphorien',
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
-
 concert = {
   title: "Les Shirley - More is More (Lancement d'album)",
   date: time2,
@@ -147,11 +146,11 @@ concert = {
   picture_url: 'https://www.danceus.org/events/images/166897830863316/salsa-groove-party-at-club--cover.png'
 }
 
-[ concert Symphorien skeggs_concert Comedy hockey salsa ].each do |attribute|
-  event = events.create!(attribute)
+[concert, symphorien, skeggs_concert, comedy, hockey, salsa].each do |attribute|
+  event = Event.create!(attribute)
   puts "created #{event.title}"
 end
-puts "done!"
+puts "Done!"
 
 # Messages Seed
 Message.destroy_all
@@ -166,13 +165,35 @@ puts "destroyed all conversations"
 # User.create!(email: "j@j.com", password: "123456")
 # User.create!(email: "e@e.com", password: "123456")
 
+puts 'Creating Empty Conversation'
 Conversation.create!
 
-Message.create!(content: "Hey", sender: User.first, receiver: User.last, conversation: Conversation.first)
-Message.create!(content: "What's up?", sender: User.first, receiver: User.last, conversation: Conversation.first)
+puts 'Creating  Messages'
+Message.create!(
+  content: "Hey",
+  sender: User.first,
+  receiver: User.last,
+  conversation: Conversation.first
+)
+Message.create!(
+  content: "What's up?",
+  sender: User.first,
+  receiver: User.last,
+  conversation: Conversation.first
+)
 
-Message.create!(content: "Yo", sender: User.last, receiver: User.first, conversation: Conversation.first)
-Message.create!(content: "Not much, you?", sender: User.last, receiver: User.first, conversation: Conversation.first)
+Message.create!(
+  content: "Yo",
+  sender: User.last,
+  receiver: User.first,
+  conversation: Conversation.first
+)
+Message.create!(
+  content: "Not much, you?",
+  sender: User.last,
+  receiver: User.first,
+  conversation: Conversation.first
+)
 
 users = User.create([{ first_name: "Jessica",
                        username: "theoneandonlyjess",
@@ -182,3 +203,4 @@ users = User.create([{ first_name: "Jessica",
                        tags: ["R&B"],
                        email: "iacovozzi.jessica@gmail.com",
                        password: "123456" }])
+puts 'Done!'
