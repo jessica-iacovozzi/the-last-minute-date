@@ -10,7 +10,11 @@
 # TODO: User Seed
 puts 'Cleaning Database'
 Message.destroy_all
+puts 'Messages Clean'
 User.destroy_all
+puts 'Cleaning Events Table'
+Event.destroy_all
+puts 'Cleaning Events Table'
 
 puts 'Generating Users...'
 hugo = {
@@ -68,18 +72,19 @@ end
 puts 'done!'
 
 # TODO: Adding event seed
-puts 'Cleaning Events'
-Event.destroy_all
+puts 'Generating Events Table'
 
 puts "Generating The Dates..."
-time1 = Time.now
-time2 = time1 + (4 * 60 * 60) # plus 4 hours
-time3 = time1 + (2 * 60 * 60) # plus 2 hours
+time1 = Time.now + 1.day # 1 hour
+time2 = time1 + (5 * 60 * 60) # plus 5 hours
+time3 = time1 + (3 * 60 * 60) # plus 33hours
 
 # Formatting the dates -> Tue, Nov 22, 6pm
 time1.strftime("%a, %b %e, %-I%P")
 time2.strftime("%a, %b %e, %-I%P")
 time3.strftime("%a, %b %e, %-I%P")
+
+
 
 puts 'Creating Event...'
 salsa = {
@@ -203,4 +208,4 @@ users = User.create([{ first_name: "Jessica",
                        tags: ["R&B"],
                        email: "iacovozzi.jessica@gmail.com",
                        password: "123456" }])
-puts 'Done!'
+puts 'All Done!'

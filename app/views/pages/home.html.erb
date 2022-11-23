@@ -1,7 +1,8 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<% time1 = Time.now %>
-<% time1 = time1 + 2*60*60 %>
+<div>
+<%= time1 = Time.now %>
+</div>
 <%=  time1.strftime("%a, %b %e, %-I%P") %>
-<%# t = Time.now %>
+<%= time1 %>
