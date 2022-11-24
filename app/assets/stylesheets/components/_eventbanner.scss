@@ -1,6 +1,5 @@
 .event-banner {
   background-color: black;
-  padding-left: 20px;
   display: flex;
 }
 
@@ -42,5 +41,13 @@
 
 .event-banner-image {
   display: flex;
-  height: 100px;
+  height: 125px;
+}
+
+.event-banner-regroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
 }
