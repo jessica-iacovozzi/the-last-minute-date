@@ -19,12 +19,7 @@ def api_call
                    city: event['_embedded']['venues'][0]['city']['name'],
                    time: event['dates']['start']['localTime'],
                    venue: event['_embedded']['venues'][0]['name'] }
-    upcoming_events = Event.create!(attributes)
-    # upcoming_events.each do |event|
-    #   Ticket.create!(
-    #     Ticket.event =
-    #   )
-    # end
+    Event.create!(attributes)
   end
 end
 # puts "#{events_targeted[0]['name']}"
