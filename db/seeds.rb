@@ -1,11 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require_relative "api"
+require_relative "seed_all"
 
+<<<<<<< HEAD
 # TODO: User Seed
 puts 'Cleaning Database'
 Message.destroy_all
@@ -597,3 +593,7 @@ jesss6 = {
 end
 
 puts "Finally All Done!"
+=======
+seed_all
+api_call
+>>>>>>> master
