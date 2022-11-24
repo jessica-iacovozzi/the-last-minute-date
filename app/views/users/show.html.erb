@@ -1,5 +1,7 @@
-<%= image_tag @my_profile.picture_url %>
-<%# <%= link_to 'Modify your profile' %>
+<div class="event-banner">
+  <%= image_tag @my_profile.picture_url, class: 'avatar-large' %>
+  <%# <%= link_to 'Modify your profile', edit_ %>
+</div>
 <h2>About me</h2>
 <%= @my_profile.description %>
 <h2>My interests</h2>
