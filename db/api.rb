@@ -10,11 +10,6 @@ def api_call
   events = JSON.parse(user_serialized)
   events_targeted = events['_embedded']['events']
 
-  events_targeted.each do |event|
-    p event['name']
-    p event['dates']['start']['localDate']
-  end
-
   # events_targeted.map{ { |event| title= event['name'], date= event['dates']['start']['localDate'], picture_url= event['images'][0]['url'],
   #                              category= event['classifications'][0]['segment']['name'], price= event['priceRanges'][0]['min'],
   #                              address= event['_embedded']['venues'][0]['address']['line1'],
@@ -22,14 +17,14 @@ def api_call
   #                              time= event['dates']['start']['localTime'], venue= event['_embedded']['venues'][0]['name']
   #                             }
   #                           }
-  events = events_targeted.map do |event|
+  events_targeted.map do |event|
     attributes = { title: event['name'], date: event['dates']['start']['localDate'], picture_url: event['images'][0]['url'],
-      category: event['classifications'][0]['segment']['name'],
-      price: event['priceRanges'][0]['min'],
-      address: event['_embedded']['venues'][0]['address']['line1']
-      # city: event['_embedded']['venues'][0]['city']['name'],
-      # time: event['dates']['start']['localTime'],
-      # venue: event['_embedded']['venues'][0]['name']
+                   category: event['classifications'][0]['segment']['name'],
+                   price: event['priceRanges'][0]['min'],
+                   address: event['_embedded']['venues'][0]['address']['line1'],
+                   city: event['_embedded']['venues'][0]['city']['name'],
+                   time: event['dates']['start']['localTime'],
+                   venue: event['_embedded']['venues'][0]['name']
     }
       Event.create!(attributes)
   end
