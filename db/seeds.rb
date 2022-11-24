@@ -316,6 +316,9 @@ puts 'Created Events'
 guillaume_pineault = {
   title: 'Guillaume Pineault',
   date: time3,
+  time: '8:00',
+  city: 'Montreal',
+  venue: 'Salle Richard-Sauvageau',
   category: 'arts_and_theatre',
   address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
   description: "Occupational therapist then an osteopath but he's finally in humor.",
@@ -326,6 +329,9 @@ guillaume_pineault = {
 pomme = {
   title: 'Pomme',
   date: time1,
+  time: '7:00',
+  city: 'Montreal',
+  venue: 'MTELUS',
   category: 'concert',
   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
   description: 'French singer-songwriter.',
@@ -336,6 +342,9 @@ pomme = {
 jessie_reyez = {
   title: 'Jessie Reyez',
   date: time2,
+  time: '8:00',
+  city: 'Montreal',
+  venue: 'MTELUS',
   category: 'concert',
   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
   description: 'Canadian singer-songwriter.',
@@ -346,6 +355,9 @@ jessie_reyez = {
 montreal_canadiens = {
   title: 'Montreal Canadiens',
   date: time3,
+  time: '7:00',
+  city: 'Montreal',
+  venue: 'Centre Bell',
   category: 'sport',
   address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
   description: "Lineup: Montreal Canadiens vs San Jose Sharks.",
@@ -356,6 +368,9 @@ montreal_canadiens = {
 jo_cormier = {
   title: 'Jo Cormier',
   date: time3,
+  time: '8:00',
+  city: 'Brossard',
+  venue: 'Le Club Square Dix30',
   category: 'arts_and_theatre',
   address: '9200 Boulevard Leduc, Brossard, QC J4Y0L1',
   description: 'o Cormier shares a wish with his parents even before starting school: to be humorous!',
@@ -366,6 +381,9 @@ jo_cormier = {
 rocket_hockey = {
   title: 'Rocket vs Abbotsford',
   date: time1,
+  time: '7:00',
+  city: 'Laval',
+  venue: 'Place Bell',
   category: 'sport',
   address: "1950 Rue Claude-Gagne, Laval, QC H7N 0E4",
   description: 'Lineup: Rocket de Laval vs Abbotsford Canucks.',
@@ -376,8 +394,11 @@ rocket_hockey = {
 lil_tjay = {
   title: "Lil Tjay",
   date: time2,
+  time: '7:00',
+  city: 'Toronto',
+  venue: 'REBEL',
   category: 'concert',
-  address: '1950 Rue Claude-Gagne, Laval, QC H7N 0E4',
+  address: '11 Polson St., Toronto, ON M5A 1A4',
   description: 'American rapper and singer.',
   price: '57',
   artist: 'Tione Jayden Merritt',
@@ -386,6 +407,9 @@ lil_tjay = {
 riz_la_vie = {
   title: 'Riz La Vie',
   date: time2,
+  time: '8:00',
+  city: 'Toronto',
+  venue: 'Pheonix',
   category: 'concert',
   address: '1403 Rue Sainte Elisabeth, Montreal, QC H2X 3C5',
   description: 'New-York based singer/songwriter.',
@@ -396,6 +420,9 @@ riz_la_vie = {
 dominic_paquet = {
   title: 'Dominic Paquet',
   date: time1,
+  time: '8:00',
+  city: 'Toronto',
+  venue: 'Olympia',
   category: 'arts_and_theatre',
   address: "1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2",
   description: 'Dominic Paquet is one of the most hilarious showman! Comedian, actor and host.',
@@ -406,6 +433,9 @@ dominic_paquet = {
 junior = {
   title: "Fina World Junior Diving Championships",
   date: time2,
+  time: '5:00',
+  city: 'Toronto',
+  venue: 'Centre sportif du Parc olympique',
   category: 'sport',
   address: '3200 Rue Viau, Montreal, QC H1B3J3',
   description: 'Competitive Dicing.',
