@@ -10,25 +10,19 @@ def api_call
   events = JSON.parse(user_serialized)
   events_targeted = events['_embedded']['events']
 
-  # events_targeted.map{ { |event| title= event['name'], date= event['dates']['start']['localDate'], picture_url= event['images'][0]['url'],
-  #                              category= event['classifications'][0]['segment']['name'], price= event['priceRanges'][0]['min'],
-  #                              address= event['_embedded']['venues'][0]['address']['line1'],
-  #                              city= event['_embedded']['venues'][0]['city']['name'],
-  #                              time= event['dates']['start']['localTime'], venue= event['_embedded']['venues'][0]['name']
-  #                             }
-  #                           }
   events_targeted.map do |event|
-    attributes = { title: event['name'], date: event['dates']['start']['localDate'], picture_url: event['images'][0]['url'],
+    attributes = { title: event['name'], date: event['dates']['start']['localDate'],
+                   picture_url: event['images'][0]['url'],
                    category: event['classifications'][0]['segment']['name'],
                    price: event['priceRanges'][0]['min'],
                    address: event['_embedded']['venues'][0]['address']['line1'],
                    city: event['_embedded']['venues'][0]['city']['name'],
                    time: event['dates']['start']['localTime'],
-                   venue: event['_embedded']['venues'][0]['name']
-    }
-      Event.create!(attributes)
+                   venue: event['_embedded']['venues'][0]['name'] }
+    upcoming_events = Event.create!(attributes)
+    # upcoming_events.each do
+    #   Ticket.create!()
+    # end
   end
-
-  # pp events
 end
 # puts "#{events_targeted[0]['name']}"
