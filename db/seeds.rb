@@ -316,7 +316,7 @@ puts 'Created Events'
 guillaume_pineault = {
   title: 'Guillaume Pineault',
   date: time3,
-  time: 8,
+  time: '8:00',
   city: 'Montreal',
   venue: 'Salle Richard-Sauvageau',
   category: 'arts_and_theatre',
@@ -329,7 +329,7 @@ guillaume_pineault = {
 pomme = {
   title: 'Pomme',
   date: time1,
-  time: 7,
+  time: '7:00',
   city: 'Montreal',
   venue: 'MTELUS',
   category: 'concert',
@@ -342,7 +342,7 @@ pomme = {
 jessie_reyez = {
   title: 'Jessie Reyez',
   date: time2,
-  time: 8,
+  time: '8:00',
   city: 'Montreal',
   venue: 'MTELUS',
   category: 'concert',
@@ -355,7 +355,7 @@ jessie_reyez = {
 montreal_canadiens = {
   title: 'Montreal Canadiens',
   date: time3,
-  time: 7,
+  time: '7:00',
   city: 'Montreal',
   venue: 'Centre Bell',
   category: 'sport',
@@ -368,7 +368,7 @@ montreal_canadiens = {
 jo_cormier = {
   title: 'Jo Cormier',
   date: time3,
-  time: 8,
+  time: '8:00',
   city: 'Brossard',
   venue: 'Le Club Square Dix30',
   category: 'arts_and_theatre',
@@ -381,7 +381,7 @@ jo_cormier = {
 rocket_hockey = {
   title: 'Rocket vs Abbotsford',
   date: time1,
-  time: 7,
+  time: '7:00',
   city: 'Laval',
   venue: 'Place Bell',
   category: 'sport',
@@ -394,7 +394,7 @@ rocket_hockey = {
 lil_tjay = {
   title: "Lil Tjay",
   date: time2,
-  time: 7,
+  time: '7:00',
   city: 'Toronto',
   venue: 'REBEL',
   category: 'concert',
@@ -407,7 +407,7 @@ lil_tjay = {
 riz_la_vie = {
   title: 'Riz La Vie',
   date: time2,
-  time: 8,
+  time: '8:00',
   city: 'Toronto',
   venue: 'Pheonix',
   category: 'concert',
@@ -420,7 +420,7 @@ riz_la_vie = {
 dominic_paquet = {
   title: 'Dominic Paquet',
   date: time1,
-  time: 8,
+  time: '8:00',
   city: 'Toronto',
   venue: 'Olympia',
   category: 'arts_and_theatre',
@@ -433,7 +433,7 @@ dominic_paquet = {
 junior = {
   title: "Fina World Junior Diving Championships",
   date: time2,
-  time: 5,
+  time: '5:00',
   city: 'Toronto',
   venue: 'Centre sportif du Parc olympique',
   category: 'sport',
