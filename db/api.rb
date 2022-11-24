@@ -3,7 +3,7 @@ require "open-uri"
 require "nokogiri"
 # require_relative "app/models/event"
 def api_call
-  Event.destroy_all
+  # Event.destroy_all
   # base url = https://app.ticketmaster.com/{package}/{version}/{resource}.json?apikey=**{cMCr5449SSuQYbG9LSGVtssAhx68HA6l}
   url = "https://app.ticketmaster.com/discovery/v2/events.json?stateCode=QC&apikey=#{ENV['TICKET_MASTER_KEY']}&locale=*&startDateTime=2022-11-29T02:00:00Z&endDateTime=2022-12-04T04:59:00Z&city=Montreal"
   user_serialized = URI.open(url).read
@@ -20,8 +20,10 @@ def api_call
                    time: event['dates']['start']['localTime'],
                    venue: event['_embedded']['venues'][0]['name'] }
     upcoming_events = Event.create!(attributes)
-    # upcoming_events.each do
-    #   Ticket.create!()
+    # upcoming_events.each do |event|
+    #   Ticket.create!(
+    #     Ticket.event =
+    #   )
     # end
   end
 end
