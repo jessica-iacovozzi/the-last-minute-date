@@ -1,0 +1,19 @@
+<div class="container chatroom">
+  <h1>#<%= @conversation.name %></h1>
+
+  <div class="messages">
+
+    <% @conversation.messages.each do |message| %>
+      <div id="message-<%= message.id %>">
+
+        <small>
+          <strong><%= message.user.username %></strong>
+          <i><%= message.created_at.strfttime("%a %b %e at %l:%M") %></i>
+        </small>
+
+        <p><%= message.content %></p>
+
+      </div>
+    <% end %>
+  </div>
+</div>

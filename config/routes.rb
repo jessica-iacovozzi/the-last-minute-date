@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get '/my_tickets', to: 'tickets#my_tickets'
   get '/my_profile', to: 'users#show'
+
+  resources :conversations, only: :show
 end

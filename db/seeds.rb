@@ -462,26 +462,26 @@ Conversation.create!
 puts 'Created Messages'
 Message.create!(
   content: "Hey",
-  sender: User.first,
-  receiver: User.last,
+  sender: User.find_by(first_name: 'Eva'),
+  receiver: User.find_by(first_name: 'Giovanni'),
   conversation: Conversation.first
 )
 Message.create!(
   content: "What's up?",
-  sender: User.first,
-  receiver: User.last,
+  sender: User.find_by(first_name: 'Eva'),
+  receiver: User.find_by(first_name: 'Giovanni'),
   conversation: Conversation.first
 )
 Message.create!(
   content: "Yo",
-  sender: User.last,
-  receiver: User.first,
+  sender: User.find_by(first_name: 'Giovanni'),
+  receiver: User.find_by(first_name: 'Eva'),
   conversation: Conversation.first
 )
 Message.create!(
   content: "Not much, you?",
-  sender: User.last,
-  receiver: User.first,
+  sender: User.find_by(first_name: 'Giovanni'),
+  receiver: User.find_by(first_name: 'Eva'),
   conversation: Conversation.first
 )
 
