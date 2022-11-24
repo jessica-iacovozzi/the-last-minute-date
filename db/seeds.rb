@@ -16,7 +16,7 @@ Event.destroy_all
 puts 'Cleaned Events...'
 Conversation.destroy_all
 puts 'Cleaned Conversations...'
-Tickets.destroy_all
+Ticket.destroy_all
 puts 'Cleaned Tickets...'
 puts 'Done!'
 
@@ -379,7 +379,7 @@ dominic_paquet = {
   artist: 'Dominic Paquet',
   picture_url: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1669238545/last-minute-date/Event%20images/Mise-en-vente-Dominic-Paquet-Gracieusete%CC%81_bgr1ka.jpg'
 }
-con = {
+junior = {
   title: "Fina World Junior Diving Championships",
   date: time2,
   category: 'sport',
@@ -391,8 +391,8 @@ con = {
 }
 
 [
-  salsa_latin, hockey, patrick_norman, skeggs_concert, symphorien,
-  les_shirley, guillaume_pineault, skeggs_con, sym, con
+  guillaume_pineault, pomme, jessie_reyez, montreal_canadiens, jo_cormier,
+  rocket_hockey, lil_tjay, riz_la_vie, dominic_paquet, junior
 ].each do |attribute|
   event = Event.create!(attribute)
   puts "Created #{event.category}"
@@ -408,7 +408,7 @@ puts "Done!"
 puts 'Created Empty Conversation'
 Conversation.create!
 
-puts 'Created  Messages'
+puts 'Created Messages'
 Message.create!(
   content: "Hey",
   sender: User.first,
@@ -434,7 +434,6 @@ Message.create!(
   conversation: Conversation.first
 )
 
-<<<<<<< HEAD
 users = User.create([{ first_name: "Jessica",
                        username: "theoneandonlyjess",
                        age: 26,
@@ -443,30 +442,132 @@ users = User.create([{ first_name: "Jessica",
                        tags: ["R&B"],
                        email: "iacovozzi.jessica@gmail.com",
                        password: "123456" }])
-puts 'All Done!'
+puts 'Done!'
 
+puts 'Generating Tickets'
+# ticket = Ticket.new
 
-puts 'Creating Empty ticket'
-Ticket.new
+# Puts 'selecting the users'
+# eva = User.find_by(first_name: 'Eva')
+# eva.event_id = 14
+# event = Event.find_by(title: 'SKEGSS')
+# eva.event_id = event
 
-Puts 'selecting the users'
-eva = User.find_by(first_name: 'Eva')
-hugo = User.find_by(first_name: 'Hugo')
-jess = User.find_by(first_name: 'Jessica')
-gio = User.find_by(first_name: 'Giovanni')
-=======
-Ticket.create!(
-  event_id: 9,
-  user_id: 9
-)
+random_events = [
+  'Guillaume Pineault', 'pomme', 'jessie_reyez', 'montreal_canadiens', 'jo_cormier',
+  'rocket_hockey', 'Lil Tjay', 'riz_la_vie', 'dominic_paquet', 'junior'
+]
 
-# users = User.create([{ first_name: "Jessica",
-#                        username: "theoneandonlyjess",
-#                        age: 26,
-#                        description: "I love R&B. My favourite artists are Jessie Reyez and Kehlani",
-#                        picture_url: "https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-#                        tags: ["R&B"],
-#                        email: "iacovozzi.jessica@gmail.com",
-#                        password: "123456" }])
-# puts 'All Done!'
->>>>>>> master
+# Giovanni - ticket
+Puts 'Tickets Giovanni'
+giov = {
+  event_id: Event.find_by(title: 'Guillaume Pineault').id,
+  user_id: User.find_by(first_name: 'Giovanni').id
+}
+giov2 = {
+  event_id: Event.find_by(title: 'Pomme').id,
+  user_id: User.find_by(first_name: 'Giovanni').id
+}
+giov3 = {
+  event_id: Event.find_by(title: 'Dominic Paquet').id,
+  user_id: User.find_by(first_name: 'Giovanni').id
+}
+giov4 = {
+  event_id: Event.find_by(title: 'Lil Tjay').id,
+  user_id: User.find_by(first_name: 'Giovanni').id
+}
+giov5 = {
+  event_id: Event.find_by(title: 'Montreal Canadiens').id,
+  user_id: User.find_by(first_name: 'Giovanni').id
+}
+
+Puts "Eva Tickets"
+evaa = {
+  event_id: Event.find_by(title: 'Jessie Reyez').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+evaa2 = {
+  event_id: Event.find_by(title: 'Rocket vs Abbotsford').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+evaa3 = {
+  event_id: Event.find_by(title: 'Lil Tjay').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+evaa4 = {
+  event_id: Event.find_by(title: 'Fina World Junior Diving Championships').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+evaa5 = {
+  event_id: Event.find_by(title: 'Dominic Paquet').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+evaa6 = {
+  event_id: Event.find_by(title: 'Pomme').id,
+  user_id: User.find_by(first_name: 'Eva').id
+}
+
+Puts 'Hugo Tickets'
+hugoo = {
+  event_id: Event.find_by(title: 'Dominic Paquet').id,
+  user_id: User.find_by(first_name: 'Hugo').id
+}
+hugoo2 = {
+  event_id: Event.find_by(title: 'Rocket vs Abbotsford').id,
+  user_id: User.find_by(first_name: 'Hugo').id
+}
+hugoo3 = {
+  event_id: Event.find_by(title: 'Guillaume Pineault').id,
+  user_id: User.find_by(first_name: 'Hugo').id
+}
+hugoo4 = {
+  event_id: Event.find_by(title: 'Pomme').id,
+  user_id: User.find_by(first_name: 'Hugo').id
+}
+hugoo5 = {
+  event_id: Event.find_by(title: 'Jessie Reyez').id,
+  user_id: User.find_by(first_name: 'Hugo').id
+}
+
+Puts 'Tickets jessica'
+jesss = {
+  event_id: Event.find_by(title: 'Jessie Reyez').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+jesss2 = {
+  event_id: Event.find_by(title: 'Jo Cormier').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+jesss3 = {
+  event_id: Event.find_by(title: 'Guillaume Pineault').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+jesss4 = {
+  event_id: Event.find_by(title: 'Lil Tjay').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+jesss5 = {
+  event_id: Event.find_by(title: 'Dominic Paquet').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+jesss6 = {
+  event_id: Event.find_by(title: 'Montreal Canadiens').id,
+  user_id: User.find_by(first_name: 'Jessica').id
+}
+
+[
+  giov, giov2, giov3, giov4, giov5
+  evaa, evaa2, evaa3, evaa4, evaa5, evaa6,
+  hugoo, hugoo2, hugoo3, hugoo4, hugoo5,
+  jesss, jesss2, jesss3, jesss4, jesss5, jesss6
+].each do |attribute|
+  Ticket.create!(attribute)
+  puts "Created #{attribute}"
+end
+
+puts "Done!"
+
+# Ticket.create!(
+#   event_id: Event.find_by(title: 'Pomme').id,
+#   user_id: User.find_by(first_name: 'Eva').id
+# )
