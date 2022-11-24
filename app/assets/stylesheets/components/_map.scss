@@ -1,0 +1,37 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.mapboxgl-ctrl-geocoder input {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  background-color: white;
+  padding: 6px 40px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 48px;
+}
+
+.mapboxgl-ctrl-geocoder svg {
+  // padding: 5%;
+  // position: absolute;
+  // top: 0;
+  // right: 20%;
+
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+  position: absolute;
+  top: 14px;
+  left: -54px;
+  width: 23px;
+  z-index: 2;
+  height: 23px;
+}
