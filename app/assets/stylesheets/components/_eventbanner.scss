@@ -1,0 +1,53 @@
+.event-banner {
+  background-color: black;
+  display: flex;
+}
+
+.event-banner-text p {
+  color: white;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 3.5px;
+  font-size: 12px;
+}
+
+.event-banner-text h2 {
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.event-banner-text {
+  background-color: black;
+}
+
+.btn-more-info {
+  text-decoration: none;
+    background-color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 8px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 4px double #000000;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    width: 108px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.event-banner-image {
+  display: flex;
+  height: 125px;
+}
+
+.event-banner-regroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+}

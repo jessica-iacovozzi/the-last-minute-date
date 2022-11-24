@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.header-home {
+  background-color: white;
+}
+
+.title-home {
+  padding: 30px;
+}
+
+.title-home h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.p-home {
+  padding: 30px;
+  margin-top: -20px;
+}
+
+.p-home p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
