@@ -1,0 +1,28 @@
+<div class="text-center">
+  <div class="d-flex justify-content-center align-items-center profile-banner ">
+    <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
+    <%# <%= link_to 'Modify your profile', edit_ %>
+  </div>
+
+  <div class="profile-black-card">
+    <h2>About me</h2>
+    <p><%= @my_profile.description %></p>
+  </div>
+
+  <div class="profile-white-card">
+    <h2>My interests</h2>
+    <% @my_profile.tags.each do |tag| %>
+      <p><%= tag %></p>
+    <% end %>
+  </div>
+
+  <div class="profile-white-card">
+    <h2>My favourite shows</h2>
+    <%# <%= raise %>
+    <%# <%= @my_events.each do |event| %>
+      <div>
+      <%# <p><%= event.date</p>  %>
+      </div>
+    <%# <% end %>
+  </div>
+</div>
