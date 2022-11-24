@@ -1,0 +1,29 @@
+.profile-picture {
+  width: 80px;
+  border-radius: 50%;
+}
+.profile-banner {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  color: white;
+  p {
+    margin: 0;
+  }
+}
+.profile-black-card {
+  background-color: black;
+  color: white;
+  p {
+    margin: 0;
+  }
+}
+.profile-white-card {
+  background-color: white;
+  color: black;
+  p {
+    margin: 0;
+  }
+}
