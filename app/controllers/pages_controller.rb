@@ -12,5 +12,7 @@ class PagesController < ApplicationController
         image_url: helpers.asset_url("pin.png")
       }
     end
+
+    @conversation = Conversation.all
   end
 end
