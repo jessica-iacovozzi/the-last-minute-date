@@ -21,24 +21,48 @@ puts 'Cleaned Tickets...'
 puts 'Done!'
 
 puts 'Generating Tags..'
-sport = %w[
-  Baseball Basketball Boxing Cycling eSports Football Gymnastics Hockey Martial Arts Soccer Tennis Volleyball
-].sample(3)
+def sport
+  sport = [
+    'Baseball', 'Basketball', 'Boxing', 'Cycling', 'eSports',
+    'Football', 'Gymnastics', 'Hockey', 'Martial', 'Arts', 'Soccer',
+    'Tennis', 'Volleyball'
+  ].sample(rand(6))
+  return sport
+end
 puts 'Created Sports'
-
-concert = %w[
-  Pop Alternative Ballads/Romantic Blues Chanson Francaise Classical Country Dance/Electronic Folk Hip-Hop/Rap Jazz Latin Metal R&B Reggae Religious Rock
-].sample(4)
+def concert
+  concert = [
+    'Pop', 'Alternative', 'Ballads/Romantic', 'Blues', 'Chanson',
+    'Francaise', 'Classical', 'Country', 'Dance/Electronic', 'Folk',
+    'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock'
+  ].sample(rand(8))
+  return concert
+end
 puts 'Created Concerts'
 
-arts_and_theatre = %w[
-  Comedy Cultural Dance Fashion Magic_&_illusion Music Opera Puppetry Theatre
-].sample(3)
+def arts_and_theatre
+  arts_and_theatre = [
+    'Comedy', 'Cultural', 'Dance', 'Fashion', 'Magic_&_illusion', 'Music', 'Opera', 'Puppetry', 'Theatre'
+  ].sample(rand(8))
+  return arts_and_theatre
+end
 puts 'Created Arts & Theatre'
 
 # Returns -> A multidimensional array -> flatten into one array
 tags = [sport, concert, arts_and_theatre]
+tags2 = [sport, concert, arts_and_theatre]
+tags3 = [sport, concert, arts_and_theatre]
+tags4 = [sport, concert, arts_and_theatre]
+tags5 = [sport, concert, arts_and_theatre]
+tags6 = [sport, concert, arts_and_theatre]
+tags7 = [sport, concert, arts_and_theatre]
 all_tags = tags.flatten
+all_tags2 = tags2.flatten
+all_tags3 = tags3.flatten
+all_tags4 = tags4.flatten
+all_tags5 = tags5.flatten
+all_tags6 = tags6.flatten
+all_tags7 = tags7.flatten
 puts 'Done!'
 
 puts 'Generating Users...'
@@ -56,7 +80,7 @@ hugo = {
 eva = {
   first_name: 'Eva',
   username: 'lola',
-  tags: all_tags,
+  tags: all_tags2,
   picture_url:
   'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
   age: '23',
@@ -67,7 +91,7 @@ eva = {
 jessica = {
   first_name: 'Jessica',
   username: 'jess',
-  tags: all_tags,
+  tags: all_tags4,
   picture_url:
   'https://avatars.githubusercontent.com/u/104274353?v=4',
   age: '26',
@@ -78,7 +102,7 @@ jessica = {
 giovanni = {
   first_name: 'Giovanni',
   username: 'gio',
-  tags: all_tags,
+  tags: all_tags6,
   picture_url:
   'https://avatars.githubusercontent.com/u/88079608?v=4',
   age: '25',
@@ -89,7 +113,7 @@ giovanni = {
 alex = {
   first_name: 'Alex',
   username: 'alexadvocate',
-  tags: all_tags,
+  tags: all_tags5,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/71_gfkef7.jpg',
   age: '37',
@@ -100,7 +124,7 @@ alex = {
 megan = {
   first_name: 'Megan',
   username: 'meganfragrant',
-  tags: all_tags,
+  tags: all_tags7,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/96_cmn2l1.jpg',
   age: '27',
@@ -111,7 +135,7 @@ megan = {
 alicia = {
   first_name: 'Alicia',
   username: 'potentialalicia',
-  tags: all_tags,
+  tags: all_tags3,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/104_qsly67.jpg',
   age: '29',
@@ -122,7 +146,7 @@ alicia = {
 delores = {
   first_name: 'Delores',
   username: 'idealdelores',
-  tags: all_tags,
+  tags: all_tags2,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/107_sjm1vi.jpg',
   age: '25',
@@ -133,7 +157,7 @@ delores = {
 keanu = {
   first_name: 'Keanu',
   username: 'keanupop',
-  tags: all_tags,
+  tags: all_tags4,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/37_npvpm9.jpg',
   age: '35',
@@ -144,7 +168,7 @@ keanu = {
 kira = {
   first_name: 'kira',
   username: 'beautykira',
-  tags: all_tags,
+  tags: all_tags6,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/22_aqlonp.jpg',
   age: '46',
@@ -155,7 +179,7 @@ kira = {
 frances = {
   first_name: 'Frances',
   username: 'franceschilli',
-  tags: all_tags,
+  tags: all_tags5,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/69_npnerl.jpg',
   age: '31',
@@ -166,7 +190,7 @@ frances = {
 charis = {
   first_name: 'Charis',
   username: 'lovablecharis',
-  tags: all_tags,
+  tags: all_tags2,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/49_cm0hii.jpg',
   age: '28',
@@ -177,7 +201,7 @@ charis = {
 henrietta = {
   first_name: 'Henrietta',
   username: 'henriettatulip',
-  tags: all_tags,
+  tags: all_tags3,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/20_sc0d4x.jpg',
   age: '32',
@@ -199,7 +223,7 @@ minnie = {
 sebastien = {
   first_name: 'Sebastien',
   username: 'juicysebastien',
-  tags: all_tags,
+  tags: all_tags5,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/50_cxwpqc.jpg',
   age: '21',
@@ -210,7 +234,7 @@ sebastien = {
 eleanor = {
   first_name: 'Eleanor',
   username: 'eleanorcookie',
-  tags: all_tags,
+  tags: all_tags2,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/21_plnux6.jpg',
   age: '27',
@@ -221,7 +245,7 @@ eleanor = {
 sasha = {
   first_name: 'Sasha',
   username: 'sashayield',
-  tags: all_tags,
+  tags: all_tags6,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/10_b8f3h0.jpg',
   age: '27',
@@ -243,7 +267,7 @@ jennifer = {
 noora = {
   first_name: 'Noor',
   username: 'noornature',
-  tags: all_tags,
+  tags: all_tags3,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/8_tjclm1.jpg',
   age: '22',
@@ -254,7 +278,7 @@ noora = {
 marcelhio = {
   first_name: 'Marcelhio',
   username: 'marcelhiocook',
-  tags: all_tags,
+  tags: all_tags6,
   picture_url:
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/2_dghr4j.jpg',
   age: '24',
@@ -399,9 +423,6 @@ junior = {
 end
 puts "Done!"
 
-# User.destroy_all
-# puts "destroyed all users"
-
 # User.create!(email: "j@j.com", password: "123456")
 # User.create!(email: "e@e.com", password: "123456")
 
@@ -434,32 +455,20 @@ Message.create!(
   conversation: Conversation.first
 )
 
-users = User.create([{ first_name: "Jessica",
+users = User.create([{ first_name: "Jess",
                        username: "theoneandonlyjess",
                        age: 26,
                        description: "I love R&B. My favourite artists are Jessie Reyez and Kehlani",
                        picture_url: "https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-                       tags: ["R&B"],
+                       tags: all_tags4,
                        email: "iacovozzi.jessica@gmail.com",
                        password: "123456" }])
 puts 'Done!'
 
 puts 'Generating Tickets'
-# ticket = Ticket.new
-
-# Puts 'selecting the users'
-# eva = User.find_by(first_name: 'Eva')
-# eva.event_id = 14
-# event = Event.find_by(title: 'SKEGSS')
-# eva.event_id = event
-
-random_events = [
-  'Guillaume Pineault', 'pomme', 'jessie_reyez', 'montreal_canadiens', 'jo_cormier',
-  'rocket_hockey', 'Lil Tjay', 'riz_la_vie', 'dominic_paquet', 'junior'
-]
 
 # Giovanni - ticket
-Puts 'Tickets Giovanni'
+puts 'Tickets for Giovanni'
 giov = {
   event_id: Event.find_by(title: 'Guillaume Pineault').id,
   user_id: User.find_by(first_name: 'Giovanni').id
@@ -481,7 +490,7 @@ giov5 = {
   user_id: User.find_by(first_name: 'Giovanni').id
 }
 
-Puts "Eva Tickets"
+puts "Tickets for Eva"
 evaa = {
   event_id: Event.find_by(title: 'Jessie Reyez').id,
   user_id: User.find_by(first_name: 'Eva').id
@@ -507,7 +516,7 @@ evaa6 = {
   user_id: User.find_by(first_name: 'Eva').id
 }
 
-Puts 'Hugo Tickets'
+puts 'Tickets for Hugo'
 hugoo = {
   event_id: Event.find_by(title: 'Dominic Paquet').id,
   user_id: User.find_by(first_name: 'Hugo').id
@@ -529,7 +538,7 @@ hugoo5 = {
   user_id: User.find_by(first_name: 'Hugo').id
 }
 
-Puts 'Tickets jessica'
+puts 'Tickets for Jessica'
 jesss = {
   event_id: Event.find_by(title: 'Jessie Reyez').id,
   user_id: User.find_by(first_name: 'Jessica').id
@@ -556,7 +565,7 @@ jesss6 = {
 }
 
 [
-  giov, giov2, giov3, giov4, giov5
+  giov, giov2, giov3, giov4, giov5,
   evaa, evaa2, evaa3, evaa4, evaa5, evaa6,
   hugoo, hugoo2, hugoo3, hugoo4, hugoo5,
   jesss, jesss2, jesss3, jesss4, jesss5, jesss6
@@ -565,9 +574,4 @@ jesss6 = {
   puts "Created #{attribute}"
 end
 
-puts "Done!"
-
-# Ticket.create!(
-#   event_id: Event.find_by(title: 'Pomme').id,
-#   user_id: User.find_by(first_name: 'Eva').id
-# )
+puts "Finally All Done!"
