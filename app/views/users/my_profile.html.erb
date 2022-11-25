@@ -1,28 +1,39 @@
 <div class="text-center">
-  <div class="d-flex justify-content-center align-items-center profile-banner ">
+  <div class="d-flex justify-content-center align-items-center profile-banner"
+       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(https://avatars.githubusercontent.com/u/104274353?v=4);">
     <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
     <%# <%= link_to 'Modify your profile', edit_ %>
   </div>
 
-  <div class="profile-black-card">
+  <div class="description-card">
     <h2>About me</h2>
     <p><%= @my_profile.description %></p>
   </div>
 
-  <div class="profile-white-card">
+  <div class="interest-card">
     <h2>My interests</h2>
-    <% @my_profile.tags.each do |tag| %>
-      <p><%= tag %></p>
-    <% end %>
+    <div class="grid">
+      <% @my_profile.tags.each do |tag| %>
+        <div class="tag">
+          <p><%= tag %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="profile-white-card">
+  <div class="shows-block">
     <h2>My favourite shows</h2>
-    <%# <%= raise %>
-    <%# <%= @my_events.each do |event| %>
-      <div>
-      <%# <p><%= event.date</p>  %>
+    <% @my_events.first(2).each do |event| %>
+    <div class="ticket-card">
+      <%= image_tag event.picture_url %>
+      <div class="ticket-card-infos">
+        <h3><%= event.title %></h3>
+        <% if event.title != event.artist %>
+          <p><%= event.artist %></p>
+        <% end %>
+        <p><%= event.date %></p>
       </div>
-    <%# <% end %>
+    </div>
+    <% end %>
   </div>
 </div>
