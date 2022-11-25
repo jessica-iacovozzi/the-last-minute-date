@@ -1,0 +1,5 @@
+<p>hi</p>
+
+<% @conversations.map do |item| %>
+    <a href="/conversations/<%= item.id %>"><p><%= item.name %></p></a>
+<% end %>
