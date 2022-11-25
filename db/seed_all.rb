@@ -589,6 +589,14 @@ def seed_all
     puts "Created #{attribute}"
   end
 
+  people = User.all
+  people.each do |user|
+    Ticket.create!(
+      event: junior,
+      user: user
+    )
+  end
+
   puts "Finally All Done!"
 
 end
