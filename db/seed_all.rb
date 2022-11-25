@@ -450,7 +450,8 @@ def seed_all
   # User.create!(email: "e@e.com", password: "123456")
 
   puts 'Created Empty Conversation'
-  Conversation.create!
+  Conversation.create!(name: 'concert')
+  Conversation.create!(name: 'Arts & Theatre')
 
   puts 'Created Messages'
   Message.create!(

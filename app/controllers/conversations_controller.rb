@@ -1,10 +1,12 @@
 class ConversationsController < ApplicationController
   def all_conversation
-    @convertation = Conversation.all
+    @conversations = Conversation.all
   end
 
   def show
-    # @message = Message.new
+    @message = Message.new
+    @user = current_user
     @conversation = Conversation.find(params[:id])
+    @message.conversation = @conversation
   end
 end

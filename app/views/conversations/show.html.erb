@@ -1,19 +1,39 @@
-<div class="container chatroom">
-  <h1>#<%= @conversation.name %></h1>
+<div class="container chatroom"
+class="container chatroom"
+  data-controller="conversation-subscription"
+  data-conversation-subscription-conversation-id-value="<%= @conversation.id %>"
+>
+  <h1>#<%= @conversation.name.capitalize %></h1>
 
-  <div class="messages">
-
+  <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>
-      <div id="message-<%= message.id %>">
+      <%= render "conversations/message", message: message %>
 
-        <small>
-          <strong><%= message.user.username %></strong>
-          <i><%= message.created_at.strfttime("%a %b %e at %l:%M") %></i>
-        </small>
-
-        <p><%= message.content %></p>
-
-      </div>
     <% end %>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+  <%= simple_form_for [@conversation, @message],
+   html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
+  <%= f.input :content,
+    label: false,
+    placeholder: "Message ##{@conversation.name}",
+    wrapper_html: {class: "flex-grow-1"}
+  %>
+
+  <%# f Used to send information to the backend, inorder to connect the receiver of the message %>
+  <% if !@conversation.messages.first.nil?  %>
+    <%= f.hidden_field :receiver_id, value: @conversation.messages.first.receiver_id  %>
+  <% end %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+<% end %>
 </div>
