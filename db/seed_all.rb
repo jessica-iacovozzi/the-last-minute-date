@@ -440,7 +440,7 @@ def seed_all
 
   louis_jose_houde = {
     title: 'Louis José Houde',
-    date: '2022-11-25',
+    date: Date.new(2022, 11, 25),
     time: '8:00',
     city: 'Montreal',
     venue: 'Salle Richard-Sauvageau',
@@ -453,7 +453,7 @@ def seed_all
   }
   fred_tremblay = {
     title: 'Les Premiers Pas',
-    date: '2022-11-25',
+    date: Date.new(2022, 11, 25),
     time: '7:00',
     city: 'Montreal',
     venue: 'Olympia',
@@ -466,7 +466,7 @@ def seed_all
   }
   nsync = {
     title: 'Nsync',
-    date: '2022-11-25',
+    date: Date.new(2022, 11, 25),
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
@@ -479,7 +479,7 @@ def seed_all
   }
   montreal_canadiens_shark = {
     title: 'Montreal Canadiens',
-    date: '2022-11-25',
+    date: Date.new(2022, 11, 25),
     time: '7:30',
     city: 'Montreal',
     venue: 'Centre Bell',
@@ -676,9 +676,6 @@ def seed_all
     Ticket.create!(attribute)
     puts "Created #{attribute}"
   end
-
-
-
   puts "Finally All Done!"
 
 end
