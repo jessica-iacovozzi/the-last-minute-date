@@ -534,6 +534,34 @@ def seed_all
     conversation: Conversation.first
   )
 
+
+  # ---------------------
+
+  Message.create!(
+    content: "Hey",
+    sender: User.first,
+    receiver: User.last,
+    conversation: Conversation.last
+  )
+  Message.create!(
+    content: "What's up?",
+    sender: User.first,
+    receiver: User.last,
+    conversation: Conversation.last
+  )
+  Message.create!(
+    content: "Yo",
+    sender: User.last,
+    receiver: User.first,
+    conversation: Conversation.last
+  )
+  Message.create!(
+    content: "Not much, you?",
+    sender: User.last,
+    receiver: User.first,
+    conversation: Conversation.last
+  )
+
   puts 'Done!'
 
   puts 'Generating Tickets'
