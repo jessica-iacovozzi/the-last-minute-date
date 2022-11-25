@@ -436,10 +436,65 @@ def seed_all
     artist: 'Diving Championships',
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317448/Hernandez-Schnell-courtesy-USA-Diving_rcb5vp_l0ntun.png'
   }
+  ####DEMO DAY
+
+  louis_jose_houde = {
+    title: 'Louis José Houde',
+    date: '2022-11-25',
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'Salle Richard-Sauvageau',
+    category: 'arts_and_theatre',
+    address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
+    description: "Occupational therapist then an osteopath but he's finally in humor.",
+    price: '35',
+    artist: 'Louis José Houde',
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317734/9ca32c6f-c8de-432c-ab06-c79befc8f85b_1323201_TABLET_LANDSCAPE_LARGE_16_9_icrc17_gocz7u.webp'
+  }
+  fred_tremblay = {
+    title: 'Les Premiers Pas',
+    date: '2022-11-25',
+    time: '7:00',
+    city: 'Montreal',
+    venue: 'Olympia',
+    category: 'music',
+    address: '1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2',
+    description: 'French singer-songwriter.',
+    price: '110',
+    artist: 'Fred Tremblay',
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317712/e8d7bf68-ca94-4ce5-a9c0-006e6b6f81dd_1774051_TABLET_LANDSCAPE_LARGE_16_9_znvr5n_nb3zlp.webp'
+  }
+  nsync = {
+    title: 'Nsync',
+    date: '2022-11-25',
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  montreal_canadiens_shark = {
+    title: 'Montreal Canadiens',
+    date: '2022-11-25',
+    time: '7:30',
+    city: 'Montreal',
+    venue: 'Centre Bell',
+    category: 'sport',
+    address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
+    description: "Lineup: Montreal Canadiens vs San Jose Sharks.",
+    price: '145',
+    artist: 'Hockey Game',
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317640/HabsCouldWinIt_Getty_Ringer.0_w4dydb_xtpvnj.jpg'
+  }
 
   [
     guillaume_pineault, pomme, jessie_reyez, montreal_canadiens, jo_cormier,
-    rocket_hockey, lil_tjay, riz_la_vie, dominic_paquet, junior
+    rocket_hockey, lil_tjay, riz_la_vie, dominic_paquet, junior, louis_jose_houde,
+    fred_tremblay, nsync, montreal_canadiens_shark
   ].each do |attribute|
     event = Event.create!(attribute)
     puts "Created #{event.category}"
@@ -503,6 +558,38 @@ def seed_all
   giov5 = {
     event_id: Event.find_by(title: 'Montreal Canadiens').id,
     user_id: User.find_by(first_name: 'Giovanni').id
+  }
+  giov11 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Sasha').id
+  }
+  giov22 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Keanu').id
+  }
+  giov33 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Delores').id
+  }
+  giov44 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Alicia').id
+  }
+  giov55 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Megan').id
+  }
+  giov66 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Alex').id
+  }
+  giov77 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Giovanni').id
+  }
+  giov88 = {
+    event_id: Event.find_by(title: 'Nsync').id,
+    user_id: User.find_by(first_name: 'Jessica').id
   }
 
   puts "Tickets for Eva"
@@ -583,19 +670,14 @@ def seed_all
     giov, giov2, giov3, giov4, giov5,
     evaa, evaa2, evaa3, evaa4, evaa5, evaa6,
     hugoo, hugoo2, hugoo3, hugoo4, hugoo5,
-    jesss, jesss2, jesss3, jesss4, jesss5, jesss6
+    jesss, jesss2, jesss3, jesss4, jesss5, jesss6, giov11,
+    giov22, giov33, giov44, giov55, giov66, giov77, giov88
   ].each do |attribute|
     Ticket.create!(attribute)
     puts "Created #{attribute}"
   end
 
-  people = User.all
-  people.each do |user|
-    Ticket.create!(
-      event: junior,
-      user: user
-    )
-  end
+
 
   puts "Finally All Done!"
 
