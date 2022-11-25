@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   get '/my_profile', to: 'users#my_profile'
   get '/edit_my_profile', to: 'users#edit'
   patch '/my_profile', to: 'users#update'
+  get '/conversations', to: 'conversations#all_conversation', as: :all_messages
+  resources :conversations, only: %i[show] do
+    resources :messages, only: :create
+  end
 end
