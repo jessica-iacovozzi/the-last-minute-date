@@ -1,12 +1,8 @@
 <div class="text-center">
-  <div class="profile-banner"
-       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(https://avatars.githubusercontent.com/u/104274353?v=4);">
-    <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
-    <%= link_to 'Modify your profile', edit_my_profile_path, class: "btn btn-flat" %>
-  </div>
-
   <div class="description-card">
-    <h2>About me</h2>
+    <h2>About me
+	    <%= link_to icon('fa-solid', 'pencil'), "#", style: 'color: white'%>
+    </h2>
     <p><%= @my_profile.description %></p>
   </div>
 
@@ -19,6 +15,7 @@
         </div>
       <% end %>
     </div>
+    <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 
   <div class="shows-block">
@@ -35,5 +32,6 @@
       </div>
     </div>
     <% end %>
+   <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 </div>
