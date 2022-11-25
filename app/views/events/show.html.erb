@@ -1,0 +1,32 @@
+<div class="event-page">
+  <div class="events-picture">
+    <%= image_tag @event.picture_url %>
+  </div>
+
+  <br>
+
+  <div class="events-header">
+    <h1><%= @event.title %></h1>
+    <p><%= @event.date %></p>
+  </div>
+
+  <div class="events-body">
+    <h2>Date</h2>
+    <p><%= @event.date %><br>
+
+    <h2>Address</h2>
+    <p><%= @event.address %><br>
+
+    <h2>Description</h2>
+  </div>
+</div>
+
+<div class="event-banner-price">
+  <div class="event-price">
+    <p><%= @event.price %>$</p>
+  </div>
+
+  <div class="buy-btn"
+    <a class="nav-link-buy" href="#"> Buy a ticket</a>
+  </div>
+</div>

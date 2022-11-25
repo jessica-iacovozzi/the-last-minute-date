@@ -1,0 +1,56 @@
+.event-page {
+  background-color: white;
+}
+
+.events-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Manrope';
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.events-header p {
+  font-family: 'Caveat', cursive;
+  color: #EA4C88;
+  margin-top: -5px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.events-body h2 {
+  font-family: 'Manrope';
+  font-weight: bold;
+  font-size: 17px;
+  color: #EA4C88;
+}
+
+.events-body {
+  padding: 30px;
+}
+
+.events-body p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  color: black;
+}
+
+.event-banner-price {
+  background-color: #EA4C88;
+  width: 100%;
+  display: flex;
+    justify-content: space-between;
+}
+
+.event-price p {
+  font-family: 'Caveat', cursive;
+  font-weight: lighter;
+  font-size: 40px;
+  color: white;
+  padding: 20px;
+}
+
+.events-picture img {
+  width: 100%;
+}
