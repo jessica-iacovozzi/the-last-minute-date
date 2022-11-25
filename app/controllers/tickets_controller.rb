@@ -16,9 +16,4 @@ class TicketsController < ApplicationController
     end
   end
 
-  private
-
-  def params_ticket
-    params.require(:ticket).permit(:user_id, :event_id)
-  end
 end

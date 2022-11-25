@@ -1,18 +1,18 @@
 <div class="shows text-center mb-3" style="background-color: #84C4BB">
   <h2>All my tickets</h2>
   <% @my_tickets.each do |event| %>
-  <% if event.date.after? Date.today %>
-  <div class="ticket">
-    <%= image_tag event.picture_url %>
-    <div class="ticket-infos">
-      <h3><%= event.title %></h3>
-      <% if event.title != event.artist %>
-        <p><%= event.artist %></p>
-      <% end %>
-      <p><%= event.date %></p>
-    </div>
-  </div>
-  <% end %>
+    <% unless event.date.before? Date.today %>
+      <div class="ticket">
+        <%= image_tag event.picture_url %>
+        <div class="ticket-infos">
+          <h3><%= event.title %></h3>
+          <% if event.title != event.artist %>
+            <p><%= event.artist %></p>
+          <% end %>
+          <p><%= event.date %></p>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
