@@ -1,5 +1,6 @@
 .mapboxgl-popup {
   max-width: 200px;
+  align-items: center;
 }
 
 .mapboxgl-popup-content {
@@ -19,13 +20,7 @@
   border-radius: 48px;
 }
 
-.mapboxgl-ctrl-geocoder svg {
-  // padding: 5%;
-  // position: absolute;
-  // top: 0;
-  // right: 20%;
 
-}
 
 .mapboxgl-ctrl-geocoder--icon-search {
   position: absolute;
