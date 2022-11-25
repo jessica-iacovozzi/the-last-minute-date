@@ -1,0 +1,18 @@
+.people-btn {
+  background-color: white;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 35px;
+  width: 112px;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+
+.people-btn a {
+  color: black;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}

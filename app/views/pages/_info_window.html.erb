@@ -3,10 +3,10 @@
   <div class="event-banner-regroup">
     <div class="event-banner-text">
       <h2><%= event.title %></h2>
-      <p><%= event.address %><br>
+      <p><%= event.date %><br>
       <%= event.category %></p>
       <div class="event-banner-btn">
-        <a class="btn-more-info" href="#">Get more informations</a>
+        <%= link_to "Get more informations", event_path(event), class:"btn-more-info" %>
       </div>
   </div>
 
