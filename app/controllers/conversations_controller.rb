@@ -1,5 +1,6 @@
 class ConversationsController < ApplicationController
   def all_conversation
+    @convertation = Conversation.all
   end
 
   def show
