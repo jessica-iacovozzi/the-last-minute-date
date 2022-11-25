@@ -12,16 +12,6 @@ class="container chatroom"
     <% end %>
   </div>
 
-
-
-
-
-
-
-
-
-
-
   <%= simple_form_for [@conversation, @message],
    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
   <%= f.input :content,
