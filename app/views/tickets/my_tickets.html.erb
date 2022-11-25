@@ -1,11 +1,35 @@
-<h2>Upcoming shows</h2>
-
-<h2>Past shows</h2>
-
-<%# <% @my_events.each do |event| %>
-  <div>
-    <%# <p><%= event.date %></p>
-    <%# <p><%= event.title %></p>
-    <%# <p><%= event.artist %></p>
+<div class="shows text-center mb-3" style="background-color: #84C4BB">
+  <h2>All my tickets</h2>
+  <% @my_tickets.each do |event| %>
+  <% if event.date.after? Date.today %>
+  <div class="ticket">
+    <%= image_tag event.picture_url %>
+    <div class="ticket-infos">
+      <h3><%= event.title %></h3>
+      <% if event.title != event.artist %>
+        <p><%= event.artist %></p>
+      <% end %>
+      <p><%= event.date %></p>
+    </div>
   </div>
-<%# <% end %>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="shows text-center mb-3" style="background-color: black">
+  <h2 style="color:white">Your last shows</h2>
+  <% @my_tickets.each do |event| %>
+  <% if event.date.before? Date.today %>
+  <div class="ticket">
+    <%= image_tag event.picture_url %>
+    <div class="ticket-infos">
+      <h3><%= event.title %></h3>
+      <% if event.title != event.artist %>
+        <p><%= event.artist %></p>
+      <% end %>
+      <p><%= event.date %></p>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>

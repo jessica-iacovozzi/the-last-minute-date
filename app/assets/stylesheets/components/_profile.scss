@@ -1,29 +1,109 @@
 .profile-picture {
-  width: 80px;
+  width: 150px;
   border-radius: 50%;
+  margin: 30px 0;
 }
 .profile-banner {
-  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 30px 0;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   p {
     margin: 0;
   }
 }
-.profile-black-card {
+.description-card {
+  padding: 25px;
   background-color: black;
   color: white;
+  h2 {
+    font-family: $headers-font;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
   p {
+    font-family: $body-font;
     margin: 0;
   }
 }
-.profile-white-card {
+.interest-card {
+  padding: 25px;
   background-color: white;
   color: black;
+  h2 {
+    font-family: $headers-font;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
   p {
+    font-family: $body-font;
     margin: 0;
   }
+}
+.ticket-card {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 3 3 30px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  border: 2px black solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.ticket-card img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+.ticket-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.ticket-card h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+.ticket-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.ticket-card .ticket-card-infos {
+  padding: 16px;
+}
+.shows-block {
+  background-color: white;
+  padding: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+.tag {
+  padding: 10px;
+  color: white;
+  background-color: #84C4BB;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  width: fit-content;
 }
