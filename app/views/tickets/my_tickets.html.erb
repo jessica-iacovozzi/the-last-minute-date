@@ -24,11 +24,10 @@
     <%= image_tag event.picture_url %>
     <div class="ticket-infos">
       <h3><%= event.title %></h3>
-      <% if event.title != event.artist %>
-        <p><%= event.artist %></p>
-      <% end %>
-      <p><%= event.date %></p>
+      <p><%= event.venue %></p>
+      <p><%= event.date.strftime("%b %-d") %> <%= event.time.to_i %>h</p>
     </div>
+    <%= image_tag 'qr' %>
   </div>
   <% end %>
   <% end %>

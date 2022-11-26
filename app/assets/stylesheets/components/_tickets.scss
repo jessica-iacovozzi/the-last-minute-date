@@ -4,6 +4,7 @@
   background: white;
   box-shadow: 3 3 30px rgba(0,0,0,0.5);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border: 2px black solid;
   border-radius: 5px;
@@ -34,6 +35,7 @@
 }
 .ticket .ticket-infos {
   padding: 16px;
+  text-align: left;
 }
 .shows {
   background-color: white;
