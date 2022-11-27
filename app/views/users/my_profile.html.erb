@@ -1,6 +1,6 @@
 <div class="text-center">
   <div class="profile-banner"
-       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(<%= image_path @my_profile.picture_url %>);">
+       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
     <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
     <%= link_to 'Modify your profile', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
@@ -27,11 +27,11 @@
     <div class="ticket-card">
       <%= image_tag event.picture_url %>
       <div class="ticket-card-infos">
+        <p><small><%= event.date %></small></p>
         <h3><%= event.title %></h3>
         <% if event.title != event.artist %>
           <p><%= event.artist %></p>
         <% end %>
-        <p><%= event.date %></p>
       </div>
     </div>
     <% end %>

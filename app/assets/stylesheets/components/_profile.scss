@@ -21,12 +21,13 @@
   background-color: black;
   color: white;
   h2 {
-    font-family: $headers-font;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-family: Caveat;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-size: xx-large;
   }
   p {
-    font-family: $body-font;
+    font-family: Manrope;
     margin: 0;
   }
 }
@@ -35,58 +36,57 @@
   background-color: white;
   color: black;
   h2 {
-    font-family: $headers-font;
+    font-family: Manrope;
     font-weight: bold;
     margin-bottom: 30px;
   }
   p {
-    font-family: $body-font;
+    font-family: Manrope;
     margin: 0;
+    font-weight: bold;
   }
 }
 .ticket-card {
   overflow: hidden;
-  height: 120px;
+  height: 80px;
   background: white;
-  box-shadow: 3 3 30px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
-  border: 2px black solid;
+  border: 1px black solid;
+  box-shadow: 3px 5px rgba(0,0,0,.7);
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .ticket-card img {
   height: 100%;
-  width: 120px;
+  width: 70px;
   object-fit: cover;
-}
-.ticket-card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  font-family: $headers-font;
 }
 .ticket-card h3 {
   font-size: 14px;
-  font-weight: bold;
-  font-family: $headers-font;
+  font-family: Manrope;
   margin: 0;
 }
 .ticket-card p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  font-family: $body-font;
+  margin: 0;
+  font-family: Manrope;
 }
 .ticket-card .ticket-card-infos {
   padding: 16px;
+  text-align: left;
 }
 .shows-block {
   background-color: white;
   padding: 20px;
+  h2 {
+    font-family: Manrope;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
 }
 .grid {
   display: flex;
@@ -107,7 +107,7 @@
 .btn-flat {
   color: white;
   padding: 8px 24px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: white;
   transition: background 0.3s ease;
   width: fit-content;
