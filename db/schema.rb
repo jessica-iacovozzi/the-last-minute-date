@@ -59,11 +59,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_160428) do
     t.string "picture_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
     t.string "time"
     t.string "city"
     t.string "venue"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "messages", force: :cascade do |t|
