@@ -2,7 +2,7 @@
   <div class="profile-banner"
        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
     <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
-    <%= link_to 'Modify your profile', edit_my_profile_path, class: "btn btn-flat" %>
+    <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn btn-flat" %>
   </div>
 
   <div class="description-card">

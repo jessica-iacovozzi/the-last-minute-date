@@ -35,7 +35,7 @@ def seed_all
 
   def arts_and_theatre
     arts_and_theatre = [
-      'Comedy', 'Cultural', 'Dance', 'Fashion', 'Magic_&_illusion', 'Music', 'Opera', 'Puppetry', 'Theatre'
+      'Comedy', 'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'
     ].sample(rand(8))
     return arts_and_theatre
   end

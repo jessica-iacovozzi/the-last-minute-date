@@ -2,24 +2,19 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="update-description"
 export default class extends Controller {
-  static targets = ["pencil", "description", "form"]
+  static targets = ["form"]
 
   connect() {
-    // console.log(this.closeTarget);
+    console.log(this.formTarget);
   }
 
-  open(event) {
-    event.preventDefault()
-    this.formTarget.classList.remove("d-none");
-  }
-
-  close(event) {
-    event.preventDefault()
-    this.formTarget.classList.add("d-none");
-  }
-
-  // update(event) {
+  // open(event) {
   //   event.preventDefault()
-  //   this.descriptionTarget.innerText = this.inputTarget.innerText
+  //   this.formTarget.classList.remove("d-none");
+  // }
+
+  // close(event) {
+  //   event.preventDefault()
+  //   this.formTarget.classList.add("d-none");
   // }
 }
