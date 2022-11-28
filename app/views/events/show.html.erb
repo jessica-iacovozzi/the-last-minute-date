@@ -14,16 +14,42 @@
     <h2>Date</h2>
     <p><%= @event.date %><br>
 
+    <h2>Venue</h2>
+    <p><%= @event.venue %><br>
+
     <h2>Address</h2>
     <p><%= @event.address %><br>
 
-    <h2>Description</h2>
+  </div>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">People going</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <% @event.users.each do |user| %>
+          <div class="card-product">
+            <a href=#><img src= <%= user.picture_url %> /></a>
+            <div class="card-product-infos">
+              <h2><%= user.first_name%></h2>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="event-people-btn">
-    <div class="people-btn">
-      <a class="nav-link-people" href="#"> See who's going</a>
-    </div>
+    <button type="button" class="people-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      See who's going
+    </button>
   </div>
 </div>
 
