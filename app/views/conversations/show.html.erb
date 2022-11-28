@@ -1,9 +1,16 @@
-<div class="container chatroom"
+<div class="chatroom"
   data-controller="conversation-subscription"
   data-conversation-subscription-conversation-id-value="<%= @conversation.id %>"
   data-conversation-subscription-current-user-id-value="<%= current_user.id %>"
 >
+<div class="text-center">
+  <div class="description-card-new">
   <h1>#<%= @conversation.name.capitalize %></h1>
+    <p></p>
+  </div>
+
+
+
 
   <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>
