@@ -22,10 +22,6 @@
     placeholder: "Message ##{@conversation.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-  <%# f Used to send information to the backend, inorder to connect the receiver of the message %>
-
-  <%= f.hidden_field :receiver_id, value: @conversation.messages.first.receiver_id  %>
-
   <%= f.submit "Send", class: "btn btn-primary mb-3" %>
 <% end %>
 </div>
