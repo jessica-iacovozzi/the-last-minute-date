@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, :set_events, only: %i[my_profile edit update]
+  before_action :set_user, :set_events, only: %i[my_profile edit update show]
   def my_profile
   end
 
