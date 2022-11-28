@@ -1,9 +1,25 @@
-<div class="text-center">
+<div class="text-center" data-controller="update-description">
   <div class="description-card">
     <h2>About me
-	    <%= link_to icon('fa-solid', 'pencil'), "#", style: 'color: white'%>
+    <div data-update-description-target="pencil" data-action="click->update-description#open">
+	    <%= link_to icon('fa-solid', 'pencil'), class: 'open-form' %>
+    </div>
     </h2>
-    <p><%= @my_profile.description %></p>
+      <p data-update-description-target="description"><%= @my_profile.description %></p>
+    <div class="form-popup d-none" data-update-description-target="form" data-action="submit->update-description#update">
+			<div class="container form-wrapper">
+				<button class="btn close-form" data-update-description-target="close" data-action="click->update-description#close">X</button>
+				<form id="my-form" novalidate="novalidate">
+          <div class="row">
+            <div class="form-group col-md-12">
+
+							<textarea name="something" class="form-control" data-update-description-target="input"></textarea>
+						</div>
+          </div>
+					<button type="submit" class="btn send-form">Update</button>
+				</form>
+			</div>
+		</div>
   </div>
 
   <div class="interest-card">
@@ -15,7 +31,7 @@
         </div>
       <% end %>
     </div>
-    <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
+    <%# <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 
   <div class="shows-block">
@@ -32,6 +48,6 @@
       </div>
     </div>
     <% end %>
-   <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
+    <%# <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 </div>
