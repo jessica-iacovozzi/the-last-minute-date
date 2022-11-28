@@ -10,14 +10,17 @@
   </div>
 
   <div class="interest-card">
-    <h2>My interests</h2>
-    <div class="grid">
-      <% @user.tags.each do |tag| %>
-        <div class="tag">
-          <p><%= tag %></p>
-        </div>
-      <% end %>
+    <div class="people-btn">
+      <%= link_to "Back to event", :back, class:"nav-link-buy" %>
     </div>
+      <h2>My interests</h2>
+      <div class="grid">
+        <% @user.tags.each do |tag| %>
+          <div class="tag">
+            <p><%= tag %></p>
+          </div>
+        <% end %>
+      </div>
   </div>
 
   <div class="shows-block">
