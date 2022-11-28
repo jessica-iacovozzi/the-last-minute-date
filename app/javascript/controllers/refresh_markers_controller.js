@@ -8,7 +8,7 @@ export default class extends Controller {
     // console.log(this.categoriesTarget)
   }
 
-  update() {
-    console.log(this.event.currentTarget)
+  update(event) {
+    console.log(event.target.innerText)
   }
 }
