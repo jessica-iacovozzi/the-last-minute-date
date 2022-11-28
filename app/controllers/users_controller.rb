@@ -3,13 +3,18 @@ class UsersController < ApplicationController
   def my_profile
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def edit
   end
 
-  def update
-  end
-
   private
+
+  def user_params
+    params.require(:user).permit(:id)
+  end
 
   def set_user
     @my_profile = current_user
