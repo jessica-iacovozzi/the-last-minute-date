@@ -1,9 +1,15 @@
-<div class="text-center">
-  <div class="description-card">
+<div class="text-center" data-controller="update-description">
+  <div class="description-card" data-update-description-target="description">
     <h2>About me
-	    <%= link_to icon('fa-solid', 'pencil'), "#", style: 'color: white'%>
+    <div data-update-description-target="pencil" data-action="click->update-description#open">
+	    <%= link_to icon('fa-solid', 'pencil')%>
+    </div>
     </h2>
-    <p><%= @my_profile.description %></p>
+      <p><%= @my_profile.description %></p>
+    <%# <%= simple_form_for(@user, data: { update_description_target: "form"}) do |f| %>
+      <%# <%= f.input :description %>
+      <%# <%= f.submit %>
+    <%# <% end %>
   </div>
 
   <div class="interest-card">
@@ -15,7 +21,7 @@
         </div>
       <% end %>
     </div>
-    <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
+    <%# <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 
   <div class="shows-block">
@@ -32,6 +38,6 @@
       </div>
     </div>
     <% end %>
-   <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
+    <%# <%= link_to 'Update', edit_my_profile_path, class: "btn btn-flat" %>
   </div>
 </div>

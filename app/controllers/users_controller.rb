@@ -7,6 +7,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @my_profile.update(profile_params)
+      redirect_to my_profile_path(@my_profile), notice: "Profile was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
@@ -17,5 +22,9 @@ class UsersController < ApplicationController
 
   def set_events
     @my_events = current_user.events
+  end
+
+  def profile_params
+    params.require(:my_profile).permit(:description)
   end
 end
