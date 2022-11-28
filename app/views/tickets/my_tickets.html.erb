@@ -5,11 +5,9 @@
       <div class="ticket">
         <%= image_tag event.picture_url %>
         <div class="ticket-infos">
+          <p><%= event.date.strftime("%b %-d") %> <%= event.time.to_i %>h</p>
           <h3><%= event.title %></h3>
-          <% if event.title != event.artist %>
-            <p><%= event.artist %></p>
-          <% end %>
-          <p><%= event.date %></p>
+          <p><%= event.venue %></p>
         </div>
       </div>
     <% end %>
@@ -23,11 +21,9 @@
       <div class="ticket">
         <%= image_tag event.picture_url %>
         <div class="ticket-infos">
+          <p><%= event.date.strftime("%b %-d") %> <%= event.time.to_i %>h</p>
           <h3><%= event.title %></h3>
-          <% if event.title != event.artist %>
-            <p><%= event.artist %></p>
-          <% end %>
-          <p><%= event.date %></p>
+          <p><%= event.venue %></p>
         </div>
       </div>
      <% end %>
