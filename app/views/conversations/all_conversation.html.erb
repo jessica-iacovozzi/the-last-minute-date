@@ -1,5 +1,19 @@
-<p>hi</p>
+<div class="text-center">
+  <div class="description-card">
+    <h2>Discussions</h2>
+    <p></p>
+  </div>
 
-<% @conversations.map do |item| %>
-    <a href="/conversations/<%= item.id %>"><p><%= item.name %></p></a>
-<% end %>
+
+  <div class="shows-block-new ">
+
+    <% @conversations.map do |item| %>
+      <div class="ticket-card-new">
+
+        <a href="/conversations/<%= item.id %>"><p><%= item.name.capitalize %></p></a>
+
+      </div>
+    <% end %>
+
+  </div>
+</div>
