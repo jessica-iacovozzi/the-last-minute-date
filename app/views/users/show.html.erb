@@ -1,0 +1,40 @@
+<div class="text-center">
+  <div class="profile-banner"
+       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @user.picture_url %>);">
+    <%= image_tag @user.picture_url, class: 'profile-picture' %>
+  </div>
+
+  <div class="description-card">
+    <h2>About me</h2>
+    <p><%= @user.description %></p>
+  </div>
+
+  <div class="interest-card">
+    <h2>My interests</h2>
+    <div class="grid">
+      <% @user.tags.each do |tag| %>
+        <div class="tag">
+          <p><%= tag %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="shows-block">
+    <h2>My favourite shows</h2>
+    <% if @my_events != nil %>
+      <% @my_events.first(2).each do |event| %>
+      <div class="ticket-card">
+        <%= image_tag event.picture_url %>
+        <div class="ticket-card-infos">
+          <p><small><%= event.date %></small></p>
+          <h3><%= event.title %></h3>
+          <% if event.title != event.artist %>
+            <p><%= event.artist %></p>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
