@@ -4,6 +4,12 @@ class Event < ApplicationRecord
 
   validates :title, :date, :category, :address, :price, :picture_url, presence: true
 
+  include PgSearch::Model
+  pg_search_scope :search_by_category_title_artist_and_city,
+                  against: %i[category title artist city],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
