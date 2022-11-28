@@ -16,30 +16,15 @@ export default class extends Controller {
     style: "mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb" // <-- use your own!
     });
 
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
+    this.#addMarkersToMap(this.markersValue)
+    this.#fitMapToMarkers(this.markersValue)
 
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                           mapboxgl: mapboxgl }))
   }
 
-  refresh(event) {
-    // this.#clearMarkers()
-    // this.#addMarkersAndResize()
-    event.preventDefault()
-    console.log(event.detail.message)
-  }
-
-  #addMarkersAndResize() {
-    if (this.markersValue.length > 0) {
-      this.#addMarkersToMap()
-      this.#fitMapToMarkers()
-    }
-  }
-
-
-  #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
+  #addMarkersToMap(markers) {
+    markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
 
       // Create a HTML element for your custom marker
@@ -58,14 +43,28 @@ export default class extends Controller {
     })
   }
 
-  #fitMapToMarkers() {
+  #fitMapToMarkers(markers) {
     const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+    markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  }
+
+  refresh(event) {
+    event.preventDefault()
+    console.log(event.detail.id)
+    // this.#clearMarkers()
+    // this.#addMarkersAndResize(event.detail.id)
   }
 
   #clearMarkers() {
     this.markersValue.length = 0
   }
 
+  #addMarkersAndResize(filter) {
+    if (this.markersValue.length > 0) {
+      const fliteredMarkers = []
+      this.#addMarkersToMap(fliteredMarkers)
+      this.#fitMapToMarkers()
+    }
+  }
 }

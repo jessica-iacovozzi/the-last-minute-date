@@ -5,29 +5,15 @@ export default class extends Controller {
   static targets = ["categories", "mapRefresh", "child"]
 
   connect() {
-    // const filterMarkers = new CustomEvent("updateMap");
-    // window.dispatchEvent(filterMarkers);
-    // console.log(this.childTarget)
+
   }
 
-//   update(event) {
-//     event.preventDefault()
-//     console.log(event.target.id)
-//   }
-    test() {
-      this.childTarget.dispatchEvent(new CustomEvent("updateMap", {
-        detail: {
-          message: "Hello"
-        }
-      }))
-    }
+  passIdToMapController(event) {
+    const id = event.target.id
+    this.childTarget.dispatchEvent(new CustomEvent("updateMap", {
+      detail: {
+        id: id
+      }
+    }))
+  }
 }
-
-// class MyController extends Controller {
-//   static targets = [ "other" ]
-
-//   copy() {
-//     const otherController = this.application.getControllerForElementAndIdentifier(this.otherTarget, 'other')
-//     otherController.otherMethod()
-//   }
-// }
