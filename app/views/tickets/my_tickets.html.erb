@@ -19,17 +19,17 @@
 <div class="shows text-center mb-3" style="background-color: black">
   <h2 style="color:white">Your last shows</h2>
   <% @my_tickets.each do |event| %>
-  <% if event.date.before? Date.today %>
-  <div class="ticket">
-    <%= image_tag event.picture_url %>
-    <div class="ticket-infos">
-      <h3><%= event.title %></h3>
-      <% if event.title != event.artist %>
-        <p><%= event.artist %></p>
-      <% end %>
-      <p><%= event.date %></p>
-    </div>
-  </div>
-  <% end %>
+    <% if event.date.before? Date.today %>
+      <div class="ticket">
+        <%= image_tag event.picture_url %>
+        <div class="ticket-infos">
+          <h3><%= event.title %></h3>
+          <% if event.title != event.artist %>
+            <p><%= event.artist %></p>
+          <% end %>
+          <p><%= event.date %></p>
+        </div>
+      </div>
+     <% end %>
   <% end %>
 </div>

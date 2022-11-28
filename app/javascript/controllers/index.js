@@ -7,6 +7,9 @@ import { application } from "./application"
 import AddressAutocompleteController from "./address_autocomplete_controller"
 application.register("address-autocomplete", AddressAutocompleteController)
 
+import BuyTicketsController from "./buy_tickets_controller"
+application.register("buy-tickets", BuyTicketsController)
+
 import ConversationSubscriptionController from "./conversation_subscription_controller"
 application.register("conversation-subscription", ConversationSubscriptionController)
 
@@ -16,5 +19,11 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import RefreshMarkersController from "./refresh_markers_controller"
+application.register("refresh-markers", RefreshMarkersController)
+
 import UpdateDescriptionController from "./update_description_controller"
 application.register("update-description", UpdateDescriptionController)
+
+import Reveal from 'stimulus-reveal-controller'
+application.register('reveal', Reveal)

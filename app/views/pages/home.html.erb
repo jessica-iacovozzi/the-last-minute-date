@@ -8,22 +8,31 @@
     <p>No more saturday night <strong>alone</strong>. With last minute date, <strong>choose</strong> a show and <strong>find a buddy</strong> to go with you. </p>
   </div>
 
-  <p>Search Bar</p>
+  <div data-controller="refresh-markers">
+    <p>Search Bar</p>
 
-  <div class="home-btn-category">
-    <div class="home-btn-category btn">
-      <a class="category-link" href="#">Music</a>
+    <div class="home-btn-category">
+
+      <div class="home-btn-category btn"
+          data-refresh-markers-target="categories"
+          data-action="click->refresh-markers#update">
+        <a class="category-link" href="#">Music</a>
+      </div>
+
+      <div class="home-btn-category btn"
+          data-refresh-markers-target="categories"
+          data-action="click->refresh-markers#update">
+        <a class="category-link" href="#">Art & Theater</a>
+      </div>
+
+      <div class="home-btn-category btn"
+          data-refresh-markers-target="categories"
+          data-action="click->refresh-markers#update">
+        <a class="category-link" href="#">Sport</a>
+      </div>
     </div>
 
-    <div class="home-btn-category btn">
-      <a class="category-link" href="#">Art & Theater</a>
-    </div>
-
-    <div class="home-btn-category btn">
-      <a class="category-link" href="#">Sport</a>
-    </div>
+    <%= render "shared/map" %>
   </div>
-
-  <%= render "shared/map" %>
 
 </div>
