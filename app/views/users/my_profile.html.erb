@@ -14,9 +14,11 @@
     <h2>My interests</h2>
     <div class="grid">
       <% @my_profile.tags.each do |tag| %>
+        <% unless tag.empty? %>
         <div class="tag">
           <p><%= tag %></p>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
