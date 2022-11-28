@@ -6,14 +6,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def update
-    if @my_profile.update
-      redirect_to my_profile_path(@my_profile), notice: "Profile was successfully updated."
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
   private
 
   def set_user
