@@ -1,7 +1,10 @@
 <div class="text-center">
-  <div class="description-card">
+  <div class="description-card-new">
     <h1>Discussions</h1>
     <p></p>
+     <div class="back_conversation_show">
+        <a href="/"><%= icon('fa-solid', 'arrow-left-long')%></a>
+      </div>
   </div>
 </div>
 
@@ -12,7 +15,6 @@
     <div class="ticket-card-new">
 
       <a href="/conversations/<%= item.id %>"><p><%= item.name.capitalize %></p></a>
-
     </div>
   <% end %>
 

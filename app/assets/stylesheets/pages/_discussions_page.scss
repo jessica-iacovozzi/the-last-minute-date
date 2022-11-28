@@ -24,9 +24,14 @@
   & a:hover, & a:active {
     text-decoration: none;
     color:rgba(0, 0, 0, 0.975);
-
   }
   & p {
     margin: 0;
   }
+}
+.description-card-all {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  position: relative;
 }

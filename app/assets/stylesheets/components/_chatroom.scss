@@ -50,3 +50,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.back_conversation_show{
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  font-size: 25px;
+  transition: all ease-in-out .2s;
+  color: white;
+  & a:link, & a:visited {
+    color: white;
+  }
+  &:hover, &:active {
+    color: white;
+    transform: scale(1.01);
+  }
+}

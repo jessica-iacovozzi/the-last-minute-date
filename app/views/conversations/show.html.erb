@@ -3,10 +3,15 @@
   data-conversation-subscription-conversation-id-value="<%= @conversation.id %>"
   data-conversation-subscription-current-user-id-value="<%= current_user.id %>"
 >
-<div class="text-center">
+
+
+
+  <div class="text-center">
   <div class="description-card-new">
-  <h1>#<%= @conversation.name.capitalize %></h1>
-    <p></p>
+    <h1>#<%= @conversation.name.capitalize %></h1>
+    <div class="back_conversation_show">
+      <a href="/conversations"><%= icon('fa-solid', 'arrow-left-long')%></a>
+    </div>
   </div>
 
 
@@ -30,5 +35,5 @@
     wrapper_html: {class: "flex-grow-1"}
   %>
   <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-<% end %>
+  <% end %>
 </div>
