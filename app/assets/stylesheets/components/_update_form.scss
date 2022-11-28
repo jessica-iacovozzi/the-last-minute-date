@@ -4,8 +4,8 @@
   margin: 20px;
   background-color: #fff;
   border-radius: 4.2px;
-  border-color: #84C4BB;
-  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+  border: #84C4BB 1px solid;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.5);
   .btn {
     color: white;
     background-color: #84C4BB;
@@ -33,7 +33,6 @@
 }
 .form-control.is-valid {
   border-color: #84C4BB;
-  background-image: 'check.svg';
 }
 .input-group {
   position: relative;
