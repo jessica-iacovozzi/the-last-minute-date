@@ -475,6 +475,8 @@ def seed_all
     description: 'You know who they are',
     price: '287',
     artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
   montreal_canadiens_shark = {
