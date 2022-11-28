@@ -55,11 +55,24 @@
 
 
 <div class="event-banner-price">
+
   <div class="event-price">
     <p><%= @event.price %>$</p>
   </div>
 
-  <div class="buy-btn">
-    <%= link_to "Buy a ticket", buy_ticket_path(@event), class:"nav-link-buy" %>
+  <div data-controller="buy-tickets"
+    data-buy-tickets-event-id-value="<%= @event.id %>">
+    <button data-action="click->buy-tickets#buyTickets"
+            type="button" class="buy-btn"
+            data-buy-tickets-target="buyButton">
+      Buy a ticket
+    </button>
+    <button data-action="click->buy-tickets#showTickets"
+            type="button"
+            class="buy-btn green"
+            data-buy-tickets-target="showButton">
+            <%= link_to "See your ticket", my_tickets_path %>
+    </button>
   </div>
+
 </div>
