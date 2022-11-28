@@ -23,9 +23,11 @@ export default class extends Controller {
                                           mapboxgl: mapboxgl }))
   }
 
-  refresh() {
-    this.#clearMarkers()
-    this.#addMarkersAndResize()
+  refresh(event) {
+    // this.#clearMarkers()
+    // this.#addMarkersAndResize()
+    event.preventDefault()
+    console.log(event.detail.message)
   }
 
   #addMarkersAndResize() {
@@ -65,4 +67,5 @@ export default class extends Controller {
   #clearMarkers() {
     this.markersValue.length = 0
   }
+
 }
