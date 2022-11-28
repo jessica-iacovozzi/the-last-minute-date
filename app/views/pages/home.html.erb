@@ -8,21 +8,15 @@
     <p>No more saturday night <strong>alone</strong>. With last minute date, <strong>choose</strong> a show and <strong>find a buddy</strong> to go with you. </p>
   </div>
 
-<<<<<<< HEAD
-  <div class="search">
-    <%= form_with url: event_path, method: :get, class: "d-flex my-3" do %>
+  <div data-controller="refresh-markers">
+    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Pick a city"
+        placeholder: "Find a show"
       %>
-      <%= submit_tag "Search", class: "btn my-2 my-sm-0 btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
-  </div>
-=======
-  <div data-controller="refresh-markers">
-    <p>Search Bar</p>
->>>>>>> 5d23af3f14aec08fc6cf5eeb1cd629cdd56e20be
 
     <div class="home-btn-category">
 
