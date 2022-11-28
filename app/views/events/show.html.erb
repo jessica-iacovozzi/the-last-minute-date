@@ -32,7 +32,7 @@
         <div class="modal-body">
           <% @event.users.each do |user| %>
           <div class="card-product">
-            <a href=#><img src= <%= user.picture_url %> /></a>
+            <a href="user_path(user.id)"><img src= <%= user.picture_url %> /></a>
             <div class="card-product-infos">
               <h2><%= user.first_name%></h2>
             </div>
