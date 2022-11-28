@@ -23,8 +23,4 @@ class UsersController < ApplicationController
   def set_events
     @my_events = current_user.events
   end
-
-  # def profile_params
-  #   params.require(:my_profile).permit(:first_name, :username, :tags, :picture_url, :age, :description)
-  # end
 end
