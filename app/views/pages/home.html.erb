@@ -9,7 +9,14 @@
   </div>
 
   <div data-controller="refresh-markers">
-    <p>Search Bar</p>
+    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a show"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
 
     <div class="home-btn-category">
 

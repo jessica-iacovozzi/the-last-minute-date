@@ -27,9 +27,9 @@
                                 'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock', 'Comedy',
                                 'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'],
                     as: :check_boxes,
-                    input_html: { multiple: true },
-                    required: false,
-                    input_html: { autocomplete: "new-interests" } %>
+                    input_html: { class: "tag-selector" },
+                    item_wrapper_class: 'tag-item',
+                    required: false %>
         <%= f.input :password,
                     required: false,
                     hint: "Leave blank if you don't want to change your password",
