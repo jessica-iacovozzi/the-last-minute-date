@@ -1,11 +1,17 @@
 .mapboxgl-popup {
   max-width: 200px;
   align-items: center;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  margin: -10px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
 }
 
 
@@ -29,4 +35,8 @@
   width: 23px;
   z-index: 2;
   height: 23px;
+}
+
+.mapboxgl-popup-anchor-bottom, .mapboxgl-popup-anchor-bottom-left, .mapboxgl-popup-anchor-bottom-right {
+  flex-direction: inherit;
 }

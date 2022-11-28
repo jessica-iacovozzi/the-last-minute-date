@@ -1,3 +1,22 @@
+.navbar-container {
+  background-color: white;
+  padding: 29px;
+}
+
+.navbar-toggler {
+  z-index: 2;
+  background: white;
+}
+
+.navbar {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 275px;
+  height: 58px;
+}
+
 .navbar-lmd {
   justify-content: space-between;
   background: white;
@@ -5,6 +24,8 @@
 
 .navbar-lmd .navbar-collapse {
   flex-grow: 0;
+  // margin-bottom: 100%;
+  z-index: 2;
 }
 
 .navbar-lmd .navbar-brand img {

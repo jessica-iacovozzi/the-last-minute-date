@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: :registrations }
 
   root to: "pages#home"
 
   resources :events, only: %i[show]
+  resources :users, only: %i[show]
 
   get '/events/:id/tickets', to: 'tickets#buy_ticket', as: :buy_ticket
   get '/my_tickets', to: 'tickets#my_tickets'

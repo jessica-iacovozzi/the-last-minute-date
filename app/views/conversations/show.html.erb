@@ -1,14 +1,29 @@
-<div class="container chatroom"
-class="container chatroom"
+<div class="chatroom"
   data-controller="conversation-subscription"
   data-conversation-subscription-conversation-id-value="<%= @conversation.id %>"
+  data-conversation-subscription-current-user-id-value="<%= current_user.id %>"
 >
-  <h1>#<%= @conversation.name.capitalize %></h1>
+
+
+
+  <div class="text-center">
+  <div class="description-card-new">
+    <h1>#<%= @conversation.name.capitalize %></h1>
+    <div class="back_conversation_show">
+      <a href="/conversations"><%= icon('fa-solid', 'arrow-left-long')%></a>
+    </div>
+  </div>
+
+
+
 
   <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>
-      <%= render "conversations/message", message: message %>
-
+      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+          <%= render "conversations/message", message: message %>
+        </div>
+      </div>
     <% end %>
   </div>
 
@@ -19,11 +34,6 @@ class="container chatroom"
     placeholder: "Message ##{@conversation.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-
-  <%# f Used to send information to the backend, inorder to connect the receiver of the message %>
-  <% if !@conversation.messages.first.nil?  %>
-    <%= f.hidden_field :receiver_id, value: @conversation.messages.first.receiver_id  %>
-  <% end %>
   <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-<% end %>
+  <% end %>
 </div>

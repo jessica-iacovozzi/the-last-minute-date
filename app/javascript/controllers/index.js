@@ -2,19 +2,28 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application";
+import { application } from "./application"
 
-import AddressAutocompleteController from "./address_autocomplete_controller";
-application.register("address-autocomplete", AddressAutocompleteController);
+import AddressAutocompleteController from "./address_autocomplete_controller"
+application.register("address-autocomplete", AddressAutocompleteController)
 
-import ConversationSubscriptionController from "./conversation_subscription_controller";
-application.register(
-	"conversation-subscription",
-	ConversationSubscriptionController
-);
+import BuyTicketsController from "./buy_tickets_controller"
+application.register("buy-tickets", BuyTicketsController)
 
-import HelloController from "./hello_controller";
-application.register("hello", HelloController);
+import ConversationSubscriptionController from "./conversation_subscription_controller"
+application.register("conversation-subscription", ConversationSubscriptionController)
 
-import MapController from "./map_controller";
-application.register("map", MapController);
+import HelloController from "./hello_controller"
+application.register("hello", HelloController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)
+
+import RefreshMarkersController from "./refresh_markers_controller"
+application.register("refresh-markers", RefreshMarkersController)
+
+import UpdateDescriptionController from "./update_description_controller"
+application.register("update-description", UpdateDescriptionController)
+
+import Reveal from 'stimulus-reveal-controller'
+application.register('reveal', Reveal)
