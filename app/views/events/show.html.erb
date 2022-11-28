@@ -22,6 +22,7 @@
 
   </div>
 
+
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -29,18 +30,31 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">People going</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+
+
         <div class="modal-body">
           <% @event.users.each do |user| %>
           <div class="card-product">
+
             <%= link_to user_path(user) do  %>
               <%= image_tag user.picture_url%>
             <% end %>
             <div class="card-product-infos">
               <h2><%= user.first_name%></h2>
+
+              <% @result = 0 %>
+              <h2><% user.tags.each do |tag|%></h2>
+                    <% if current_user.tags.include?(tag) %>
+                        <% @result += 35 %>
+                    <% end %>
+                  <% end %>
+                <p>Matching Score: </p><p class="result_total"><%= @result %></p>
             </div>
           </div>
           <% end %>
         </div>
+
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
