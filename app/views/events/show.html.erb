@@ -33,7 +33,7 @@
           <% @event.users.each do |user| %>
           <div class="card-product">
             <%= link_to user_path(user) do  %>
-              <%= cl_image_tag user.picture_url%>
+              <%= image_tag user.picture_url%>
             <% end %>
             <div class="card-product-infos">
               <h2><%= user.first_name%></h2>
