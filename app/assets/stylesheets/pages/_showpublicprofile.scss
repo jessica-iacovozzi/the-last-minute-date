@@ -1,0 +1,94 @@
+.container-profile-public {
+  padding: 20px;
+    background-color: white;
+}
+
+.profile-public {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.about-me-container {
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+  }
+  p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+.interest-card-container {
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 6px;
+  }
+}
+
+.tag-container {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  // border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #84C4BB;
+  color: white;
+  border: 1px solid #e3f5f2;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.grid-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.description-block {
+  padding: 20px;
+  height: 46vh;
+  overflow-y: scroll;
+}
+
+.shows-container {
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    align-items: flex-start;
+    font-weight: bold;
+  }
+}
+
+.favorite-show {
+  overflow: hidden;
+  height: 74px;
+  background: white;
+  display: flex;
+  align-items: center;
+  border: 1px black solid;
+  box-shadow: 3px 5px rgba(0,0,0,.7);
+  border-radius: 5px;
+  /* margin: 20px; */
+  margin-bottom: 23px;
+  width: 100%;
+  margin-left: 0;
+}
+
+.back-btn {
+  border: 1px black solid;
+  box-shadow: 3px 5px rgba(0,0,0,.7);
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+}
