@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   def markers
     @markers = @events.geocoded.map do |event|
     {
+      category: event.category,
       lat: event.latitude,
       lng: event.longitude,
       info_window: render_to_string(partial: "info_window", locals: { event: }),
