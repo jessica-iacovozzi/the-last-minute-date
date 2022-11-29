@@ -7,7 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  padding: 30px 0;
+  padding: 15px 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -17,14 +17,16 @@
   }
 }
 .description-card {
-  padding: 25px;
+  padding: 48px;
   background-color: black;
   color: white;
+  border-radius: 10px;
   h2 {
     font-family: Caveat;
     font-weight: bolder;
     margin-bottom: 10px;
     font-size: xx-large;
+    margin-top: -15px;
   }
   p {
     font-family: Manrope;
@@ -36,12 +38,12 @@
   background-color: white;
   color: black;
   h2 {
-    font-family: Manrope;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-family: Caveat, cursive;
+    font-size: 30px;
+    margin-bottom: 35px;
   }
   p {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin: 0;
     font-weight: bold;
   }
@@ -83,34 +85,47 @@
   background-color: white;
   padding: 20px;
   h2 {
-    font-family: Manrope;
-    font-weight: bold;
+    font-family: Manrope, sans-serif;
+    font-size: 22px;
     margin-bottom: 30px;
   }
 }
 .grid {
   display: flex;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 13px;
   justify-items: center;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: center;
+
 }
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
 .tag {
-  padding: 10px;
+  padding: 8px;
   color: white;
   background-color: #84C4BB;
-  border-radius: 5px;
   width: fit-content;
+  display: inline-block;
 }
 
 .btn-flat {
-  color: white;
-  padding: 8px 24px;
+  color: black;
+  padding: 8px 16px;
   border-radius: 10px;
-  background: white;
+  background-color: white;
   transition: background 0.3s ease;
   width: fit-content;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  margin-bottom: 10px;
+  border: 1px black solid;
+  box-shadow: 2px 2px rgba(0,0,0,.7);
+  margin-top: -5px;
+  text-decoration: none;
 }
 .close {
   position: absolute;

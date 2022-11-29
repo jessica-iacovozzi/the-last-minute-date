@@ -4,47 +4,63 @@
       <%= f.error_notification %>
 
       <div class="input-group">
-        <%= f.input :email, required: true, autofocus: true %>
 
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-        <% end %>
+        <div class="about-me">
+          <h3>About me</h3>
 
-        <%= f.input :username,
-                    required: false,
-                    input_html: { autocomplete: "new-username" } %>
-        <%= f.input :age,
-                    required: false,
-                    input_html: { autocomplete: "new-age" } %>
-        <%= f.input :description,
-                    required: false,
-                    input_html: { autocomplete: "new-description" } %>
-        <%= f.input :tags,
-                    collection: ['Baseball', 'Basketball', 'Boxing', 'Cycling', 'eSports',
-                                'Football', 'Gymnastics', 'Hockey', 'Martial', 'Arts', 'Soccer',
-                                'Tennis', 'Volleyball', 'Pop', 'Alternative', 'Ballads/Romantic', 'Blues', 'Chanson',
-                                'Francaise', 'Classical', 'Country', 'Dance/Electronic', 'Folk',
-                                'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock', 'Comedy',
-                                'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'],
-                    as: :check_boxes,
-                    input_html: { class: "tag-selector" },
-                    item_wrapper_class: 'tag-item',
-                    required: false %>
-        <%= f.input :password,
-                    required: false,
-                    hint: "Leave blank if you don't want to change your password",
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: false,
-                    hint: "Leave blank if you don't want to change your password",
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :current_password,
-                    hint: "We need your current password to confirm your changes",
-                    required: true,
-                    input_html: { autocomplete: "current-password" } %>
+          <%= f.input :username,
+                      required: false,
+                      input_html: { autocomplete: "new-username" },
+                      class: 'about-me-label' %>
+          <%= f.input :age,
+                      required: false,
+                      input_html: { autocomplete: "new-age" },
+                      class: 'about-me-label' %>
+          <%= f.input :description,
+                      required: false,
+                      input_html: { autocomplete: "new-description" },
+                      class: 'about-me-label' %>
+        </div>
+
+        <div class="my-interests-container">
+          <h4>My interests</h4>
+          <%= f.input :tags,
+                      collection: ['Baseball', 'Basketball', 'Boxing', 'Cycling', 'eSports',
+                                  'Football', 'Gymnastics', 'Hockey', 'Martial', 'Arts', 'Soccer',
+                                  'Tennis', 'Volleyball', 'Pop', 'Alternative', 'Ballads/Romantic', 'Blues', 'Chanson',
+                                  'Francaise', 'Classical', 'Country', 'Dance/Electronic', 'Folk',
+                                  'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock', 'Comedy',
+                                  'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'],
+                      as: :check_boxes,
+                      input_html: { class: "tag-selector" },
+                      item_wrapper_class: 'tag-item',
+                      required: false %>
+        </div>
+
+        <div class="parameters-container">
+          <h5>Parameters</h5>
+
+          <%= f.input :email, required: true, autofocus: true %>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <% end %>
+          <%= f.input :password,
+                      required: false,
+                      hint: "Leave blank if you don't want to change your password",
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: false,
+                      hint: "Leave blank if you don't want to change your password",
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :current_password,
+                      hint: "We need your current password to confirm your changes",
+                      required: true,
+                      input_html: { autocomplete: "current-password" } %>
+        </div>
       </div>
 
-      <div>
+      <div class="update-btn">
         <%= f.button :submit, "Update" %>
         <%= link_to "Back", my_profile_path, class: 'btn' %>
       </div>
