@@ -1,17 +1,26 @@
 .home-btn-category {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.9rem;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 15px;
+    margin: 20px;
 }
 
-.btn {
+.b-home {
   background-color: black;
-}
-
-.btn a {
   color: white;
   text-decoration: none;
+  margin: auto;
+  padding: 10px;
+  border-radius: 14px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.b-home:hover {
+  background-color: white;
+  color: black;
+  transition: 0.7s;
 }
