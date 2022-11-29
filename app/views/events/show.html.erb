@@ -41,8 +41,10 @@
                 <%= image_tag user.picture_url%>
               <% end %>
               <div class="card-product-infos">
-                <h2><%= user.first_name%></h2>
+              <div>
+                <h2><%= user.first_name%> <small><%= user.age%></small></h2>
 
+                </div>
                 <% @result = 0 %>
                 <h2><% user.tags.each do |tag|%></h2>
                       <% if current_user.tags.include?(tag) %>
@@ -65,7 +67,7 @@
                     <% end %>
               </div>
               <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn msg-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
                   Send a message
                 </button>
               </p>
