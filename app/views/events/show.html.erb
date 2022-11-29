@@ -49,21 +49,25 @@
                           <% @result += 35 %>
                       <% end %>
                     <% end %>
-                    <% case @result %>
-                    <% when @result > 15 && @result < 100 %>
-                      <p>Matching Score: </p><p class="result_total"><%= @result %></p>
-                    <% when @result > 100 && @result < 200 %>
-                      <p>Good Score: </p><p class="result_total"><%= @result %></p>
-                    <% when @result > 200 %>
-                      <p>Top Score: </p><p class="result_total"><%= @result %></p>
-                    <% else %>
-                      <p>Don't try, you have nothing in common</p>
-                      <%= raise %>
+                    <% score = @result %>
+                    <% result = case score %>
+                      <% when 30...100 then %>
+                        <p class="result_total">Score: <%= @result %></p>
+                        <p class="result_total">Could be a friend</p>
+                      <% when 100...200 then %>
+                        <p id="good-score">Score: <%= @result %></p>
+                        <p id="good-score">Worth a shot</p>
+                      <% when 200...350 then %>
+                        <p id="top-score"> Score: <%= @result %></p>
+                        <p id="top-score"><strong>SOULMATE ALERT</strong></p>
+                      <% else %>
+                        <p>Don't try, you have nothing in common</p>
                     <% end %>
+
               </div>
               <p>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
-                  Write a message
+                  Send a message
                 </button>
               </p>
             </div>
