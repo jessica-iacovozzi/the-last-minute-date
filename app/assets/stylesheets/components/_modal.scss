@@ -1,0 +1,32 @@
+.modal-form {
+  display: flex;
+  padding-bottom: 43px;
+  border-radius: 48px;
+  background-color: transparent;
+  align-items: center;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  padding-top: 30px;
+}
+.btn-close {
+  margin: 20px;
+}
+.modal-title {
+  padding: 0 50px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.6;
+}
+.search-btn {
+  padding: 12px;
+  background-color: #84C4BB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 125px;
+}
+.modal-content {
+  height: 720px;
+}
