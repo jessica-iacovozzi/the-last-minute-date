@@ -390,7 +390,7 @@ def seed_all
     time: '7:00',
     city: 'Toronto',
     venue: 'REBEL',
-    category: 'concert',
+    category: 'music',
     address: '11 Polson St., Toronto, ON M5A 1A4',
     description: 'American rapper and singer.',
     price: '57',
@@ -491,6 +491,156 @@ def seed_all
     price: '145',
     artist: 'Hockey Game',
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317640/HabsCouldWinIt_Getty_Ringer.0_w4dydb_xtpvnj.jpg'
+  }
+  justin_bieber = {
+    title: 'Justin Bieber',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'Centre Bell',
+    category: 'music',
+    address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
+    description: 'Justin Bieber is back in town just for you',
+    price: '135',
+    artist: 'Justin Bieber',
+    latitude: 45.496082,
+    longitude: -73.569916,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  scott_town = {
+    title: 'Scott Town',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'La Licorne',
+    category: 'arts_and_theatre',
+    address: '4559 Av. Papineau, Montréal, QC H2H 1V4',
+    description: 'Fabien Cloutier takes you to Scott Town and tell you a childhood story',
+    price: '35',
+    artist: 'Fabien Cloutier',
+    latitude: 45.5336,
+    longitude: -73.5756,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  les_trois_mousquetaires = {
+    title: 'Les Trois Mousquetaires',
+    date: Date.new(2022, 12, 2),
+    time: '7:30',
+    city: 'Montreal',
+    venue: 'TNM',
+    category: 'arts_and_theatre',
+    address: '84 Saint-Catherine St W, Montreal, Quebec H2X 1Z6',
+    description: 'Come and see Alexandre Dumas Classic tale',
+    price: '55',
+    artist: 'Alexandre Dumas',
+    latitude: 45.5088,
+    longitude: -73.5645,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  les_denis_drolets = {
+    title: 'Les Denis Drolet',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'La Tulipe',
+    category: 'arts_and_theatre',
+    address: '4530 Av. Papineau, Montréal, QC H2H 1V3',
+    description: 'The Denis Drolet talk about life and death, but mostly taxes',
+    price: '45',
+    artist: 'Les Denis Drolets',
+    latitude: 45.5331,
+    longitude: -73.5754,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  amon_amarth = {
+    title: 'Amon Amarth',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Laval',
+    venue: 'Place Bell',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'Come and see one heaven of a heavy metal show',
+    price: '287',
+    artist: 'Amon Amarth',
+    latitude: 45.5561,
+    longitude: -73.7212,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  demoday = {
+    title: 'Nsync',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  demoday = {
+    title: 'Nsync',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  demoday = {
+    title: 'Nsync',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  demoday = {
+    title: 'Nsync',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  demoday = {
+    title: 'Nsync',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Montreal',
+    venue: 'MTELUS',
+    category: 'music',
+    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    description: 'You know who they are',
+    price: '287',
+    artist: 'Nsync',
+    latitude: 45.5106,
+    longitude: -73.5634,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
 
   [
