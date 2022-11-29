@@ -34,21 +34,33 @@
 
         <div class="modal-body">
           <% @event.users.each do |user| %>
-          <div class="card-product">
+          <div class="wrapper">
+            <div class="card-product">
 
-            <%= link_to user_path(user) do  %>
-              <%= image_tag user.picture_url%>
-            <% end %>
-            <div class="card-product-infos">
-              <h2><%= user.first_name%></h2>
+              <%= link_to user_path(user) do  %>
+                <%= image_tag user.picture_url%>
+              <% end %>
+              <div class="card-product-infos">
+                <h2><%= user.first_name%></h2>
 
-              <% @result = 0 %>
-              <h2><% user.tags.each do |tag|%></h2>
-                    <% if current_user.tags.include?(tag) %>
-                        <% @result += 35 %>
+                <% @result = 0 %>
+                <h2><% user.tags.each do |tag|%></h2>
+                      <% if current_user.tags.include?(tag) %>
+                          <% @result += 35 %>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+                  <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+              </div>
+              <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
+                  Write a message
+                </button>
+              </p>
+            </div>
+            <div class="collapse" id="collapseMessage<%=user.id %>">
+              <div class="message-card message-card-body">
+                Write your message
+              </div>
             </div>
           </div>
           <% end %>
