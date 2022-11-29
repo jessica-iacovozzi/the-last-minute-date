@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if params[:query].present?
-      @events = Event.search_by_category_title_artist_and_city(params[:query])
+      @events = Event.search_by_category_title_artist_date_and_city("#{params[:query]} #{params[:date]}")
 
       markers
     else
