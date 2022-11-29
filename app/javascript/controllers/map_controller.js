@@ -8,6 +8,8 @@ export default class extends Controller {
     markers: Array
   }
 
+  mapMarkers = []
+
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -15,7 +17,6 @@ export default class extends Controller {
     container: this.element,
     style: "mapbox://styles/evaroux/clb1ns7z8000015qjjk4ao0nh" // <-- use your own!
     });
-
     this.#addMarkersToMap(this.markersValue)
     this.#fitMapToMarkers(this.markersValue)
 
@@ -24,7 +25,8 @@ export default class extends Controller {
   }
 
   #addMarkersToMap(markers) {
-    markers.forEach((marker) => {
+    this.#clearMarkers()
+    this.mapMarkers = markers.map((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
 
       // Create a HTML element for your custom marker
@@ -36,11 +38,15 @@ export default class extends Controller {
       customMarker.style.height = "25px"
 
       // Pass the element as an argument to the new marker
-      new mapboxgl.Marker(customMarker)
+      return new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
-        .addTo(this.map)
-    })
+      })
+      this.#refreshMarkers()
+  }
+
+  #refreshMarkers() {
+    this.mapMarkers.forEach(mapMarker => mapMarker.addTo(this.map))
   }
 
   #fitMapToMarkers(markers) {
@@ -51,13 +57,13 @@ export default class extends Controller {
 
   refresh(event) {
     event.preventDefault()
-    console.log(event.detail.id)
-    // this.#clearMarkers()
+    const filteredMarkers = this.markersValue.filter(marker => marker.category === event.detail.id)
+    this.#addMarkersToMap(filteredMarkers)
     // this.#addMarkersAndResize(event.detail.id)
   }
 
   #clearMarkers() {
-    this.markersValue.length = 0
+    this.mapMarkers.forEach(mapMarker => mapMarker.remove())
   }
 
   #addMarkersAndResize(filter) {
