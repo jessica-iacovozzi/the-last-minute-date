@@ -49,7 +49,17 @@
                           <% @result += 35 %>
                       <% end %>
                     <% end %>
-                  <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+                    <% case @result %>
+                    <% when @result > 15 && @result < 100 %>
+                      <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+                    <% when @result > 100 && @result < 200 %>
+                      <p>Good Score: </p><p class="result_total"><%= @result %></p>
+                    <% when @result > 200 %>
+                      <p>Top Score: </p><p class="result_total"><%= @result %></p>
+                    <% else %>
+                      <p>Don't try, you have nothing in common</p>
+                      <%= raise %>
+                    <% end %>
               </div>
               <p>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
