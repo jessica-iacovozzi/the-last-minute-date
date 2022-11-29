@@ -1,6 +1,7 @@
 .navbar-container {
   background-color: white;
-  padding: 29px;
+  padding: 31px;
+  border-bottom: 1px black solid;
 }
 
 .navbar-toggler {
@@ -26,6 +27,7 @@
   flex-grow: 0;
   // margin-bottom: 100%;
   z-index: 2;
+  height: 100vh;
 }
 
 .navbar-lmd .navbar-brand img {
@@ -33,8 +35,8 @@
 }
 
 .navbar-brand {
-  font-family: 'Manrope', sans-serif;
-  font-size: 17px;
+  font-family: 'Caveat', cursive;
+  font-size: 23px;
 }
 
 .navbar-collapse {
@@ -54,4 +56,13 @@
 
 .container-fluid {
   margin-bottom: 10px;
+}
+
+#terms {
+  color: #ab6b7e;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  padding: 20px;
+  margin-top: 220px;
 }

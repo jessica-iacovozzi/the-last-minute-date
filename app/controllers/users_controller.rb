@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, :set_events, only: %i[my_profile edit update show]
+  before_action :set_user, :set_events, only: %i[my_profile edit show]
   def my_profile
   end
 
@@ -11,10 +11,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-  def user_params
-    params.require(:user).permit(:id)
-  end
 
   def set_user
     @my_profile = current_user
