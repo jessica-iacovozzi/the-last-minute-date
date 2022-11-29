@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :events, through: :tickets
   has_many_attached :photos
 
-  validates :username, presence: true
+  validates :username, :first_name, :description, :tags, presence: true
   validates :username, uniqueness: true
   validates :age, numericality: { only_integer: true }
 end
