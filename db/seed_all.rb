@@ -3,12 +3,12 @@ def seed_all
   puts 'Cleaning Database'
   Message.destroy_all
   puts 'Cleaned Messages...'
+  Conversation.destroy_all
+  puts 'Cleaned Conversations...'
   User.destroy_all
   puts 'Cleaned Users...'
   Event.destroy_all
   puts 'Cleaned Events...'
-  Conversation.destroy_all
-  puts 'Cleaned Conversations...'
   Ticket.destroy_all
   puts 'Cleaned Tickets...'
   puts 'Done!'
@@ -656,55 +656,105 @@ def seed_all
   # User.create!(email: "j@j.com", password: "123456")
   # User.create!(email: "e@e.com", password: "123456")
 
-  puts 'Created Empty Conversation'
-  Conversation.create!(name: 'concert')
-  Conversation.create!(name: 'Arts & Theatre')
+  puts 'Create Empty Conversation'
+  Conversation.create!(name: 'Hugo', user1_id: User.find_by(first_name: 'Hugo').id, user2_id: User.find_by(first_name: 'Giovanni').id)
+  puts 'Done'
+  # Conversation.create!(name: 'Jessica', user1: jessica, user2: eva)
+  # Conversation.create!(name: 'Eva', user1: hugo, user2: jessica)
+  # Conversation.create!(name: 'Giovanni', user1: giovanni, user2: eva)
+  # Conversation.create!(name: 'Charly')
 
   puts 'Created Messages'
+  puts 'Conversation Hugo'
   Message.create!(
     content: "Hey",
-    sender: User.first,
-    conversation: Conversation.first
+    sender: User.find_by(first_name: 'Giovanni'),
+    conversation: Conversation.find_by(name: 'Hugo')
   )
   Message.create!(
     content: "What's up?",
-    sender: User.first,
-    conversation: Conversation.first
+    sender: User.find_by(first_name: 'Giovanni'),
+    conversation: Conversation.find_by(name: 'Hugo')
   )
   Message.create!(
     content: "Yo",
-    sender: User.last,
-    conversation: Conversation.first
+    sender: User.find_by(first_name: 'Hugo'),
+    conversation: Conversation.find_by(name: 'Hugo')
   )
   Message.create!(
     content: "Not much, you?",
-    sender: User.last,
-    conversation: Conversation.first
+    sender: User.find_by(first_name: 'Hugo'),
+    conversation: Conversation.find_by(name: 'Hugo')
   )
-
 
   # ---------------------
+  # puts 'Conversation Jessica'
+  # Message.create!(
+  #   content: "whats this",
+  #   sender: User.first,
+  #   conversation: Conversation.find_by(name: 'Jessica')
+  # )
+  # Message.create!(
+  #   content: "What's up?",
+  #   sender: User.first,
+  #   conversation: Conversation.find_by(name: 'Jessica')
+  # )
+  # Message.create!(
+  #   content: "Yo",
+  #   sender: User.last,
+  #   conversation: Conversation.find_by(name: 'Jessica')
+  # )
+  # Message.create!(
+  #   content: "Not much, you?",
+  #   sender: User.last,
+  #   conversation: Conversation.find_by(name: 'Jessica')
+  # )
 
-  Message.create!(
-    content: "Hey",
-    sender: User.first,
-    conversation: Conversation.last
-  )
-  Message.create!(
-    content: "What's up?",
-    sender: User.first,
-    conversation: Conversation.last
-  )
-  Message.create!(
-    content: "Yo",
-    sender: User.last,
-    conversation: Conversation.last
-  )
-  Message.create!(
-    content: "Not much, you?",
-    sender: User.last,
-    conversation: Conversation.last
-  )
+  # ---------------------
+  # puts 'Conversation Eva'
+  # Message.create!(
+  #   content: "hello",
+  #   sender: User.first,
+  #   conversation: Conversation.find_by(name: 'Eva')
+  # )
+  # Message.create!(
+  #   content: "What's up?",
+  #   sender: User.first,
+  #   conversation: Conversation.find_by(name: 'Eva')
+  # )
+  # Message.create!(
+  #   content: "Yolo",
+  #   sender: User.last,
+  #   conversation: Conversation.find_by(name: 'Eva')
+  # )
+  # Message.create!(
+  #   content: "Not much, you?",
+  #   sender: User.last,
+  #   conversation: Conversation.find_by(name: 'Eva')
+  # )
+
+  # ---------------------
+  # puts 'Conversation Giovanni'
+  # Message.create!(
+  #   content: "viola!",
+  #   sender: User.find_by(first_name: 'Eva'),
+  #   conversation: Conversation.find_by(name: 'Giovanni')
+  # )
+  # Message.create!(
+  #   content: "yess?",
+  #   sender: User.find_by(first_name: 'Eva'),
+  #   conversation: Conversation.find_by(name: 'Giovanni')
+  # )
+  # Message.create!(
+  #   content: "yolo",
+  #   sender: User.find_by(first_name: 'Eva'),
+  #   conversation: Conversation.find_by(name: 'Giovanni')
+  # )
+  # Message.create!(
+  #   content: "Not much, you?",
+  #   sender: User.find_by(first_name: 'Eva'),
+  #   conversation: Conversation.find_by(name: 'Giovanni')
+  # )
 
   puts 'Done!'
 
