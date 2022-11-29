@@ -8,9 +8,9 @@ class User < ApplicationRecord
   has_many :conversations, through: :sent_messages, dependent: :destroy
   has_many :tickets, dependent: :destroy
   has_many :events, through: :tickets
-  has_one_attached :photo
+  has_many_attached :photos
 
-  validates :first_name, :username, :tags, :picture_url, :age, :description, presence: true
+  validates :username, :first_name, :description, :tags, presence: true
   validates :username, uniqueness: true
   validates :age, numericality: { only_integer: true }
 end

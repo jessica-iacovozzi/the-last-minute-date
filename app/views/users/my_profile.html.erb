@@ -1,8 +1,13 @@
 <div class="text-center">
   <div class="profile-banner"
-       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
-    <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
-    <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn-flat" %>
+    <% if @my_profile.photos.attached? %>
+        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= cl_image_path @my_profile.photos.first.key %>);">
+        <%= cl_image_tag @my_profile.photos.first.key, class: 'profile-picture' %>
+      <% else %>
+        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
+        <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
+      <% end %>
+    <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn btn-flat" %>
   </div>
 
   <div class="description-card">
