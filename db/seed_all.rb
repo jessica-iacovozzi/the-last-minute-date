@@ -3,12 +3,12 @@ def seed_all
   puts 'Cleaning Database'
   Message.destroy_all
   puts 'Cleaned Messages...'
+  Conversation.destroy_all
+  puts 'Cleaned Conversations...'
   User.destroy_all
   puts 'Cleaned Users...'
   Event.destroy_all
   puts 'Cleaned Events...'
-  Conversation.destroy_all
-  puts 'Cleaned Conversations...'
   Ticket.destroy_all
   puts 'Cleaned Tickets...'
   puts 'Done!'

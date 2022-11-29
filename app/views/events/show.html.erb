@@ -35,7 +35,7 @@
         <div class="modal-body">
           <% @event.users.each do |user| %>
           <div class="wrapper">
-            <div class="card-product">
+            <div class="card-product" id="<%= user.id %>">
 
               <%= link_to user_path(user) do  %>
                 <%= image_tag user.picture_url%>
@@ -59,7 +59,12 @@
             </div>
             <div class="collapse" id="collapseMessage<%=user.id %>">
               <div class="message-card message-card-body">
-                Write your message
+                <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                  <input type="text" name="content" id="content">
+                  <input type="submit">
+
+                </form>
+
               </div>
             </div>
           </div>
