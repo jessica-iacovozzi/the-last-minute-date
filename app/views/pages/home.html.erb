@@ -9,31 +9,34 @@
   </div>
 
   <div data-controller="refresh-markers">
-    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a show"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+    <div class ="search-bar">
+      <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+        <%= submit_tag "Search", class: "btn-primary-search" %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control-search",
+          placeholder: "Find a show"
+        %>
+      <% end %>
+    </div>
 
     <div class="home-btn-category">
 
       <div class="home-btn-category btn"
-          data-action="click->refresh-markers#update">
-        <a class="category-link" href="#">Music</a>
+          data-action="click->refresh-markers#passIdToMapController">
+        <a class="category-link" href="#" id="music">Music</a>
       </div>
 
       <div class="home-btn-category btn"
-          data-action="click->refresh-markers#update">
-        <a class="category-link" href="#">Art & Theater</a>
+          data-action="click->refresh-markers#passIdToMapController">
+        <a class="category-link" href="#" id="art">Art & Theater</a>
       </div>
 
       <div class="home-btn-category btn"
-          data-action="click->refresh-markers#update">
-        <a class="category-link" href="#">Sport</a>
+          data-action="click->refresh-markers#passIdToMapController">
+        <a class="category-link" href="#" id="sport">Sport</a>
       </div>
+
     </div>
 
     <%= render "shared/map" %>
