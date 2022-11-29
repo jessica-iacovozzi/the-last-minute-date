@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="refresh-markers"
 export default class extends Controller {
-  static targets = ["categories", "mapRefresh", "child"]
+  static targets = ["categories", "mapRefresh", "child", "modal", "form"]
 
   connect() {
 
