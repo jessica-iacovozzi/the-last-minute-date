@@ -30,6 +30,9 @@
                     input_html: { class: "tag-selector" },
                     item_wrapper_class: 'tag-item',
                     required: false %>
+        <%= f.input :photos,
+                    as: :file,
+                    input_html: { multiple: true } %>
         <%= f.input :password,
                     required: false,
                     hint: "Leave blank if you don't want to change your password",
