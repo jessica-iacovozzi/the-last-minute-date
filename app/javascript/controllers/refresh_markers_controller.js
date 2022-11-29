@@ -2,13 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="refresh-markers"
 export default class extends Controller {
-  static targets = ["categories", "mapRefresh"]
+  static targets = ["categories", "mapRefresh", "child"]
 
   connect() {
-    // console.log(this.categoriesTarget)
+
   }
 
-  update(event) {
-    console.log(event.target.innerText)
+  passIdToMapController(event) {
+    const id = event.target.id
+    this.childTarget.dispatchEvent(new CustomEvent("updateMap", {
+      detail: {
+        id: id
+      }
+    }))
   }
 }
