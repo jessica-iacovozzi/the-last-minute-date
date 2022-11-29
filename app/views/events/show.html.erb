@@ -34,23 +34,24 @@
 
         <div class="modal-body">
           <% @event.users.each do |user| %>
-          <div class="card-product">
+            <div class="card-product">
 
-            <%= link_to user_path(user) do  %>
-              <%= image_tag user.picture_url%>
-            <% end %>
-            <div class="card-product-infos">
-              <h2><%= user.first_name%></h2>
+              <%= link_to user_path(user) do  %>
+                <%= image_tag user.picture_url%>
+              <% end %>
 
-              <% @result = 0 %>
-              <h2><% user.tags.each do |tag|%></h2>
-                    <% if current_user.tags.include?(tag) %>
-                        <% @result += 35 %>
-                    <% end %>
-                  <% end %>
-                <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+              <div class="card-product-infos">
+                  <h2><%= user.first_name%></h2>
+                  <% @result = 0 %>
+                  <h2><% user.tags.each do |tag|%></h2>
+                        <% if current_user.tags.include?(tag) %>
+                            <% @result += 35 %>
+                        <% end %>
+                      <% end %>
+                    <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+              </div>
             </div>
-          </div>
+
           <% end %>
         </div>
 
