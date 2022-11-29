@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_155052) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_185525) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_155052) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.bigint "user1_id"
+    t.bigint "user2_id"
+    t.index ["user1_id"], name: "index_conversations_on_user1_id"
+    t.index ["user2_id"], name: "index_conversations_on_user2_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -59,11 +63,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_155052) do
     t.string "picture_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.string "time"
     t.string "city"
     t.string "venue"
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -105,6 +109,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_155052) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "conversations", "users", column: "user1_id"
+  add_foreign_key "conversations", "users", column: "user2_id"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "tickets", "events"

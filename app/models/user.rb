@@ -4,9 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :sent_messages, class_name: "Message", foreign_key: :sender_id, dependent: :destroy
-  has_many :conversations_user_1, through: :sent_messages, dependent: :destroy
-  has_many :conversations_user_2, through: :sent_messages, dependent: :destroy
+  has_many :messages
+  has_many :conversations, through: :messages
+
+  # this is how you access chats by typing user.conversation_as_user1 or user2
+  has_many :conversations_as_user1, class_name: 'Conversation', foreign_key: :user1_id
+  has_many :conversations_as_user2, class_name: 'Conversation', foreign_key: :user2_id
 
   has_many :tickets, dependent: :destroy
   has_many :events, through: :tickets

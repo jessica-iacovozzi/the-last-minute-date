@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
   def all_conversation
-    @conversations = Conversation.all
-    @user = User.all
+    @conversations = Conversation.where("user1_id = ? or user2_id = ?", current_user,
+                                        current_user).order(updated_at: :desc)
   end
 
   def show

@@ -14,9 +14,12 @@
   <% @conversations.map do |conversation| %>
     <div class="ticket-card-new">
 
-      <a href="/conversations/<%= conversation.id %>"><p><%= conversation.name.capitalize %></p></a>
+      <a href="/conversations/<%= conversation.id %>"><p>
 
-      <a href="/conversations/<%= conversation.id %>"><p><%= image_tag conversation.messages.user.sender.picture_url %></p></a>
+       <%= image_tag conversation.user1.picture_url %>
+
+      </p></a>
+
 
     </div>
   <% end %>
