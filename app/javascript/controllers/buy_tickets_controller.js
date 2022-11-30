@@ -5,7 +5,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
     static targets = ["buyButton", "showButton"]
     static values = {
-      eventId: String
+      eventId: Number
     }
 
   connect() {
