@@ -46,22 +46,42 @@
                   <% end %>
                 </div>
 
-                  <div class="card-product-button">
-                    <p>
-                      <button class="msg-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
-                        Send a message
-                      </button>
-                    </p>
+                <div class="card-product-button"
+                    data-controller="send-message">
+                  <p>
+                    <button class="msg-btn"
+                            data-send-message-target="button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseMessage<%=user.id %>"
+                            aria-expanded="false"
+                            aria-controls="collapseExample"
+                            >
+                      Send a message
+                    </button>
+                  </p>
 
-                    <div class="collapse" id="collapseMessage<%=user.id %>">
-                      <div class="message-card message-card-body">
-                        <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
-                          <input type="text" name="content" id="content-card">
-                          <input type="submit" id="content-submit">
-                        </form>
-                      </div>
+                  <div class="collapse" id="collapseMessage<%=user.id %>">
+
+                    <div class="message-card message-card-body"
+                          data-send-message-user-id-value="<%= user.id %>">
+
+                      <form
+                          data-send-message-target="form"
+                          data-action='submit->send-message#sendMessage'
+                          action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                        <input
+                            data-send-message-target="content"
+                            type="text"
+                            name="content"
+                            id="content-card">
+                        <input
+                            type="submit"
+                            id="content-submit">
+                      </form>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
