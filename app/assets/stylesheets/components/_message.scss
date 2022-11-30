@@ -4,6 +4,12 @@
   font-family: $manrope;
   font-size: 1.1rem;
 }
+.message-row h3{
+  font-weight: 600;
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
 
 // To style the message itself
 .sender-style, .receiver-style {

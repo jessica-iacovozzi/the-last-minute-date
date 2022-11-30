@@ -1,8 +1,13 @@
 
 <div id="message-<%= message.id %>">
   <small>
-    <strong><%= message.sender_id %></strong>
-    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+  <% if message.sender_id == current_user.id %>
+    <h3 class="show_message_firstname">
+      <%= @conversation.user1.first_name.capitalize %>
+    </h3><i>- <%= message.created_at.strftime("%l:%M %p") %></i>
+  <% else %>
+    <h3><%= @conversation.user2.first_name.capitalize %></h3><i>- <%= message.created_at.strftime("%l:%M %p") %></i>
+  <% end %>
   <p><%= message.content %></p>
   </small>
 
