@@ -54,15 +54,15 @@
                     </p>
                   </div>
 
-                  <div class="collapse" id="collapseMessage<%=user.id %>">
-                    <div class="message-card message-card-body">
-                      <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
-                        <input type="text" name="content" id="content">
-                        <input type="submit">
-                      </form>
-                    </div>
-                  </div>
               </div>
+            </div>
+          </div>
+          <div class="collapse" id="collapseMessage<%=user.id %>">
+            <div class="message-card message-card-body">
+              <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                <input type="text" name="content" id="content">
+                <input type="submit">
+              </form>
             </div>
           </div>
         <% end %>
