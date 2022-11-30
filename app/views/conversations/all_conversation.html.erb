@@ -11,21 +11,57 @@
 
 <div class="shows-block-new ">
 
+
+  <div class="all_conversation">
+    <% @conversations.map do |conversation| %>
+      <div class="ticket-card-newer">
+         <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc circle_nav ">
+          <div>
+            <% if conversation.user1.id == current_user.id %>
+              <%= image_tag conversation.user2.picture_url, class:'discussion_card_img discussion_card_img-scroll' %>
+                <p><%= conversation.user2.first_name.capitalize %></p>
+            <% else %>
+              <%= image_tag conversation.user1.picture_url, class:'discussion_card_img discussion_card_img-scroll' %>
+              <p><%= conversation.user1.first_name.capitalize %></p>
+            <% end %>
+          </div>
+         </a>
+      </div>
+    <% end %>
+  </div>
+
   <% @conversations.map do |conversation| %>
+
     <div class="ticket-card-new">
 
-      <a href="/conversations/<%= conversation.id %>"><p>
-      <% if conversation.user2.photos.attached? %>
-        <%= cl_image_tag conversation.user2.photos.first.key %>
-      <% elsif conversation.user2.picture_url? %>
-        <%= image_tag conversation.user2.picture_url %>
-      <% else %>
-        <%= image_tag 'placeholder-avatar.png' %>
-      <% end %>
-      </p></a>
+      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
+        <% if conversation.user1.id == current_user.id %>
+          <% if conversation.user2.photos.attached? %>
+            <%= cl_image_tag conversation.user2.photos.first.key, class: 'discussion_card_img' %>
+          <% elsif conversation.user2.picture_url? %>
+            <%= image_tag conversation.user2.picture_url, class: 'discussion_card_img' %>
+          <% else %>
+            <%= image_tag 'placeholder-avatar.png', class: 'discussion_card_img' %>
+          <% end %>
+        <% else %>
+          <% if conversation.user1.photos.attached? %>
+            <%= cl_image_tag conversation.user1.photos.first.key, class: 'discussion_card_img' %>
+          <% elsif conversation.user1.picture_url? %>
+            <%= image_tag conversation.user1.picture_url, class: 'discussion_card_img' %>
+          <% else %>
+            <%= image_tag 'placeholder-avatar.png', class: 'discussion_card_img' %>
+          <% end %>
+        <% end %>
 
-
+        <div>
+          <% if conversation.user1.id == current_user.id %>
+            <h3><%= conversation.user2.first_name.capitalize %></h3>
+          <% else %>
+            <h3><%= conversation.user1.first_name.capitalize %></h3>
+          <% end %>
+          <p> <%= conversation.messages.last.content %> - <i><%= conversation.messages.last.created_at.strftime("%a %b %e") %></i> </p>
+        </div>
+      </a>
     </div>
   <% end %>
-
 </div>

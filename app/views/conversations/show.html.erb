@@ -4,36 +4,43 @@
   data-conversation-subscription-current-user-id-value="<%= current_user.id %>"
 >
 
-
-
   <div class="text-center">
-  <div class="description-card-new">
-    <h1>#<%= @conversation.name.capitalize %></h1>
-    <div class="back_conversation_show">
-      <a href="/conversations"><%= icon('fa-solid', 'arrow-left-long')%></a>
-    </div>
-  </div>
-
-
-
-
-  <div class="messages" data-conversation-subscription-target="messages">
-    <% @conversation.messages.each do |message| %>
-      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-          <%= render "conversations/message", message: message %>
-        </div>
+    <div class="description-card-new">
+      <% if @conversation.user1.id == current_user.id %>
+        <h1><%= @conversation.user2.first_name.capitalize %></h1>
+      <% else %>
+        <h1><%= @conversation.user1.first_name.capitalize %></h1>
+      <% end %>
+      <div class="back_conversation_show">
+        <a href="/conversations"><%= icon('fa-solid', 'arrow-left-long')%></a>
       </div>
-    <% end %>
-  </div>
+    </div>
 
-  <%= simple_form_for [@conversation, @message],
-   html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "Message ##{@conversation.name}",
-      wrapper_html: {class: "flex-grow-1"}
-      %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <% end %>
+    <div class="messages" data-conversation-subscription-target="messages">
+      <% @conversation.messages.each do |message| %>
+
+        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+
+          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+            <%= render "conversations/message", message: message %>
+          </div>
+
+        </div>
+      <% end %>
+    </div>
+
+
+
+      <%= simple_form_for [@conversation, @message],
+      html: { data: { action: "turbo:submit-end->conversation-subscription#resetForm" }, class: "d-flex" } do |f| %>
+        <%= f.input :content,
+          label: false,
+          placeholder: "Message ##{
+            @conversation.user1.id == @user.id ? @conversation.user2.first_name.capitalize : @conversation.user1.first_name.capitalize
+            }",
+          wrapper_html: {class: "flex-grow-1"}
+          %>
+        <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+      <% end %>
+  </div>
 </div>
