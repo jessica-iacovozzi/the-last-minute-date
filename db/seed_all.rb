@@ -106,7 +106,7 @@ def seed_all
   alex = {
     first_name: 'Alex',
     username: 'alexadvocate',
-    tags: all_tags5,
+    tags: ['Baseball', 'Basketball', 'Metal', 'Pop', 'Ballads/Romantic', 'Soccer', 'R&B', 'Folk', 'Classical', 'Alternative'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/71_gfkef7.jpg',
     age: '37',
@@ -117,7 +117,7 @@ def seed_all
   megan = {
     first_name: 'Megan',
     username: 'meganfragrant',
-    tags: all_tags7,
+    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/96_cmn2l1.jpg',
     age: '27',
@@ -613,42 +613,103 @@ def seed_all
     longitude: -73.5799,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
-  # demoday = {
-  #   title: 'Nsync',
-  #   date: Date.new(2022, 12, 2),
-  #   time: '8:00',
-  #   city: 'Montreal',
-  #   venue: 'MTELUS',
-  #   category: 'music',
-  #   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-  #   description: 'You know who they are',
-  #   price: '287',
-  #   artist: 'Nsync',
-  #   latitude: 45.5106,
-  #   longitude: -73.5634,
-  #   picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
-  # }
-  # demoday = {
-  #   title: 'Nsync',
-  #   date: Date.new(2022, 12, 2),
-  #   time: '8:00',
-  #   city: 'Montreal',
-  #   venue: 'MTELUS',
-  #   category: 'music',
-  #   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-  #   description: 'You know who they are',
-  #   price: '287',
-  #   artist: 'Nsync',
-  #   latitude: 45.5106,
-  #   longitude: -73.5634,
-  #   picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
-  # }
+  pierre_lapointe = {
+    title: 'Solo Piano',
+    date: Date.new(2022, 12, 3),
+    time: '8:00',
+    city: 'Quebec',
+    venue: 'Grand theatre de Quebec',
+    category: 'music',
+    address: '269 Bd René-Lévesque E, Québec, QC G1R 2B3',
+    description: 'You know who they are',
+    price: '60',
+    artist: 'Pierre Lapointe',
+    latitude: 46.8063,
+    longitude: -71.2217,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  martin_matte = {
+    title: 'Martin Matte présente',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Quebec',
+    venue: 'Salle Albert Rousseau',
+    category: 'concerts',
+    address: '2410 Ch Ste-Foy, Québec, QC G1V 1T3',
+    description: 'Martin latest show will make you laugh until you scream ',
+    price: '85',
+    artist: 'Martin Matte',
+    latitude: 46.7863,
+    longitude: -71.2865,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  nordique_de_quebec_vs_montreal_canadiens = {
+    title: 'Qc vs Mtl',
+    date: Date.new(2022, 12, 3),
+    time: '8:00',
+    city: 'Quebec',
+    venue: 'Centre Videotron',
+    category: 'sport',
+    address: '250 Wilfrid-Hamel Blvd, Québec City, Quebec G1L 5A7',
+    description: 'You know who they are',
+    price: '65',
+    artist: 'Hockey game',
+    latitude: 46.8289,
+    longitude: -71.2479,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  blue_jays = {
+    title: 'Blue Jays against Cardinals',
+    date: Date.new(2022, 12, 2),
+    time: '8:30',
+    city: 'Toronto',
+    venue: 'MTELUS',
+    category: 'sports',
+    address: '1 Blue Jays Way, Toronto, ON M5V 1J1',
+    description: 'Toronto Blue Jays vs St-Louis Cardinals',
+    price: '47',
+    artist: 'Toronto Blue Jays',
+    latitude: 43.6418,
+    longitude: -79.3891,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  emile_bilodeau = {
+    title: 'Émile Bilodeau',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Trois-Rivières',
+    venue: 'Cogeco Amphiteatre',
+    category: 'music',
+    address: '100 Avenue des Draveurs, Trois-Rivières, QC',
+    description: 'Emile Bilodeau welcomes you in his musical world',
+    price: '35',
+    artist: 'Émile Bilodeau',
+    latitude: 46.3470,
+    longitude: -72.5322,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
+  lise_dion = {
+    title: 'Chu rendu là',
+    date: Date.new(2022, 12, 2),
+    time: '8:00',
+    city: 'Trois-Rivières',
+    venue: 'salle j.-antonio-thompson',
+    category: 'concerts',
+    address: '374 Rue des Forges, Trois-Rivières, QC G9A 5H3',
+    description: 'Lise Dion reflects on her life on stage ',
+    price: '55',
+    artist: 'Lise Dion',
+    latitude: 46.3424,
+    longitude: -72.5436,
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  }
 
   [
     guillaume_pineault, pomme, jessie_reyez, montreal_canadiens, jo_cormier,
     rocket_hockey, lil_tjay, riz_la_vie, dominic_paquet, junior, louis_jose_houde,
     fred_tremblay, nsync, montreal_canadiens_shark, justin_bieber, scott_town, les_trois_mousquetaires,
-    les_denis_drolets, amon_amarth, ping_pong, mademoiselle_julie, film_orchestra
+    les_denis_drolets, amon_amarth, ping_pong, mademoiselle_julie, film_orchestra, pierre_lapointe, martin_matte,
+    nordique_de_quebec_vs_montreal_canadiens, blue_jays, emile_bilodeau, lise_dion
   ].each do |attribute|
     event = Event.create!(attribute)
     puts "Created #{event.category}"
