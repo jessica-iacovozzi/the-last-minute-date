@@ -8,7 +8,7 @@
     <p>No more saturday night <strong>alone</strong>. With last minute date, <strong>choose</strong> a show and <strong>find a buddy</strong> to go with you. </p>
   </div>
 
-  <button type="button" class="form-control-search" data-bs-toggle="modal" data-bs-target="#modal" data-bs-whatever="@getbootstrap">Pick a city and a date</button>
+  <button type="button" class="form-control-search" data-bs-toggle="modal" data-bs-target="#modal" data-bs-whatever="@getbootstrap">Where and when do you want to go?</button>
 
   <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-refresh-markers-target="modal">
     <div class="modal-dialog">
@@ -22,7 +22,7 @@
           <%= text_field_tag :query,
             params[:query],
             class: "form-control-search",
-            placeholder: "Enter a location"
+            placeholder: "Search for a city or an artist"
           %>
           <%= date_field :date,
             params[:date],
@@ -35,23 +35,23 @@
   </div>
 
   <div class="home-btn-category">
-  
+
       <div>
-        <button class="home-btn-category b-home" id="music"
+        <button class="home-btn-category b-home" id="concerts"
         data-action="click->refresh-markers#passIdToMapController">
-        Music</button>
+        Concerts</button>
       </div>
 
       <div>
-        <button class="home-btn-category b-home" id="art"
+        <button class="home-btn-category b-home" id="theater"
         data-action="click->refresh-markers#passIdToMapController">
-        Art & Theater</button>
+        Theater</button>
       </div>
 
       <div>
-        <button class="home-btn-category b-home" id="sport"
+        <button class="home-btn-category b-home" id="sports"
         data-action="click->refresh-markers#passIdToMapController">
-        Sport</button>
+        Sports</button>
       </div>
 
   </div>
