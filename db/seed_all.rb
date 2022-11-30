@@ -508,7 +508,7 @@ def seed_all
 
   puts 'Create Empty Conversation'
   Conversation.create!(
-    name: 'Hugo', user1_id: User.find_by(first_name: 'Hugo').id, user2_id: User.find_by(first_name: 'Giovanni').id
+    name: 'Hugo', user1_id: User.find_by(first_name: 'Giovanni').id, user2_id: User.find_by(first_name: 'Hugo').id
   )
   puts 'Done'
   # Conversation.create!(name: 'Jessica', user1: jessica, user2: eva)
@@ -530,12 +530,12 @@ def seed_all
   )
   Message.create!(
     content: "Yo",
-    sender: User.find_by(first_name: 'Hugo'),
+    sender: User.find_by(first_name: 'Giovanni'),
     conversation: Conversation.find_by(name: 'Hugo')
   )
   Message.create!(
     content: "Not much, you?",
-    sender: User.find_by(first_name: 'Hugo'),
+    sender: User.find_by(first_name: 'Giovanni'),
     conversation: Conversation.find_by(name: 'Hugo')
   )
 

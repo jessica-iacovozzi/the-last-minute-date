@@ -1,7 +1,7 @@
 
 <div id="message-<%= message.id %>">
   <small>
-  <% if message.sender_id == current_user.id %>
+  <% if @conversation.user1.id == current_user.id %>
     <h3 class="show_message_firstname">
       <%= @conversation.user1.first_name.capitalize %>
     </h3><i>- <%= message.created_at.strftime("%l:%M %p") %></i>
