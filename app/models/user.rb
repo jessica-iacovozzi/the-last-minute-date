@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  attr_accessor :score, :match_level, :css
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
