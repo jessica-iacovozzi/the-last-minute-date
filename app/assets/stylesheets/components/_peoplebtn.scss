@@ -5,14 +5,11 @@
   justify-content: space-around;
   align-items: center;
   margin: 35px;
-  width: 150px;
+  width: 35%;
   border-radius: 5px;
   border: 1px black solid;
-}
-
-.people-btn a {
-  color: black;
-  font-family: 'Manrope', sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: 13px;
-  text-decoration: none;
+  border: 1px black solid;
+  box-shadow: 3px 5px rgba(0,0,0,.7);
 }
