@@ -62,7 +62,7 @@ def seed_all
   hugo = {
     first_name: 'Hugo',
     username: 'Hugo Spirit',
-    tags: all_tags,
+    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
     picture_url:
     'https://avatars.githubusercontent.com/u/112583556?v=4',
     age: '22',
@@ -73,7 +73,7 @@ def seed_all
   eva = {
     first_name: 'Eva',
     username: 'lola',
-    tags: all_tags2,
+    tags: ['Baseball', 'Boxing', 'Cycling', 'Dance/Electronic', 'Magic', 'Comedy', 'Opera', 'Folk', 'Rock', 'Reggae'],
     picture_url:
     'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
     age: '23',
@@ -530,12 +530,13 @@ def seed_all
     venue: 'TNM',
     category: 'theatre',
     address: '84 Saint-Catherine St W, Montreal, Quebec H2X 1Z6',
-    description: 'Come and see Alexandre Dumas Classic tale',
+    description: "Come and see Alexandre Dumas classic tale about the three musketeers Athos, Porthos and Aramis as the
+    young D'Artagnan comes to Paris to seek glory and fame as he tries to become a musketeer ",
     price: '55',
     artist: 'Alexandre Dumas',
     latitude: 45.5088,
     longitude: -73.5645,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669826740/aapsmmou1z1st6qaxmww.png'
   }
   les_denis_drolets = {
     title: 'Les Denis Drolet',
