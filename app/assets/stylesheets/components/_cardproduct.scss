@@ -1,39 +1,46 @@
+#staticBackdropLabel {
+  padding: 0 0 0 93px;
+}
+
+.card-product-infos {
+  padding: 30px 80px 10px 30px;
+}
+
 .card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 10px 10px ;
-  margin-bottom: 0;
+  overflow: hidden;
+  height: 125px;
+  background: white;
+  margin: 10px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+
+.card-product-name {
+  h2 {
+    font-family: 'Manrope';
+    font-weight: 900;
+    font-size: 17px;
+    height: max-content;
+    width: max-content;
+  }
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 5px;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 15px;
-  padding-right: 0;
-}
-#staticBackdropLabel {
-  padding: 0 0 0 120px;
+.card-product-result {
+  p {
+    font-family: 'Manrope';
+    font-size: 9px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 5px;
+    margin-top: 8px;
+  }
 }
