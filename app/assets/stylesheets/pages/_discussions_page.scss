@@ -37,8 +37,8 @@
   position: relative;
 }
 .discussion_card_img{
-  width: 70px;
-  height: 70px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   border: 3px solid #e2e2e2;
 }
@@ -59,9 +59,42 @@
     font-size: .8rem;
   }
 }
-.conversation_wrapper_disc h3 {
-
+.all_conversation{
+  margin: 0 auto;
+  width: 90%;
+  height: 100px;
+  color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(
+      to bottom,
+      #e0c1f0,
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+  overflow-y: scroll;
+  display:flex;
+  align-items: center;
+  text-align: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.conversation_wrapper_disc p {
-
+.ticket-card-newer{
+  display: inline-block;
+  margin-top:5px;
+  & a{
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+  }
+}
+.circle_nav{
+  display: flex;
+  gap: 5px;
+}
+.discussion_card_img-scroll{
+  width: 60px;
+  height: 60px;
+  margin-bottom:2px;
 }
