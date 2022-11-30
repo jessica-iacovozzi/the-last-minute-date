@@ -21,3 +21,6 @@ application.register("map", MapController)
 
 import RefreshMarkersController from "./refresh_markers_controller"
 application.register("refresh-markers", RefreshMarkersController)
+
+import SendMessageController from "./send_message_controller"
+application.register("send-message", SendMessageController)

@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     @message.save
     @event = Event.find(params[:event_id])
 
-    redirect_to event_path(@event)
+    head :ok
   end
 
   private
