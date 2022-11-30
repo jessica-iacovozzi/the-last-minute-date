@@ -1,6 +1,6 @@
 .chatroom {
   background: white;
-  margin-top: 9px;
+  // margin-top: 9px;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
@@ -8,16 +8,14 @@
   flex-grow: 1;
 
   & h1 {
-    // border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
-    // padding: 1rem;
   }
 
   .messages {
-    // height: 100%;
     overflow: scroll;
     padding: 1rem;
     background-color: white;
+    min-height: 600px;
   }
 
   #new_message {
@@ -65,4 +63,8 @@
     color: white;
     transform: scale(1.01);
   }
+}
+.text-center {
+  text-align: center !important;
+  background-color: white;
 }
