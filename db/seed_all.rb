@@ -139,7 +139,7 @@ def seed_all
   delores = {
     first_name: 'Delores',
     username: 'idealdelores',
-    tags: all_tags2,
+    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/107_sjm1vi.jpg',
     age: '25',
