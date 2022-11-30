@@ -4,17 +4,22 @@
   font-family: $manrope;
   font-size: 1.1rem;
 }
+.message-row h3{
+  font-weight: 600;
+  font-size: 1.3rem;
+  display: inline-block;
+}
 
 // To style the message itself
 .sender-style, .receiver-style {
   width: 60%;
   max-width: 250px;
-  border-radius: 4px;
-  padding: 8px;
+  border-radius: 6px;
+  padding: 11px;
   min-height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .sender-style {
@@ -23,4 +28,8 @@
 
 .receiver-style {
   background-color: lightblue;
+}
+small, .small {
+  font-size: 0.875em;
+  text-align: start;
 }
