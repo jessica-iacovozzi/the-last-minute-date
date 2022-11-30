@@ -20,23 +20,27 @@
       <% @conversation.messages.each do |message| %>
 
         <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+
           <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
             <%= render "conversations/message", message: message %>
           </div>
-        </div>
 
+        </div>
       <% end %>
     </div>
 
-    <%= simple_form_for [@conversation, @message],
-    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Message ##{@conversation.user2.first_name.capitalize}",
-        wrapper_html: {class: "flex-grow-1"}
-        %>
-      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-    <% end %>
 
+
+      <%= simple_form_for [@conversation, @message],
+      html: { data: { action: "turbo:submit-end->conversation-subscription#resetForm" }, class: "d-flex" } do |f| %>
+        <%= f.input :content,
+          label: false,
+          placeholder: "Message ##{
+            @conversation.user1.id == @user.id ? @conversation.user2.first_name.capitalize : @conversation.user1.first_name.capitalize
+            }",
+          wrapper_html: {class: "flex-grow-1"}
+          %>
+        <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+      <% end %>
   </div>
 </div>
