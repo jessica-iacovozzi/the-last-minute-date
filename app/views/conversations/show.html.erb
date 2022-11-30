@@ -4,18 +4,18 @@
   data-conversation-subscription-current-user-id-value="<%= current_user.id %>"
 >
 
-
-
   <div class="text-center">
   <div class="description-card-new">
-    <h1>#<%= @conversation.name.capitalize %></h1>
+    <% if @conversation.user1.id == current_user.id %>
+      <h1>#<%= @conversation.user2.first_name.capitalize %></h1>
+    <% else %>
+      <h1>#<%= @conversation.user1.first_name.capitalize %></h1>
+    <% end %>
+
     <div class="back_conversation_show">
       <a href="/conversations"><%= icon('fa-solid', 'arrow-left-long')%></a>
     </div>
   </div>
-
-
-
 
   <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>

@@ -14,14 +14,23 @@
   <% @conversations.map do |conversation| %>
     <div class="ticket-card-new">
 
-      <a href="/conversations/<%= conversation.id %>"><p>
-
-       <%= image_tag conversation.user1.picture_url %>
-
-      </p></a>
+      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
 
 
+        <div>
+          <%= image_tag conversation.user2.picture_url, class:'discussion_card_img' %>
+        </div>
+        <div>
+          <% if conversation.user1.id == current_user.id %>
+            <h3><%= conversation.user2.first_name.capitalize %></h3>
+          <% else %>
+            <h3><%= conversation.user1.first_name.capitalize %></h3>
+          <% end %>
+
+          <p> <%= conversation.messages.last.content %> - <i><%= conversation.messages.last.created_at.strftime("%a %b %e") %></i> </p>
+
+        </div>
+      </a>
     </div>
   <% end %>
-
 </div>

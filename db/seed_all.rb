@@ -507,7 +507,9 @@ def seed_all
   # User.create!(email: "e@e.com", password: "123456")
 
   puts 'Create Empty Conversation'
-  Conversation.create!(name: 'Hugo', user1_id: User.find_by(first_name: 'Hugo').id, user2_id: User.find_by(first_name: 'Giovanni').id)
+  Conversation.create!(
+    name: 'Hugo', user1_id: User.find_by(first_name: 'Hugo').id, user2_id: User.find_by(first_name: 'Giovanni').id
+  )
   puts 'Done'
   # Conversation.create!(name: 'Jessica', user1: jessica, user2: eva)
   # Conversation.create!(name: 'Eva', user1: hugo, user2: jessica)

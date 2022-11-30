@@ -6,7 +6,7 @@
 
 .ticket-card-new {
   overflow: hidden;
-  height: 80px;
+  min-height: 100px;
   background: white;
   display: flex;
   align-items: center;
@@ -14,7 +14,8 @@
   box-shadow: 3px 5px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   margin: 20px;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 10px;
   & a:link, & a:visited {
     text-decoration: none;
     color:rgba(0, 0, 0, 0.975);
@@ -34,4 +35,33 @@
   background-color: black;
   color: white;
   position: relative;
+}
+.discussion_card_img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #e2e2e2;
+}
+.conversation_wrapper_disc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-family:$manrope;
+  margin-left: 18px;
+  h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  p {
+    font-size: .8rem;
+  }
+}
+.conversation_wrapper_disc h3 {
+
+}
+.conversation_wrapper_disc p {
+
 }
