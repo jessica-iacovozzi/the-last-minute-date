@@ -1,5 +1,5 @@
 <div class="container-profile-public">
-  <div class="profile-photo">
+  <div class="profile-public">
     <% if @user.photos.attached? %>
       <%= cl_image_tag @user.photos.first.key, class: 'profile-public' %>
     <% elsif @user.picture_url? %>
@@ -7,6 +7,7 @@
     <% else %>
       <%= image_tag 'placeholder-avatar.png' %>
     <% end %>
+    <p><%= @user.first_name %>, <%= @user.age %></p>
   </div>
 
   <div class="description-container">
@@ -47,7 +48,7 @@
   </div>
 
   <div class="people-btn back-btn">
-      <%= link_to "Back to event", :back, class:"nav-link-buy" %>
+      <%= link_to "BACK", :back %>
     </div>
 
 </div>
