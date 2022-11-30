@@ -39,7 +39,7 @@
 
 
 .description-card-new{
-  padding: 25px;
+  padding: 16px;
   background-color: black;
   color: white;
   position: sticky;
@@ -47,13 +47,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 25px;
+    margin: 0;
+  }
 }
 
 .back_conversation_show{
   position: absolute;
-  top: 26px;
   left: 25px;
-  font-size: 25px;
   transition: all ease-in-out .2s;
   color: white;
   & a:link, & a:visited {
