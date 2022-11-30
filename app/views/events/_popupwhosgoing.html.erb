@@ -1,0 +1,78 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">People going 🚀</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <% @event.users.each do |user| %>
+          <div class="wrapper">
+            <div class="card-product" id="<%= user.id %>">
+
+              <div class="card-product-image">
+              <%= link_to user_path(user) do  %>
+                <%= image_tag user.picture_url%>
+              <% end %>
+              </div>
+
+              <div class="card-product-infos">
+                <div class="card-product-name">
+                  <h2><%= user.first_name%> <small>, <%= user.age%></small></h2>
+                </div>
+
+                <div class="card-product-result">
+                  <% @result = 0 %>
+                  <% user.tags.each do |tag|%>
+                    <% if current_user.tags.include?(tag) %>
+                        <% @result += 35 %>
+                    <% end %>
+                  <% end %>
+                  <% score = @result %>
+                  <% result = case score %>
+                    <% when 30...100 then %>
+                      <p class="result_total">Score: <%= @result %></p>
+                      <p class="result_total">Could be a friend</p>
+                    <% when 100...200 then %>
+                      <p id="good-score">Score: <%= @result %></p>
+                      <p id="good-score">Worth a shot</p>
+                    <% when 200...350 then %>
+                      <p id="top-score"> Score: <%= @result %></p>
+                      <p id="top-score"><strong>SOULMATE ALERT</strong></p>
+                    <% else %>
+                      <p>Don't try, you have nothing in common</p>
+                  <% end %>
+                </div>
+
+                  <div class="card-product-button">
+                    <p>
+                      <button class="msg-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
+                        Send a message
+                      </button>
+                    </p>
+                  </div>
+
+                  <div class="collapse" id="collapseMessage<%=user.id %>">
+                    <div class="message-card message-card-body">
+                      <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                        <input type="text" name="content" id="content">
+                        <input type="submit">
+                      </form>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

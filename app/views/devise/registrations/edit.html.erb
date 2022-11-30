@@ -21,6 +21,10 @@
                       required: false,
                       input_html: { autocomplete: "new-description" },
                       class: 'about-me-label' %>
+          <%= f.input :photos,
+                      as: :file,
+                      input_html: { multiple: true },
+                      required: false %>
         </div>
 
         <div class="my-interests-container">
@@ -59,7 +63,7 @@
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
         </div>
-        
+
       </div>
 
       <div class="update-btn">

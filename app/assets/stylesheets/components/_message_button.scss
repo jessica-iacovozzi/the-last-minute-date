@@ -1,8 +1,12 @@
 .msg-btn {
   background-color: black;
   color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   font-family: Caveat, sans-serif;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin-right: 10px;
+  font-family: Caveat, sans-serif;
+  font-size: 7px;
 }

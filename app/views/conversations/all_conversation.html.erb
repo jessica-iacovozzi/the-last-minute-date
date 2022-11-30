@@ -33,7 +33,15 @@
   <% @conversations.map do |conversation| %>
 
     <div class="ticket-card-new">
-      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
+      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc"><p>
+      <% if conversation.user2.photos.attached? %>
+        <%= cl_image_tag conversation.user2.photos.first.key %>
+      <% elsif conversation.user2.picture_url? %>
+        <%= image_tag conversation.user2.picture_url %>
+      <% else %>
+        <%= image_tag 'placeholder-avatar.png' %>
+      <% end %>
+      </p></a>
 
 
         <div>
