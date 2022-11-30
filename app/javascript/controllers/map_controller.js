@@ -15,10 +15,12 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
     container: this.element,
+    center: [-73.561668, 45.508888],
+    zoom: 10,
     style: "mapbox://styles/evaroux/clb1ns7z8000015qjjk4ao0nh" // <-- use your own!
     });
     this.#addMarkersToMap(this.markersValue)
-    this.#fitMapToMarkers(this.markersValue)
+    // this.#fitMapToMarkers(this.markersValue)
 
     // this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
     //                                       mapboxgl: mapboxgl }))

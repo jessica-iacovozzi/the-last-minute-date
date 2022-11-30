@@ -3,14 +3,14 @@
   <div class="event-banner-regroup">
     <div class="event-banner-text">
       <h2><%= event.title %></h2>
-      <p><%= event.date %><br>
-      <%= event.category %></p>
+      <p><%= event.date.strftime("%b %-d") %>, <%= event.time.to_i %>h<br>
+      <%= event.category.capitalize %></p>
       <div class="event-banner-btn">
         <%= link_to "Get more informations", event_path(event), class:"btn-more-info" %>
       </div>
   </div>
 
     <div class="event-banner-image">
-      <%= image_tag ("standup.jpg") %>
+      <%= image_tag event.picture_url, style: 'width:148px' %>
     </div>
 </div>

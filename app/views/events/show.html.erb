@@ -12,7 +12,7 @@
 
   <div class="events-body">
     <h2>Date</h2>
-    <p><%= @event.date %><br>
+    <p><%= event.date.strftime("%b %-d") %> <%= event.time.to_i %>h<br>
 
     <h2>Venue</h2>
     <p><%= @event.venue %><br>
