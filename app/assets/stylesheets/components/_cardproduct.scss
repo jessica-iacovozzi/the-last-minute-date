@@ -14,11 +14,11 @@
   margin: 10px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   img {
     height: 100%;
-    width: 100%;
+    width: 130px;
     object-fit: cover;
   }
 }
@@ -43,7 +43,9 @@
     margin-bottom: 5px;
     margin-top: 8px;
   }
+}
 
 #tbd-avatar {
   object-fit: contain;
+  width: 130px;
 }
