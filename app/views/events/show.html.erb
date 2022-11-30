@@ -38,6 +38,9 @@
             <div class="card-product" id="<%= user.id %>">
 
               <%= link_to user_path(user) do  %>
+              <% if user.photos.attached? %>
+                <%= cl_image_tag user.photos.first.key %>
+              <% else %>
                 <%= image_tag user.picture_url%>
               <% end %>
               <div class="card-product-infos">

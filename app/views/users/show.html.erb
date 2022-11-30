@@ -1,6 +1,10 @@
 <div class="container-profile-public">
   <div class="profile-photo">
-    <%= image_tag @user.picture_url, class: 'profile-public' %>
+    <% if @user.photos.attached? %>
+      <%= cl_image_tag @user.photos.first.key, class: 'profile-public' %>
+    <% else %>
+      <%= image_tag @user.picture_url, class: 'profile-public' %>
+    <% end %>
   </div>
 
   <div class="description-container">
