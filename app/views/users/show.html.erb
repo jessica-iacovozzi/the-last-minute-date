@@ -2,8 +2,10 @@
   <div class="profile-photo">
     <% if @user.photos.attached? %>
       <%= cl_image_tag @user.photos.first.key, class: 'profile-public' %>
-    <% else %>
+    <% elsif @user.picture_url? %>
       <%= image_tag @user.picture_url, class: 'profile-public' %>
+    <% else %>
+      <%= image_tag 'placeholder-avatar.png' %>
     <% end %>
   </div>
 
