@@ -1,12 +1,14 @@
 <div class="text-center">
   <div class="profile-banner"
     <% if @my_profile.photos.attached? %>
-        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= cl_image_path @my_profile.photos.first.key %>);">
-        <%= cl_image_tag @my_profile.photos.first.key, class: 'profile-picture' %>
-      <% else %>
-        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
-        <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
-      <% end %>
+      style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= cl_image_path @my_profile.photos.first.key %>);">
+      <%= cl_image_tag @my_profile.photos.first.key, class: 'profile-picture' %>
+    <% elsif @my_profile.picture_url? %>
+      style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
+      <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
+    <% else %>
+      <%= image_tag 't-bg.png', class: 'profile-picture' %>
+    <% end %>
     <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn btn-flat" %>
   </div>
 

@@ -38,7 +38,13 @@
             <div class="card-product" id="<%= user.id %>">
 
               <%= link_to user_path(user) do  %>
-                <%= image_tag user.picture_url%>
+                <% if user.photos.attached? %>
+                  <%= cl_image_tag user.photos.first.key %>
+                <% elsif user.picture_url? %>
+                  <%= image_tag user.picture_url%>
+                <% else %>
+                  <%= image_tag 'placeholder-avatar.png', id: 'tbd-avatar' %>
+                <% end %>
               <% end %>
               <div class="card-product-infos">
               <div>
