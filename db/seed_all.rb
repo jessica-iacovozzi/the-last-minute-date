@@ -312,7 +312,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'Salle Richard-Sauvageau',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
     description: "Occupational therapist then an osteopath but he's finally in humor.",
     price: '35',
@@ -325,7 +325,7 @@ def seed_all
     time: '7:00',
     city: 'Montreal',
     venue: 'MTELUS',
-    category: 'concert',
+    category: 'concerts',
     address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
     description: 'French singer-songwriter.',
     price: '110',
@@ -338,7 +338,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
-    category: 'concert',
+    category: 'concerts',
     address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
     description: 'Canadian singer-songwriter.',
     price: '287',
@@ -351,7 +351,7 @@ def seed_all
     time: '7:00',
     city: 'Montreal',
     venue: 'Centre Bell',
-    category: 'sport',
+    category: 'sports',
     address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
     description: "Lineup: Montreal Canadiens vs San Jose Sharks.",
     price: '145',
@@ -364,7 +364,7 @@ def seed_all
     time: '8:00',
     city: 'Brossard',
     venue: 'Le Club Square Dix30',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '9200 Boulevard Leduc, Brossard, QC J4Y0L1',
     description: 'o Cormier shares a wish with his parents even before starting school: to be humorous!',
     price: '29',
@@ -377,7 +377,7 @@ def seed_all
     time: '7:00',
     city: 'Laval',
     venue: 'Place Bell',
-    category: 'sport',
+    category: 'sports',
     address: "1950 Rue Claude-Gagne, Laval, QC H7N 0E4",
     description: 'Lineup: Rocket de Laval vs Abbotsford Canucks.',
     price: '55',
@@ -390,7 +390,7 @@ def seed_all
     time: '7:00',
     city: 'Toronto',
     venue: 'REBEL',
-    category: 'music',
+    category: 'concerts',
     address: '11 Polson St., Toronto, ON M5A 1A4',
     description: 'American rapper and singer.',
     price: '57',
@@ -403,7 +403,7 @@ def seed_all
     time: '8:00',
     city: 'Toronto',
     venue: 'Pheonix',
-    category: 'concert',
+    category: 'concerts',
     address: '1403 Rue Sainte Elisabeth, Montreal, QC H2X 3C5',
     description: 'New-York based singer/songwriter.',
     price: '16',
@@ -416,7 +416,7 @@ def seed_all
     time: '8:00',
     city: 'Toronto',
     venue: 'Olympia',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: "1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2",
     description: 'Dominic Paquet is one of the most hilarious showman! Comedian, actor and host.',
     price: '49',
@@ -429,7 +429,7 @@ def seed_all
     time: '5:00',
     city: 'Toronto',
     venue: 'Centre sportif du Parc olympique',
-    category: 'sport',
+    category: 'sports',
     address: '3200 Rue Viau, Montreal, QC H1B3J3',
     description: 'Competitive Dicing.',
     price: '452',
@@ -444,7 +444,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'Salle Richard-Sauvageau',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '1100, boulevard Taschereau, Laprairie, QC J5R 1W8',
     description: "Occupational therapist then an osteopath but he's finally in humor.",
     price: '35',
@@ -457,7 +457,7 @@ def seed_all
     time: '7:00',
     city: 'Montreal',
     venue: 'Olympia',
-    category: 'music',
+    category: 'concerts',
     address: '1004 Sainte-Catherine Street East, Montreal, QC H2L 2G2',
     description: 'French singer-songwriter.',
     price: '110',
@@ -470,7 +470,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
-    category: 'music',
+    category: 'concerts',
     address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
     description: 'You know who they are',
     price: '287',
@@ -485,7 +485,7 @@ def seed_all
     time: '7:30',
     city: 'Montreal',
     venue: 'Centre Bell',
-    category: 'sport',
+    category: 'sports',
     address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
     description: "Lineup: Montreal Canadiens vs San Jose Sharks.",
     price: '145',
@@ -498,7 +498,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'Centre Bell',
-    category: 'music',
+    category: 'concerts',
     address: '1909 avenue des Canadiens-de-Montréal, Montreal, QC H4B 5G0',
     description: 'Justin Bieber is back in town just for you',
     price: '135',
@@ -513,7 +513,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'La Licorne',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '4559 Av. Papineau, Montréal, QC H2H 1V4',
     description: 'Fabien Cloutier takes you to Scott Town and tell you a childhood story',
     price: '35',
@@ -528,7 +528,7 @@ def seed_all
     time: '7:30',
     city: 'Montreal',
     venue: 'TNM',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '84 Saint-Catherine St W, Montreal, Quebec H2X 1Z6',
     description: 'Come and see Alexandre Dumas Classic tale',
     price: '55',
@@ -543,7 +543,7 @@ def seed_all
     time: '8:00',
     city: 'Montreal',
     venue: 'La Tulipe',
-    category: 'arts_and_theatre',
+    category: 'theatre',
     address: '4530 Av. Papineau, Montréal, QC H2H 1V3',
     description: 'The Denis Drolet talk about life and death, but mostly taxes',
     price: '45',
@@ -558,7 +558,7 @@ def seed_all
     time: '8:00',
     city: 'Laval',
     venue: 'Place Bell',
-    category: 'music',
+    category: 'concerts',
     address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
     description: 'Come and see one heaven of a heavy metal show',
     price: '287',
@@ -567,86 +567,87 @@ def seed_all
     longitude: -73.7212,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
-  demoday = {
-    title: 'Nsync',
+  ping_pong = {
+    title: '57th Ping Pong tournament',
     date: Date.new(2022, 12, 2),
     time: '8:00',
     city: 'Montreal',
-    venue: 'MTELUS',
-    category: 'music',
-    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-    description: 'You know who they are',
-    price: '287',
-    artist: 'Nsync',
-    latitude: 45.5106,
-    longitude: -73.5634,
+    venue: 'Olympic Stadium',
+    category: 'sports',
+    address: '4545 Pierre-de Coubertin Ave, Montreal, Quebec H1V 0B2',
+    description: 'Come and see the greatest ping-pong players in the world',
+    price: '45',
+    artist: 'Ping Pong Masters',
+    latitude: 45.5577,
+    longitude: -73.5515,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
-  demoday = {
-    title: 'Nsync',
+  mademoiselle_julie = {
+    title: 'Mademoiselle Julie',
     date: Date.new(2022, 12, 2),
     time: '8:00',
     city: 'Montreal',
-    venue: 'MTELUS',
-    category: 'music',
-    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+    venue: 'Rideau Vert',
+    category: 'theatre',
+    address: '4664 Saint Denis St, Montreal, Quebec H2J 2L3',
     description: 'You know who they are',
-    price: '287',
-    artist: 'Nsync',
-    latitude: 45.5106,
-    longitude: -73.5634,
+    price: '32',
+    artist: 'Magalie Lepine Blondeau, David Boutin',
+    latitude: 45.5249,
+    longitude: -73.5852,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
-  demoday = {
-    title: 'Nsync',
+  film_orchestra = {
+    title: 'Lord of the Ring orchestra',
     date: Date.new(2022, 12, 2),
     time: '8:00',
     city: 'Montreal',
-    venue: 'MTELUS',
-    category: 'music',
-    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-    description: 'You know who they are',
-    price: '287',
-    artist: 'Nsync',
-    latitude: 45.5106,
-    longitude: -73.5634,
+    venue: 'Saint-Jean-Baptiste Catholic Church',
+    category: 'concerts',
+    address: '4237 Henri Julien Ave, Montreal, Quebec H2W 1E5',
+    description: 'Watch the first movie with a live orchestra playing along',
+    price: '50',
+    artist: 'OSMFM',
+    latitude: 45.5213,
+    longitude: -73.5799,
     picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
   }
-  demoday = {
-    title: 'Nsync',
-    date: Date.new(2022, 12, 2),
-    time: '8:00',
-    city: 'Montreal',
-    venue: 'MTELUS',
-    category: 'music',
-    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-    description: 'You know who they are',
-    price: '287',
-    artist: 'Nsync',
-    latitude: 45.5106,
-    longitude: -73.5634,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
-  }
-  demoday = {
-    title: 'Nsync',
-    date: Date.new(2022, 12, 2),
-    time: '8:00',
-    city: 'Montreal',
-    venue: 'MTELUS',
-    category: 'music',
-    address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
-    description: 'You know who they are',
-    price: '287',
-    artist: 'Nsync',
-    latitude: 45.5106,
-    longitude: -73.5634,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
-  }
+  # demoday = {
+  #   title: 'Nsync',
+  #   date: Date.new(2022, 12, 2),
+  #   time: '8:00',
+  #   city: 'Montreal',
+  #   venue: 'MTELUS',
+  #   category: 'music',
+  #   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+  #   description: 'You know who they are',
+  #   price: '287',
+  #   artist: 'Nsync',
+  #   latitude: 45.5106,
+  #   longitude: -73.5634,
+  #   picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  # }
+  # demoday = {
+  #   title: 'Nsync',
+  #   date: Date.new(2022, 12, 2),
+  #   time: '8:00',
+  #   city: 'Montreal',
+  #   venue: 'MTELUS',
+  #   category: 'music',
+  #   address: '59 Rue Sainte-Catherine Est, Montreal, QC H2X 1K5',
+  #   description: 'You know who they are',
+  #   price: '287',
+  #   artist: 'Nsync',
+  #   latitude: 45.5106,
+  #   longitude: -73.5634,
+  #   picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+  # }
 
   [
     guillaume_pineault, pomme, jessie_reyez, montreal_canadiens, jo_cormier,
     rocket_hockey, lil_tjay, riz_la_vie, dominic_paquet, junior, louis_jose_houde,
-    fred_tremblay, nsync, montreal_canadiens_shark
+    fred_tremblay, nsync, montreal_canadiens_shark, justin_bieber, scott_town, les_trois_mousquetaires,
+    les_denis_drolets, amon_amarth, ping_pong, mademoiselle_julie, film_orchestra
   ].each do |attribute|
     event = Event.create!(attribute)
     puts "Created #{event.category}"
@@ -714,35 +715,35 @@ def seed_all
     user_id: User.find_by(first_name: 'Giovanni').id
   }
   giov11 = {
-    event_id: Event.find_by(title: 'Nsync').id,
-    user_id: User.find_by(first_name: 'Sasha').id
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    user_id: User.find_by(first_name: 'Eva').id
   }
   giov22 = {
-    event_id: Event.find_by(title: 'Nsync').id,
-    user_id: User.find_by(first_name: 'Keanu').id
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    user_id: User.find_by(first_name: 'Sasha').id
   }
   giov33 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Delores').id
   }
   giov44 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Alicia').id
   }
   giov55 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Megan').id
   }
   giov66 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Alex').id
   }
   giov77 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Giovanni').id
   }
   giov88 = {
-    event_id: Event.find_by(title: 'Nsync').id,
+    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
     user_id: User.find_by(first_name: 'Jessica').id
   }
 
