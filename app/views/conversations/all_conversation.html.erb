@@ -33,25 +33,25 @@
   <% @conversations.map do |conversation| %>
 
     <div class="ticket-card-new">
-      <div>
-        <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
-          <p>
-            <% if conversation.user2.photos.attached? %>
-              <%= cl_image_tag conversation.user2.photos.first.key %>
-            <% elsif conversation.user2.picture_url? %>
-              <%= image_tag conversation.user2.picture_url %>
-            <% else %>
-              <%= image_tag 'placeholder-avatar.png' %>
-            <% end %>
-          </p>
 
-          <% if conversation.user1.id == current_user.id %>
-            <%= image_tag conversation.user2.picture_url, class:'discussion_card_img' %>
+      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
+        <% if conversation.user1.id == current_user.id %>
+          <% if conversation.user2.photos.attached? %>
+            <%= cl_image_tag conversation.user2.photos.first.key, class: 'discussion_card_img' %>
+          <% elsif conversation.user2.picture_url? %>
+            <%= image_tag conversation.user2.picture_url, class: 'discussion_card_img' %>
           <% else %>
-            <%= image_tag conversation.user1.picture_url, class:'discussion_card_img' %>
+            <%= image_tag 'placeholder-avatar.png', class: 'discussion_card_img' %>
           <% end %>
-        </a>
-      </div>
+        <% else %>
+          <% if conversation.user1.photos.attached? %>
+            <%= cl_image_tag conversation.user1.photos.first.key, class: 'discussion_card_img' %>
+          <% elsif conversation.user1.picture_url? %>
+            <%= image_tag conversation.user1.picture_url, class: 'discussion_card_img' %>
+          <% else %>
+            <%= image_tag 'placeholder-avatar.png', class: 'discussion_card_img' %>
+          <% end %>
+        <% end %>
 
         <div>
           <% if conversation.user1.id == current_user.id %>
@@ -59,9 +59,7 @@
           <% else %>
             <h3><%= conversation.user1.first_name.capitalize %></h3>
           <% end %>
-
           <p> <%= conversation.messages.last.content %> - <i><%= conversation.messages.last.created_at.strftime("%a %b %e") %></i> </p>
-
         </div>
       </a>
     </div>
