@@ -7,18 +7,24 @@
 
   <div class="events-header">
     <h1><%= @event.title %></h1>
-    <p><%= @event.date %></p>
+    <h2>By <%= @event.venue %></h2>
   </div>
 
   <div class="events-body">
     <h2>Date</h2>
-    <p><%= @event.date.strftime("%b %-d") %> <%= @event.time.to_i %>h<br>
+    <p><%= @event.date.strftime("%b %-d %Y") %> • <%= @event.time.to_i %>h<br></p>
 
     <h2>Venue</h2>
-    <p><%= @event.venue %><br>
+    <p><%= @event.venue %><br></p>
 
     <h2>Address</h2>
-    <p><%= @event.address %><br>
+    <p><%= @event.address %><br></p>
+
+    <h2>Description</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p>
 
   </div>
 
@@ -105,7 +111,8 @@
 <div class="event-banner-price">
 
   <div class="event-price">
-    <p><small id="starting-price">Starting at</small> <%= @event.price.to_i %>$</p>
+    <h2>Starting at</h2>
+    <p><%= @event.price.to_i %>$</p>
   </div>
 
   <div data-controller="buy-tickets"
