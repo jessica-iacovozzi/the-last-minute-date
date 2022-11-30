@@ -33,25 +33,25 @@
   <% @conversations.map do |conversation| %>
 
     <div class="ticket-card-new">
-      <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc"><p>
-      <% if conversation.user2.photos.attached? %>
-        <%= cl_image_tag conversation.user2.photos.first.key %>
-      <% elsif conversation.user2.picture_url? %>
-        <%= image_tag conversation.user2.picture_url %>
-      <% else %>
-        <%= image_tag 'placeholder-avatar.png' %>
-      <% end %>
-      </p></a>
+      <div>
+        <a href="/conversations/<%= conversation.id %>", class="conversation_wrapper_disc">
+          <p>
+            <% if conversation.user2.photos.attached? %>
+              <%= cl_image_tag conversation.user2.photos.first.key %>
+            <% elsif conversation.user2.picture_url? %>
+              <%= image_tag conversation.user2.picture_url %>
+            <% else %>
+              <%= image_tag 'placeholder-avatar.png' %>
+            <% end %>
+          </p>
 
-
-        <div>
           <% if conversation.user1.id == current_user.id %>
             <%= image_tag conversation.user2.picture_url, class:'discussion_card_img' %>
           <% else %>
             <%= image_tag conversation.user1.picture_url, class:'discussion_card_img' %>
           <% end %>
-
-        </div>
+        </a>
+      </div>
 
         <div>
           <% if conversation.user1.id == current_user.id %>
