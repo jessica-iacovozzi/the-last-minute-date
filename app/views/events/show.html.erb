@@ -7,98 +7,28 @@
 
   <div class="events-header">
     <h1><%= @event.title %></h1>
-    <p><%= @event.date %></p>
+    <h2>By <%= @event.venue %></h2>
   </div>
 
   <div class="events-body">
     <h2>Date</h2>
-    <p><%= @event.date.strftime("%b %-d") %> <%= @event.time.to_i %>h<br>
+    <p><%= @event.date.strftime("%b %-d %Y") %> • <%= @event.time.to_i %>h<br></p>
 
     <h2>Venue</h2>
-    <p><%= @event.venue %><br>
+    <p><%= @event.venue %><br></p>
 
     <h2>Address</h2>
-    <p><%= @event.address %><br>
+    <p><%= @event.address %><br></p>
+
+    <h2>Description</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p>
 
   </div>
 
-
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">People going</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-
-        <div class="modal-body">
-          <% @event.users.each do |user| %>
-          <div class="wrapper">
-            <div class="card-product" id="<%= user.id %>">
-
-              <%= link_to user_path(user) do  %>
-                <% if user.photos.attached? %>
-                  <%= cl_image_tag user.photos.first.key %>
-                <% elsif user.picture_url? %>
-                  <%= image_tag user.picture_url%>
-                <% else %>
-                  <%= image_tag 'placeholder-avatar.png', id: 'tbd-avatar' %>
-                <% end %>
-              <% end %>
-              <div class="card-product-infos">
-              <div>
-                <h2><%= user.first_name%> <small><%= user.age%></small></h2>
-
-                </div>
-                <% @result = 0 %>
-                <h2><% user.tags.each do |tag|%></h2>
-                      <% if current_user.tags.include?(tag) %>
-                          <% @result += 35 %>
-                      <% end %>
-                    <% end %>
-                    <% score = @result %>
-                    <% result = case score %>
-                      <% when 30...100 then %>
-                        <p class="result_total">Score: <%= @result %></p>
-                        <p class="result_total">Could be a friend</p>
-                      <% when 100...200 then %>
-                        <p id="good-score">Score: <%= @result %></p>
-                        <p id="good-score">Worth a shot</p>
-                      <% when 200...350 then %>
-                        <p id="top-score"> Score: <%= @result %></p>
-                        <p id="top-score"><strong>SOULMATE ALERT</strong></p>
-                      <% else %>
-                        <p>Don't try, you have nothing in common</p>
-                    <% end %>
-              </div>
-              <p>
-                <button class="btn msg-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
-                  Send a message
-                </button>
-              </p>
-            </div>
-            <div class="collapse" id="collapseMessage<%=user.id %>">
-              <div class="message-card message-card-body">
-                <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
-                  <input type="text" name="content" id="content">
-                  <input type="submit">
-
-                </form>
-
-              </div>
-            </div>
-          </div>
-          <% end %>
-        </div>
-
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "popupwhosgoing" %>
 
   <div class="event-people-btn">
     <button type="button" class="people-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -109,9 +39,9 @@
 
 
 <div class="event-banner-price">
-
   <div class="event-price">
-    <p><small id="starting-price">Starting at</small> <%= @event.price.to_i %>$</p>
+    <h2>Starting at</h2>
+    <p><%= @event.price.to_i %>$</p>
   </div>
 
   <div data-controller="buy-tickets"
@@ -121,6 +51,7 @@
             data-buy-tickets-target="buyButton">
       Buy a ticket
     </button>
+
     <button data-action="click->buy-tickets#buyTickets"
             type="button"
             class="buy-btn green"
@@ -128,5 +59,4 @@
             <%= link_to "See your ticket", my_tickets_path %>
     </button>
   </div>
-
 </div>

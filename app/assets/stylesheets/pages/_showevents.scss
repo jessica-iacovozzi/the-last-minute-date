@@ -2,39 +2,39 @@
   background-color: white;
 }
 
-.events-header h1 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  font-family: 'Manrope';
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.events-header p {
-  font-family: 'Caveat', cursive;
-  color: #EA4C88;
-  margin-top: -5px;
-  text-align: center;
-  margin-bottom: -10px;
-}
-
-.events-body h2 {
-  font-family: 'Manrope';
-  font-weight: bold;
-  font-size: 17px;
-  color: #EA4C88;
+.events-header {
+  h1 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Manrope';
+    text-align: center;
+  }
+  h2 {
+    font-size: 13px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Manrope';
+    text-align: center;
+    text-decoration: underline;
+  }
 }
 
 .events-body {
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
+  h2 {
+    font-family: 'Caveat';
+    font-weight: unset;
+    font-size: 22px;
+    color: #EA4C88;
+  }
+  p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: black;
+  }
 }
 
-.events-body p {
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;
-  color: black;
-}
 
 .event-banner-price {
   background-color: #EA4C88;
@@ -43,12 +43,22 @@
     justify-content: space-between;
 }
 
-.event-price p {
-  font-family: 'Caveat', cursive;
-  font-weight: lighter;
-  font-size: 40px;
-  color: white;
-  padding: 20px;
+.event-price {
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    padding: 20px 20px 0 30px;
+    margin-bottom: -5px;
+  }
+  p {
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
+    font-size: 40px;
+    color: white;
+    padding: 0 20px 0 30px;
+  }
 }
 
 .events-picture img {
@@ -59,4 +69,5 @@
   background-color: white;
   display: flex;
   justify-content: center;
+  margin: -10px 10px 0 10px;
 }
