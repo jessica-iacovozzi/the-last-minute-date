@@ -12,7 +12,7 @@
 
   <div class="events-body">
     <h2>Date</h2>
-    <p><%= @event.date %><br>
+    <p><%= @event.date.strftime("%b %-d") %> <%= @event.time.to_i %>h<br>
 
     <h2>Venue</h2>
     <p><%= @event.venue %><br>
@@ -105,7 +105,7 @@
 <div class="event-banner-price">
 
   <div class="event-price">
-    <p><%= @event.price %>$</p>
+    <p><small id="starting-price">Starting at</small> <%= @event.price.to_i %>$</p>
   </div>
 
   <div data-controller="buy-tickets"
