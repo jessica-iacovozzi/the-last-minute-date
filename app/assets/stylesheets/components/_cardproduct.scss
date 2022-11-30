@@ -3,26 +3,28 @@
 }
 
 .card-product-infos {
-  padding: 30px 80px 10px 30px;
+  padding: 10px 100px 10px 34px;
 }
 
 .card-product {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
-  height: 125px;
+  height: 110px;
   background: white;
   margin: 10px 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
+  border-radius: 5px;
+  flex-grow: 2;
+  align-items: stretch;
   img {
     height: 100%;
-    width: 100%;
     object-fit: cover;
   }
 }
 
+.card-product-image {
+  width: 100%;
+}
 
 .card-product-name {
   h2 {
@@ -39,9 +41,7 @@
     font-family: 'Manrope';
     font-size: 9px;
     line-height: 1.4;
-    opacity: .7;
     margin-bottom: 5px;
-    margin-top: 8px;
   }
 
 #tbd-avatar {
