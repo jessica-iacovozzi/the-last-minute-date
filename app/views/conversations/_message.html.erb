@@ -3,6 +3,7 @@
   <small>
     <strong><%= message.sender_id %></strong>
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+  <p><%= message.content %></p>
   </small>
-  <p>You: <%= message.content %></p>
+
 </div>

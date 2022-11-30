@@ -21,9 +21,3 @@ application.register("map", MapController)
 
 import RefreshMarkersController from "./refresh_markers_controller"
 application.register("refresh-markers", RefreshMarkersController)
-
-import UpdateDescriptionController from "./update_description_controller"
-application.register("update-description", UpdateDescriptionController)
-
-import Reveal from 'stimulus-reveal-controller'
-application.register('reveal', Reveal)

@@ -1,6 +1,6 @@
 .ticket {
   overflow: hidden;
-  height: 120px;
+  height: 100px;
   background: white;
   box-shadow: 3 3 30px rgba(0,0,0,0.5);
   display: flex;
@@ -37,7 +37,39 @@
   text-align: left;
 }
 .shows {
-  background-color: white;
   padding: 20px;
   border-radius: 5px;
+  height: 42vh;
+  overflow-y: scroll;
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 3px;
+  }
+}
+
+.shows-container {
+  padding-top: 25px;
+  background-color: white;
+}
+
+#current-shows {
+  background-color: white;
+  border: 1px black solid;
+  box-shadow: 2px 2px rgba(0,0,0,.7);
+}
+
+#past-shows {
+  background-color: black;
 }

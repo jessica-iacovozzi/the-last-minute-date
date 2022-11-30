@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if params[:query].present?
-      @events = Event.search_by_category_title_artist_and_city(params[:query])
+      @events = Event.search_by_category_title_artist_date_and_city("#{params[:query]} #{params[:date]}")
 
       markers
     else
@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   def markers
     @markers = @events.geocoded.map do |event|
     {
+      category: event.category,
       lat: event.latitude,
       lng: event.longitude,
       info_window: render_to_string(partial: "info_window", locals: { event: }),

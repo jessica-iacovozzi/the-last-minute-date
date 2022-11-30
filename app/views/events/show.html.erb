@@ -34,21 +34,53 @@
 
         <div class="modal-body">
           <% @event.users.each do |user| %>
-          <div class="card-product">
+          <div class="wrapper">
+            <div class="card-product" id="<%= user.id %>">
 
-            <%= link_to user_path(user) do  %>
-              <%= image_tag user.picture_url%>
-            <% end %>
-            <div class="card-product-infos">
-              <h2><%= user.first_name%></h2>
+              <%= link_to user_path(user) do  %>
+                <%= image_tag user.picture_url%>
+              <% end %>
+              <div class="card-product-infos">
+              <div>
+                <h2><%= user.first_name%> <small><%= user.age%></small></h2>
 
-              <% @result = 0 %>
-              <h2><% user.tags.each do |tag|%></h2>
-                    <% if current_user.tags.include?(tag) %>
-                        <% @result += 35 %>
+                </div>
+                <% @result = 0 %>
+                <h2><% user.tags.each do |tag|%></h2>
+                      <% if current_user.tags.include?(tag) %>
+                          <% @result += 35 %>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                <p>Matching Score: </p><p class="result_total"><%= @result %></p>
+                    <% score = @result %>
+                    <% result = case score %>
+                      <% when 30...100 then %>
+                        <p class="result_total">Score: <%= @result %></p>
+                        <p class="result_total">Could be a friend</p>
+                      <% when 100...200 then %>
+                        <p id="good-score">Score: <%= @result %></p>
+                        <p id="good-score">Worth a shot</p>
+                      <% when 200...350 then %>
+                        <p id="top-score"> Score: <%= @result %></p>
+                        <p id="top-score"><strong>SOULMATE ALERT</strong></p>
+                      <% else %>
+                        <p>Don't try, you have nothing in common</p>
+                    <% end %>
+              </div>
+              <p>
+                <button class="btn msg-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage<%=user.id %>" aria-expanded="false" aria-controls="collapseExample">
+                  Send a message
+                </button>
+              </p>
+            </div>
+            <div class="collapse" id="collapseMessage<%=user.id %>">
+              <div class="message-card message-card-body">
+                <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                  <input type="text" name="content" id="content">
+                  <input type="submit">
+
+                </form>
+
+              </div>
             </div>
           </div>
           <% end %>

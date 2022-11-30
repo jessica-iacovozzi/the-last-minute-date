@@ -7,11 +7,14 @@
 
 // To style the message itself
 .sender-style, .receiver-style {
-  width: 70%;
-  max-width: 400px;
+  width: 60%;
+  max-width: 250px;
   border-radius: 4px;
   padding: 8px;
   min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sender-style {

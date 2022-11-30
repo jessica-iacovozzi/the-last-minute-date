@@ -1,7 +1,12 @@
 <div class="text-center">
   <div class="profile-banner"
-       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
-    <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
+    <% if @my_profile.photos.attached? %>
+        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= cl_image_path @my_profile.photos.first.key %>);">
+        <%= cl_image_tag @my_profile.photos.first.key, class: 'profile-picture' %>
+      <% else %>
+        style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
+        <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
+      <% end %>
     <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn btn-flat" %>
   </div>
 
@@ -12,14 +17,16 @@
 
   <div class="interest-card">
     <h2>My interests</h2>
-    <div class="grid">
-      <% @my_profile.tags.each do |tag| %>
-        <% unless tag.empty? %>
-        <div class="tag">
-          <p><%= tag %></p>
-        </div>
+    <div class="scrollmenu">
+      <div class="grid">
+        <% @my_profile.tags.each do |tag| %>
+          <% unless tag.empty? %>
+          <div class="tag">
+            <p><%= tag %></p>
+          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 
@@ -29,7 +36,7 @@
     <div class="ticket-card">
       <%= image_tag event.picture_url %>
       <div class="ticket-card-infos">
-        <p><%= event.date.strftime("%b %-d") %> <%= event.time.to_i %>h</p>
+        <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
         <h3><%= event.title %></h3>
         <p><%= event.venue %></p>
       </div>
