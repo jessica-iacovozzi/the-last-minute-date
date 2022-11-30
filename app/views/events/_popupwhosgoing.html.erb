@@ -52,14 +52,14 @@
                         Send a message
                       </button>
                     </p>
-                  </div>
 
-                  <div class="collapse" id="collapseMessage<%=user.id %>">
-                    <div class="message-card message-card-body">
-                      <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
-                        <input type="text" name="content" id="content">
-                        <input type="submit">
-                      </form>
+                    <div class="collapse" id="collapseMessage<%=user.id %>">
+                      <div class="message-card message-card-body">
+                        <form action="/events/<%= @event.id %>/connection/<%= user.id %>">
+                          <input type="text" name="content" id="content-card">
+                          <input type="submit" id="content-submit">
+                        </form>
+                      </div>
                     </div>
                   </div>
               </div>
