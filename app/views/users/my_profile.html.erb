@@ -7,7 +7,7 @@
       style="background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 255, 255, 255, 0.9)), url(<%= image_path @my_profile.picture_url %>);">
       <%= image_tag @my_profile.picture_url, class: 'profile-picture' %>
     <% else %>
-      <%= image_tag 'placeholder-avatar.png' %>
+      <%= image_tag 't-bg.png', class: 'profile-picture' %>
     <% end %>
     <%= link_to 'Modify your profile', edit_user_registration_path, class: "btn btn-flat" %>
   </div>
