@@ -18,8 +18,16 @@
 
 
         <div>
-          <%= image_tag conversation.user2.picture_url, class:'discussion_card_img' %>
+          <% if conversation.user1.id == current_user.id %>
+            <%= image_tag conversation.user2.picture_url, class:'discussion_card_img' %>
+          <% else %>
+            <%= image_tag conversation.user1.picture_url, class:'discussion_card_img' %>
+          <% end %>
+
         </div>
+
+
+
         <div>
           <% if conversation.user1.id == current_user.id %>
             <h3><%= conversation.user2.first_name.capitalize %></h3>
