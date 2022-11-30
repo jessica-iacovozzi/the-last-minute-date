@@ -1,8 +1,6 @@
 <div class="container-profile-public">
   <div class="profile-public">
-    <div class="div-arrow">
-      <%= image_tag 'back_btn.png', id: 'back-arrow' %>
-    </div>
+    <%= link_to image_tag('back_btn.png'), :back, id: 'back-arrow' %>
     <% if @user.photos.attached? %>
       <%= cl_image_tag @user.photos.first.key, class: 'profile-public' %>
     <% elsif @user.picture_url? %>
