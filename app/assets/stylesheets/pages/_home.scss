@@ -5,16 +5,23 @@
 
 .title-home {
   padding: 30px;
+  h1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 18px;
+    line-height: 1.6;
+  }
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.6;
+  }
 }
 
-.title-home h1 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
-  padding-top: 18px;
-  line-height: 1.6;
-}
 
 .p-home {
   padding: 30px;
