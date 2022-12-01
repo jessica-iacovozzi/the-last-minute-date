@@ -35,7 +35,7 @@
 
   <div class="shows-block">
     <h2>My favourite shows</h2>
-    <% @my_events.first(2).each do |event| %>
+    <% @my_events.last(2).each do |event| %>
     <div class="ticket-card">
       <%= image_tag event.picture_url %>
       <div class="ticket-card-infos">
