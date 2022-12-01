@@ -1,3 +1,73 @@
+// .mapboxgl-popup {
+//   max-width: 200px;
+//   align-items: center;
+//   position: absolute;
+//   justify-content: center;
+//   align-items: center;
+//   left: 20px;
+//   margin: -10px;
+// }
+
+// .mapboxgl-popup-content {
+//   text-align: center;
+//   font-family: 'Manrope', sans-serif;
+//   font-size: 15px;
+// }
+
+
+// .mapboxgl-ctrl-geocoder input {
+//   position: absolute;
+//   top: 0;
+//   right: 25%;
+//   background-color: white;
+//   padding: 6px 40px;
+//   font-family: 'Manrope', sans-serif;
+//   font-size: 0.9rem;
+//   border-radius: 48px;
+// }
+
+
+
+// .mapboxgl-ctrl-geocoder--icon-search {
+//   position: absolute;
+//   top: 14px;
+//   left: -54px;
+//   width: 23px;
+//   z-index: 2;
+//   height: 23px;
+// }
+
+// .mapboxgl-popup-anchor-bottom, .mapboxgl-popup-anchor-bottom-left, .mapboxgl-popup-anchor-bottom-right {
+//   flex-direction: inherit;
+// }
+
+/* Marker tweaks */
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  width: 250px;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #91c949;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 400;
+}
+
 .mapboxgl-popup-content div {
   text-align: center;
   font-family: 'Manrope', sans-serif;

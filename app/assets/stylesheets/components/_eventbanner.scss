@@ -1,7 +1,7 @@
 .event-banner {
   background-color: black;
   display: flex;
-  text-align: left;
+  text-align: center;
 }
 
 .event-banner-text p {
@@ -39,6 +39,7 @@
   width: fit-content;
   transition: all 0.5s;
   cursor: pointer;
+  margin: 0;
 }
 
 // .event-banner-image {
