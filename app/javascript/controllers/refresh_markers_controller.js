@@ -16,4 +16,14 @@ export default class extends Controller {
       }
     }))
   }
+
+  clearUrl(event) {
+    event.preventDefault()
+
+    if (typeof URLSearchParams !== 'undefined') {
+      window.history.pushState({}, document.title, "/");
+    } else {
+      console.log(`Your browser ${navigator} does not support URLSearchParams`)
+    }
+  }
 }

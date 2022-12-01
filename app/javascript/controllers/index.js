@@ -10,6 +10,9 @@ application.register("address-autocomplete", AddressAutocompleteController)
 import BuyTicketsController from "./buy_tickets_controller"
 application.register("buy-tickets", BuyTicketsController)
 
+import ClearUrlController from "./clear_url_controller"
+application.register("clear-url", ClearUrlController)
+
 import ConversationSubscriptionController from "./conversation_subscription_controller"
 application.register("conversation-subscription", ConversationSubscriptionController)
 

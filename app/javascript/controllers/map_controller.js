@@ -7,6 +7,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
+  static targets = ["button"]
 
   mapMarkers = []
 
