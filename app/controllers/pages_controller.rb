@@ -8,7 +8,6 @@ class PagesController < ApplicationController
       @events = Event.all
     end
     markers
-    raise
   end
 
   def markers

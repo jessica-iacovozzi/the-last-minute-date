@@ -2,10 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="refresh-markers"
 export default class extends Controller {
-  static targets = ["categories", "mapRefresh", "child", "modal", "form"]
+  static targets = ["categories", "mapRefresh", "child"]
 
   connect() {
-
+    // console.log(this.modalTarget);
   }
 
   passIdToMapController(event) {
@@ -17,13 +17,13 @@ export default class extends Controller {
     }))
   }
 
-  clearUrl(event) {
-    event.preventDefault()
-
-    if (typeof URLSearchParams !== 'undefined') {
-      window.history.pushState({}, document.title, "/");
-    } else {
-      console.log(`Your browser ${navigator} does not support URLSearchParams`)
-    }
-  }
+  // clearUrl(event) {
+  //   event.preventDefault()
+  //   console.log(URLSearchParams);
+  //   if (typeof URLSearchParams !== 'undefined') {
+  //     window.history.pushState({}, document.title, "/");
+  //   } else {
+  //     console.log(`Your browser ${navigator} does not support URLSearchParams`)
+  //   }
+  // }
 }

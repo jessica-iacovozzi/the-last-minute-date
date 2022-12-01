@@ -10,9 +10,6 @@ application.register("address-autocomplete", AddressAutocompleteController)
 import BuyTicketsController from "./buy_tickets_controller"
 application.register("buy-tickets", BuyTicketsController)
 
-import ClearUrlController from "./clear_url_controller"
-application.register("clear-url", ClearUrlController)
-
 import ConversationSubscriptionController from "./conversation_subscription_controller"
 application.register("conversation-subscription", ConversationSubscriptionController)
 
@@ -21,6 +18,9 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import ModalController from "./modal_controller"
+application.register("modal", ModalController)
 
 import RefreshMarkersController from "./refresh_markers_controller"
 application.register("refresh-markers", RefreshMarkersController)
