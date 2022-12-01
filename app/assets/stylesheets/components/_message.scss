@@ -23,7 +23,9 @@
 }
 
 .sender-style {
-  background-color: lightcoral;
+  background-color: white;
+  border: 1px black solid;
+  box-shadow: 2px 2px rgba(0,0,0,.7);
 }
 
 .receiver-style {
@@ -32,4 +34,14 @@
 small, .small {
   font-size: 0.875em;
   text-align: start;
+}
+
+.show-message-firstname {
+  font-family: 'Manrope', sans-serif;
+}
+
+#btn-send {
+  background-color: black;
+  border: black;
+  font-family: 'Manrope', sans-serif;
 }
