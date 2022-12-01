@@ -1,33 +1,37 @@
 <div class="shows-container">
-  <div class="shows text-center mb-3" id="current-shows">
+    <div class="shows text-center mb-3" id="current-shows">
     <h2>All my tickets</h2>
-    <% @my_tickets.each do |event| %>
-      <% unless event.date.before? Date.today %>
-        <div class="ticket">
-          <%= image_tag event.picture_url %>
-          <div class="ticket-infos">
-            <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
-            <h3><%= event.title %></h3>
-            <p><%= event.venue %></p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+      <div class="shows-scroll">
+        <% @my_tickets.each do |event| %>
+          <% unless event.date.before? Date.today %>
+            <div class="ticket">
+              <%= image_tag event.picture_url %>
+              <div class="ticket-infos">
+                <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
+                <h3><%= event.title %></h3>
+                <p><%= event.venue %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
   </div>
 
   <div class="shows text-center mb-3" id="past-shows">
     <h2 style="color:white">Your last shows</h2>
-    <% @my_tickets.each do |event| %>
-      <% if event.date.before? Date.today %>
-        <div class="ticket">
-          <%= image_tag event.picture_url %>
-          <div class="ticket-infos">
-            <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
-            <h3><%= event.title %></h3>
-            <p><%= event.venue %></p>
+    <div class="shows-scroll">
+      <% @my_tickets.each do |event| %>
+        <% if event.date.before? Date.today %>
+          <div class="ticket">
+            <%= image_tag event.picture_url %>
+            <div class="ticket-infos">
+              <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
+              <h3><%= event.title %></h3>
+              <p><%= event.venue %></p>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
