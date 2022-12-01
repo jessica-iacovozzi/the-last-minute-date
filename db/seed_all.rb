@@ -600,7 +600,7 @@ def seed_all
   }
   film_orchestra = {
     title: 'Lord of the Ring orchestra',
-    date: Date.new(2022, 12, 2),
+    date: Date.new(2022, 12, 3),
     time: '8:00',
     city: 'Montreal',
     venue: 'Saint-Jean-Baptiste Catholic Church',
@@ -719,10 +719,6 @@ def seed_all
   # User.create!(email: "j@j.com", password: "123456")
   # User.create!(email: "e@e.com", password: "123456")
 
-  puts 'Create Empty Conversation'
-  Conversation.create!(
-    name: 'Hugo', user1_id: User.find_by(first_name: 'Giovanni').id, user2_id: User.find_by(first_name: 'Hugo').id
-  )
   puts 'Done'
   # Conversation.create!(name: 'Jessica', user1: jessica, user2: eva)
   # Conversation.create!(name: 'Eva', user1: hugo, user2: jessica)
@@ -754,36 +750,40 @@ def seed_all
     user_id: User.find_by(first_name: 'Giovanni').id
   }
   giov11 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Eva').id
   }
   giov22 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Sasha').id
   }
   giov33 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Delores').id
   }
   giov44 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Alicia').id
   }
   giov55 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Megan').id
   }
   giov66 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Alex').id
   }
   giov77 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Giovanni').id
   }
   giov88 = {
-    event_id: Event.find_by(title: 'Les Trois Mousquetaires').id,
+    event_id: Event.find_by(title: '57th Ping Pong tournament').id,
     user_id: User.find_by(first_name: 'Jessica').id
+  }
+  giov99 = {
+    event_id: Event.find_by(title: 'Lord of the Ring orchestra').id,
+    user_id: User.find_by(first_name: 'Hugo').id
   }
 
   puts "Tickets for Eva"
@@ -865,7 +865,7 @@ def seed_all
     evaa, evaa2, evaa3, evaa4, evaa5, evaa6,
     hugoo, hugoo2, hugoo3, hugoo4, hugoo5,
     jesss, jesss2, jesss3, jesss4, jesss5, jesss6, giov11,
-    giov22, giov33, giov44, giov55, giov66, giov77, giov88
+    giov22, giov33, giov44, giov55, giov66, giov77, giov88, giov99
   ].each do |attribute|
     Ticket.create!(attribute)
     puts "Created #{attribute}"
