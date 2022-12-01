@@ -477,7 +477,7 @@ def seed_all
     artist: 'Nsync',
     latitude: 45.5106,
     longitude: -73.5634,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669913435/wdi5lwijxl6pwkrhckwd.jpg'
   }
   montreal_canadiens_shark = {
     title: 'Montreal Canadiens',
@@ -505,10 +505,10 @@ def seed_all
     artist: 'Justin Bieber',
     latitude: 45.496082,
     longitude: -73.569916,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669912852/aenaog9rrmkwbymfkmwp.jpg'
   }
   scott_town = {
-    title: 'Scott Town',
+    title: 'Scotstown',
     date: Date.new(2022, 12, 2),
     time: '8:00',
     city: 'Montreal',
@@ -520,7 +520,7 @@ def seed_all
     artist: 'Fabien Cloutier',
     latitude: 45.5336,
     longitude: -73.5756,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669913568/abyzsx2onehul0on4bdl.jpg'
   }
   les_trois_mousquetaires = {
     title: 'Les Trois Mousquetaires',
@@ -566,7 +566,7 @@ def seed_all
     artist: 'Amon Amarth',
     latitude: 45.5561,
     longitude: -73.7212,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669912725/iemehypy0z3hbedyvyms.jpg'
   }
   ping_pong = {
     title: '57th Ping Pong tournament',
@@ -581,7 +581,7 @@ def seed_all
     artist: 'Ping Pong Masters',
     latitude: 45.5577,
     longitude: -73.5515,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669912417/ddje6gq8b4s0fq765xn8.jpg'
   }
   mademoiselle_julie = {
     title: 'Mademoiselle Julie',
@@ -596,7 +596,7 @@ def seed_all
     artist: 'Magalie Lepine Blondeau, David Boutin',
     latitude: 45.5249,
     longitude: -73.5852,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669912072/i28kv9elnljiuijokzvy.jpg'
   }
   film_orchestra = {
     title: 'Lord of the Ring orchestra',
@@ -611,7 +611,7 @@ def seed_all
     artist: 'OSMFM',
     latitude: 45.5213,
     longitude: -73.5799,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669911998/csky6u7ulw1yyyuq6vte.jpg'
   }
   pierre_lapointe = {
     title: 'Solo Piano',
@@ -619,14 +619,14 @@ def seed_all
     time: '8:00',
     city: 'Quebec',
     venue: 'Grand theatre de Quebec',
-    category: 'music',
+    category: 'concerts',
     address: '269 Bd René-Lévesque E, Québec, QC G1R 2B3',
     description: 'You know who they are',
     price: '60',
     artist: 'Pierre Lapointe',
     latitude: 46.8063,
     longitude: -71.2217,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669911617/fpptcduzj7fymo5ouaom.jpg'
   }
   martin_matte = {
     title: 'Martin Matte présente',
@@ -641,7 +641,7 @@ def seed_all
     artist: 'Martin Matte',
     latitude: 46.7863,
     longitude: -71.2865,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669911362/br6xs0qut0lvsfh6lpmp.jpg'
   }
   nordique_de_quebec_vs_montreal_canadiens = {
     title: 'Qc vs Mtl',
@@ -649,14 +649,14 @@ def seed_all
     time: '8:00',
     city: 'Quebec',
     venue: 'Centre Videotron',
-    category: 'sport',
+    category: 'sports',
     address: '250 Wilfrid-Hamel Blvd, Québec City, Quebec G1L 5A7',
     description: 'You know who they are',
     price: '65',
     artist: 'Hockey game',
     latitude: 46.8289,
     longitude: -71.2479,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669911239/avocazdfy7tnhpmzizdk.jpg'
   }
   blue_jays = {
     title: 'Blue Jays against Cardinals',
@@ -671,7 +671,7 @@ def seed_all
     artist: 'Toronto Blue Jays',
     latitude: 43.6418,
     longitude: -79.3891,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669911157/xuh3mftppvmziclcjyiy.jpg'
   }
   emile_bilodeau = {
     title: 'Émile Bilodeau',
@@ -679,14 +679,14 @@ def seed_all
     time: '8:00',
     city: 'Trois-Rivières',
     venue: 'Cogeco Amphiteatre',
-    category: 'music',
+    category: 'concerts',
     address: '100 Avenue des Draveurs, Trois-Rivières, QC',
     description: 'Emile Bilodeau welcomes you in his musical world',
     price: '35',
     artist: 'Émile Bilodeau',
     latitude: 46.3470,
     longitude: -72.5322,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669910852/gm4hpjcddormcmodjjut.jpg'
   }
   lise_dion = {
     title: 'Chu rendu là',
@@ -701,7 +701,7 @@ def seed_all
     artist: 'Lise Dion',
     latitude: 46.3424,
     longitude: -72.5436,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669910756/ml8jgo4zhijkzok6s6wv.jpg'
   }
 
   [
