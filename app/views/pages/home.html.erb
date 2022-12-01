@@ -14,9 +14,9 @@
     <button type="button" class="form-control-search" data-bs-toggle="modal" data-bs-target="#modal" data-bs-whatever="@getbootstrap">Where and when do you want to go?</button>
   </div>
 
-  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-refresh-markers-target="modal">
+  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-controller="modal">
     <div class="modal-dialog">
-      <div class="modal-content" data-refresh-markers-target="form">
+      <div class="modal-content">
 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <h1 class="modal-title fs-5" id="exampleModalLabel">Where and when would you like to see a show?</h1>
@@ -30,6 +30,7 @@
           %>
           <%= date_field :date,
             params[:date],
+            data: { modal_target: 'dateInput' },
             class: "form-control-search",
             placeholder: "Enter a date"
           %>

@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    if params[:query].present?
+    if params[:query].present? && params[:date].present?
       @events = Event.search_by_category_title_artist_date_and_city("#{params[:query]} #{params[:date]}")
     else
       @events = Event.all
