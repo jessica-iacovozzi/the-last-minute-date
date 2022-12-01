@@ -9,6 +9,7 @@
 
       <div class="modal-body">
         <% @users.each do |user| %>
+          <% unless user == current_user %>
           <div class="wrapper">
             <div class="card-product" id="<%= user.id %>">
 
@@ -73,6 +74,7 @@
               </div>
             </div>
           </div>
+          <% end %>
         <% end %>
       </div>
     </div>
