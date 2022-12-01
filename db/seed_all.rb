@@ -551,7 +551,7 @@ def seed_all
     artist: 'Les Denis Drolets',
     latitude: 45.5331,
     longitude: -73.5754,
-    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669317685/0x0_byplvc_occr2q.jpg'
+    picture_url: 'https://res.cloudinary.com/detjwm0o4/image/upload/v1669912782/w5lvpkbx13budjvwg0qa.jpg'
   }
   amon_amarth = {
     title: 'Amon Amarth',
