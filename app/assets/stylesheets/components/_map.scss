@@ -69,14 +69,16 @@
 }
 
 .mapboxgl-popup-content div {
-  padding: 10px;
-  width: 100%;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-  margin-top: 15px;
-}
-
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-  border-bottom-color: #91c949;
+.mapboxgl-popup-close-button {
+  background-color: white !important;
 }
