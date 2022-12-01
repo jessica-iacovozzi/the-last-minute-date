@@ -43,25 +43,17 @@
         </div>
 
         <div class="parameters-container">
-          <h5>Parameters</h5>
+          <h5>Confirm your changes</h5>
 
-          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :email, required: false, autofocus: true %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
           <%= f.input :current_password,
                       hint: "We need your current password to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "current-password" } %>
-          <%= f.input :password,
-                      required: false,
-                      hint: "Leave blank if you don't want to change your password",
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
-                      required: false,
-                      hint: "Leave blank if you don't want to change your password",
-                      input_html: { autocomplete: "new-password" } %>
         </div>
 
       </div>
