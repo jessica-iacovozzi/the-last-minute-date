@@ -5,7 +5,7 @@
         <% @my_tickets.each do |event| %>
           <% unless event.date.before? Date.today %>
             <div class="ticket">
-              <%= image_tag event.picture_url %>
+              <%= link_to image_tag(event.picture_url), event_path(event), class: 'ticket-img' %>
               <div class="ticket-infos">
                 <p><%= event.date.strftime("%b %-d") %> . <%= event.time.to_i %>h</p>
                 <h3><%= event.title %></h3>
