@@ -334,7 +334,7 @@ def seed_all
   }
   jessie_reyez = {
     title: 'Jessie Reyez',
-    date: Date.new(2022, 12, 9),
+    date: Date.new(2022, 11, 25),
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
@@ -728,31 +728,6 @@ def seed_all
   # Conversation.create!(name: 'Eva', user1: hugo, user2: jessica)
   # Conversation.create!(name: 'Giovanni', user1: giovanni, user2: eva)
   # Conversation.create!(name: 'Charly')
-
-  puts 'Created Messages'
-  puts 'Conversation Hugo'
-  Message.create!(
-    content: "Hey",
-    sender: User.find_by(first_name: 'Giovanni'),
-    conversation: Conversation.find_by(name: 'Hugo')
-  )
-  Message.create!(
-    content: "What's up?",
-    sender: User.find_by(first_name: 'Giovanni'),
-    conversation: Conversation.find_by(name: 'Hugo')
-  )
-  Message.create!(
-    content: "Yo",
-    sender: User.find_by(first_name: 'Giovanni'),
-    conversation: Conversation.find_by(name: 'Hugo')
-  )
-  Message.create!(
-    content: "Not much, you?",
-    sender: User.find_by(first_name: 'Giovanni'),
-    conversation: Conversation.find_by(name: 'Hugo')
-  )
-
-  puts 'Done!'
 
   puts 'Generating Tickets'
 
