@@ -59,7 +59,9 @@
           <% else %>
             <h3><%= conversation.user1.first_name.capitalize %></h3>
           <% end %>
-          <p> <%= conversation.messages.last.content %> - <i><%= conversation.messages.last.created_at.strftime("%a %b %e") %></i> </p>
+          <% if conversation.messages.any? %>
+            <p> <%= conversation.messages.last.content %> - <i><%= conversation.messages.last.created_at.strftime("%a %b %e") %></i> </p>
+          <% end %>
         </div>
       </a>
     </div>
