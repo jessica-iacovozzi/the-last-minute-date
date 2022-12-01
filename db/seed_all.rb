@@ -321,7 +321,7 @@ def seed_all
   }
   pomme = {
     title: 'Pomme',
-    date: time1,
+    date: Date.new(2022, 11, 23),
     time: '7:00',
     city: 'Montreal',
     venue: 'MTELUS',
@@ -334,7 +334,7 @@ def seed_all
   }
   jessie_reyez = {
     title: 'Jessie Reyez',
-    date: time2,
+    date: Date.new(2022, 12, 9),
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
@@ -373,7 +373,7 @@ def seed_all
   }
   rocket_hockey = {
     title: 'Rocket vs Abbotsford',
-    date: time1,
+    date: Date.new(2022, 11, 19),
     time: '7:00',
     city: 'Laval',
     venue: 'Place Bell',
@@ -386,7 +386,7 @@ def seed_all
   }
   lil_tjay = {
     title: "Lil Tjay",
-    date: time2,
+    date: Date.new(2022, 11, 18),
     time: '7:00',
     city: 'Toronto',
     venue: 'REBEL',
@@ -466,7 +466,7 @@ def seed_all
   }
   nsync = {
     title: 'Nsync',
-    date: Date.new(2022, 11, 25),
+    date: Date.new(2022, 11, 26),
     time: '8:00',
     city: 'Montreal',
     venue: 'MTELUS',
@@ -481,7 +481,7 @@ def seed_all
   }
   montreal_canadiens_shark = {
     title: 'Montreal Canadiens',
-    date: Date.new(2022, 11, 25),
+    date: Date.new(2022, 11, 27),
     time: '7:30',
     city: 'Montreal',
     venue: 'Centre Bell',
