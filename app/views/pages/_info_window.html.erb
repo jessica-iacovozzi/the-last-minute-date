@@ -6,7 +6,7 @@
       <p><%= event.date.strftime("%b %-d") %>, <%= event.time.to_i %>h<br>
       <%= event.category.capitalize %></p>
       <div class="event-banner-btn">
-        <%= link_to "Get more informations", event_path(event), class:"btn-more-info" %>
+        <%= link_to "Get infos", event_path(event), class:"btn-more-info" %>
       </div>
   </div>
 </div>
