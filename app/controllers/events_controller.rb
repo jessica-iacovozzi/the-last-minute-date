@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
       user.tags.each do |tag|
         if current_user.tags.include?(tag)
-          user.score += 35
+          user.score += 70
         end
       end
 

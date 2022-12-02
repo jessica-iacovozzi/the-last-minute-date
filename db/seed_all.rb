@@ -19,7 +19,7 @@ def seed_all
       'Baseball', 'Basketball', 'Boxing', 'Cycling', 'eSports',
       'Football', 'Gymnastics', 'Hockey', 'Martial', 'Arts', 'Soccer',
       'Tennis', 'Volleyball'
-    ].sample(rand(6))
+    ].sample(rand(3))
     return sport
   end
   puts 'Created Sports'
@@ -28,7 +28,7 @@ def seed_all
       'Pop', 'Alternative', 'Ballads/Romantic', 'Blues', 'Chanson',
       'Francaise', 'Classical', 'Country', 'Dance/Electronic', 'Folk',
       'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock'
-    ].sample(rand(8))
+    ].sample(rand(4))
     return concert
   end
   puts 'Created Concerts'
@@ -36,7 +36,7 @@ def seed_all
   def arts_and_theatre
     arts_and_theatre = [
       'Comedy', 'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'
-    ].sample(rand(8))
+    ].sample(rand(4))
     return arts_and_theatre
   end
   puts 'Created Arts & Theatre'
@@ -62,7 +62,7 @@ def seed_all
   hugo = {
     first_name: 'Hugo',
     username: 'Hugo Spirit',
-    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
+    tags: ['Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Music', 'Theatre'],
     picture_url:
     'https://avatars.githubusercontent.com/u/112583556?v=4',
     age: '22',
@@ -73,7 +73,7 @@ def seed_all
   eva = {
     first_name: 'Eva',
     username: 'lola',
-    tags: ['Baseball', 'Boxing', 'Cycling', 'Dance/Electronic', 'Magic', 'Comedy', 'Opera', 'Folk', 'Rock', 'Reggae'],
+    tags: ['Boxing', 'Dance/Electronic', 'Magic', 'Comedy', 'Opera', 'Rock'],
     picture_url:
     'https://ca.slack-edge.com/T02NE0241-U044W7NJEGH-aaa6c8146884-512',
     age: '23',
@@ -679,7 +679,7 @@ def seed_all
     time: '8:00',
     city: 'Trois-Rivières',
     venue: 'Cogeco Amphiteatre',
-    category: 'concerts',
+    category: 'theatre',
     address: '100 Avenue des Draveurs, Trois-Rivières, QC',
     description: 'Emile Bilodeau welcomes you in his musical world',
     price: '35',
@@ -694,7 +694,7 @@ def seed_all
     time: '8:00',
     city: 'Trois-Rivières',
     venue: 'salle j.-antonio-thompson',
-    category: 'concerts',
+    category: 'theatre',
     address: '374 Rue des Forges, Trois-Rivières, QC G9A 5H3',
     description: 'Lise Dion reflects on her life on stage ',
     price: '55',
