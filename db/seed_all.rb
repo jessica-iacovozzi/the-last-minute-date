@@ -19,7 +19,7 @@ def seed_all
       'Baseball', 'Basketball', 'Boxing', 'Cycling', 'eSports',
       'Football', 'Gymnastics', 'Hockey', 'Martial', 'Arts', 'Soccer',
       'Tennis', 'Volleyball'
-    ].sample(rand(3))
+    ].sample(rand(6))
     return sport
   end
   puts 'Created Sports'
@@ -28,7 +28,7 @@ def seed_all
       'Pop', 'Alternative', 'Ballads/Romantic', 'Blues', 'Chanson',
       'Francaise', 'Classical', 'Country', 'Dance/Electronic', 'Folk',
       'Hip-Hop/Rap', 'Jazz', 'Latin', 'Metal', 'R&B', 'Reggae', 'Religious', 'Rock'
-    ].sample(rand(4))
+    ].sample(rand(8))
     return concert
   end
   puts 'Created Concerts'
@@ -36,7 +36,7 @@ def seed_all
   def arts_and_theatre
     arts_and_theatre = [
       'Comedy', 'Cultural', 'Dance', 'Fashion', 'Magic', 'Music', 'Opera', 'Puppetry', 'Theatre'
-    ].sample(rand(4))
+    ].sample(rand(8))
     return arts_and_theatre
   end
   puts 'Created Arts & Theatre'
@@ -84,7 +84,7 @@ def seed_all
   jessica = {
     first_name: 'Jessica',
     username: 'jess',
-    tags: all_tags4,
+    tags: ['Boxing', 'Pop', 'Magic', 'Comedy', 'Opera', 'Rock'],
     picture_url:
     'https://avatars.githubusercontent.com/u/104274353?v=4',
     age: '26',
@@ -95,7 +95,7 @@ def seed_all
   giovanni = {
     first_name: 'Giovanni',
     username: 'gio',
-    tags: all_tags6,
+    tags: ['Boxing', 'Pop', 'Magic', 'Comedy', 'Opera', 'Rock'],
     picture_url:
     'https://avatars.githubusercontent.com/u/88079608?v=4',
     age: '25',
@@ -106,7 +106,7 @@ def seed_all
   alex = {
     first_name: 'Alex',
     username: 'alexadvocate',
-    tags: ['Baseball', 'Basketball', 'Metal', 'Pop', 'Ballads/Romantic', 'Soccer', 'R&B', 'Folk', 'Classical', 'Alternative'],
+    tags: ['Boxing', 'Pop', 'Magic', 'Comedy', 'Opera', 'Rock'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/71_gfkef7.jpg',
     age: '37',
@@ -117,7 +117,7 @@ def seed_all
   megan = {
     first_name: 'Megan',
     username: 'meganfragrant',
-    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
+    tags: ['Arts', 'Tennis', 'Pop', 'Music', 'Theatre'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/96_cmn2l1.jpg',
     age: '27',
@@ -128,7 +128,7 @@ def seed_all
   alicia = {
     first_name: 'Alicia',
     username: 'potentialalicia',
-    tags: all_tags3,
+    tags: ['Boxing', 'Pop', 'Theatre', 'Tennis', 'Opera', 'Rock'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/104_qsly67.jpg',
     age: '29',
@@ -139,7 +139,7 @@ def seed_all
   delores = {
     first_name: 'Delores',
     username: 'idealdelores',
-    tags: ['Gymnastics', 'Arts', 'Tennis', 'Pop', 'Ballads/Romantic', 'Jazz', 'Dance', 'Music', 'Puppetry', 'Theatre'],
+    tags: ['Arts', 'Tennis', 'Pop', 'Music', 'Theatre'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225995/last-minute-date/user-images/107_sjm1vi.jpg',
     age: '25',
@@ -238,7 +238,7 @@ def seed_all
   sasha = {
     first_name: 'Sasha',
     username: 'sashayield',
-    tags: all_tags6,
+    tags: ['Boxing', 'Pop', 'Theatre', 'Tennis', 'Opera', 'Rock'],
     picture_url:
     'https://res.cloudinary.com/dppymdnxh/image/upload/v1669225994/last-minute-date/user-images/10_b8f3h0.jpg',
     age: '27',
