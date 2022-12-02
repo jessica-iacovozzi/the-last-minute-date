@@ -24,10 +24,10 @@ class EventsController < ApplicationController
       when 35...100
         user.match_level = "Could be a friend"
         user.css = "result_total"
-      when 100...200
+      when 100...300
         user.match_level = "Worth a shot"
         user.css = "good-score"
-      when 200..350
+      when 300..450
         user.match_level = "SOULMATE ALERT"
         user.css = "top-score"
       else
